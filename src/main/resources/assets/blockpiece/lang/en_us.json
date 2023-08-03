@@ -1,5 +1,8 @@
 {
+  "key.blockpiece.switch_move": "Switch Move",
   "key.categories.bp": "Block Piece",
+  "entity.blockpiece.pistol_mob": "Pistol Mob",
+  "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
   "key.blockpiece.switch_moveset": "Switch Moveset",
   "key.blockpiece.use_move": "Use Move"
 }

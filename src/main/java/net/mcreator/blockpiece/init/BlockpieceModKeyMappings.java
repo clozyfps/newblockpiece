@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.blockpiece.network.UseMoveMessage;
 import net.mcreator.blockpiece.network.SwitchMovesetMessage;
+import net.mcreator.blockpiece.network.SwitchMoveMessage;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -47,11 +48,25 @@ public class BlockpieceModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping SWITCH_MOVE = new KeyMapping("key.blockpiece.switch_move", GLFW.GLFW_KEY_R, "key.categories.bp") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				BlockpieceMod.PACKET_HANDLER.sendToServer(new SwitchMoveMessage(0, 0));
+				SwitchMoveMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(USE_MOVE);
 		event.register(SWITCH_MOVESET);
+		event.register(SWITCH_MOVE);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +76,7 @@ public class BlockpieceModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				USE_MOVE.consumeClick();
 				SWITCH_MOVESET.consumeClick();
+				SWITCH_MOVE.consumeClick();
 			}
 		}
 	}

@@ -10,31 +10,31 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.blockpiece.procedures.UseMoveProcedureProcedure;
+import net.mcreator.blockpiece.procedures.SwitchMoveOnKeyPressedProcedure;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class UseMoveMessage {
+public class SwitchMoveMessage {
 	int type, pressedms;
 
-	public UseMoveMessage(int type, int pressedms) {
+	public SwitchMoveMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public UseMoveMessage(FriendlyByteBuf buffer) {
+	public SwitchMoveMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(UseMoveMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(SwitchMoveMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(UseMoveMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(SwitchMoveMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -52,12 +52,12 @@ public class UseMoveMessage {
 			return;
 		if (type == 0) {
 
-			UseMoveProcedureProcedure.execute(world, x, y, z, entity);
+			SwitchMoveOnKeyPressedProcedure.execute(entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		BlockpieceMod.addNetworkMessage(UseMoveMessage.class, UseMoveMessage::buffer, UseMoveMessage::new, UseMoveMessage::handler);
+		BlockpieceMod.addNetworkMessage(SwitchMoveMessage.class, SwitchMoveMessage::buffer, SwitchMoveMessage::new, SwitchMoveMessage::handler);
 	}
 }

@@ -70,6 +70,8 @@ public class BlockpieceModVariables {
 			clone.DevilFruit = original.DevilFruit;
 			clone.Race = original.Race;
 			clone.FightingStyle = original.FightingStyle;
+			clone.SwitchCurrentMove = original.SwitchCurrentMove;
+			clone.SelectedMove = original.SelectedMove;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -110,6 +112,8 @@ public class BlockpieceModVariables {
 		public String DevilFruit = "";
 		public String Race = "";
 		public String FightingStyle = "";
+		public double SwitchCurrentMove = 0;
+		public String SelectedMove = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -122,6 +126,8 @@ public class BlockpieceModVariables {
 			nbt.putString("DevilFruit", DevilFruit);
 			nbt.putString("Race", Race);
 			nbt.putString("FightingStyle", FightingStyle);
+			nbt.putDouble("SwitchCurrentMove", SwitchCurrentMove);
+			nbt.putString("SelectedMove", SelectedMove);
 			return nbt;
 		}
 
@@ -131,6 +137,8 @@ public class BlockpieceModVariables {
 			DevilFruit = nbt.getString("DevilFruit");
 			Race = nbt.getString("Race");
 			FightingStyle = nbt.getString("FightingStyle");
+			SwitchCurrentMove = nbt.getDouble("SwitchCurrentMove");
+			SelectedMove = nbt.getString("SelectedMove");
 		}
 	}
 
@@ -159,6 +167,8 @@ public class BlockpieceModVariables {
 					variables.DevilFruit = message.data.DevilFruit;
 					variables.Race = message.data.Race;
 					variables.FightingStyle = message.data.FightingStyle;
+					variables.SwitchCurrentMove = message.data.SwitchCurrentMove;
+					variables.SelectedMove = message.data.SelectedMove;
 				}
 			});
 			context.setPacketHandled(true);

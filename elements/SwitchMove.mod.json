@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Switch Move",
+    "keyBindingCategoryKey": "bp",
+    "onKeyPressed": {
+      "name": "SwitchMoveOnKeyPressed"
+    }
+  }
+}
