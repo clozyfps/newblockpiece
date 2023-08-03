@@ -1,13 +1,200 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "SwitchMoveset",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moveset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/network/SwitchMovesetMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SwitchMovesetProcedure",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moveset_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/SwitchMovesetProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "UseMove",
+      "type": "keybind",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_move",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/network/UseMoveMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseMoveProcedure",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_move_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/UseMoveProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "Ope",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/OpeProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Mera",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mera",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Bari",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bari",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BariProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Buddha",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buddha",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BuddhaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Gum",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gum",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/GumProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Movesets"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "SelectedMoveset",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "DevilFruit",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Race",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "FightingStyle",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "key.categories.bp": "Block Piece",
+      "key.blockpiece.switch_moveset": "Switch Moveset",
+      "key.blockpiece.use_move": "Use Move"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Movesets",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "blockpiece",
@@ -23,7 +210,6 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
-      "pehkui",
       "geckolib",
       "playeranimator"
     ],

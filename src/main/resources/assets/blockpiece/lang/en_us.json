@@ -1,1 +1,5 @@
-{}
+{
+  "key.categories.bp": "Block Piece",
+  "key.blockpiece.switch_moveset": "Switch Moveset",
+  "key.blockpiece.use_move": "Use Move"
+}
