@@ -1,19 +1,5 @@
 {
-  "mod_elements": [
-    {
-      "name": "Test",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/procedures/TestProcedure.java"
-        ],
-        "dependencies": []
-      }
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
@@ -25,7 +11,7 @@
   },
   "workspaceSettings": {
     "modid": "blockpiece",
-    "modName": "blockpiece",
+    "modName": "Block Piece",
     "version": "1.0.0",
     "author": "jayso, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -37,6 +23,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.blockpiece",
     "lockBaseModFiles": false
   },
