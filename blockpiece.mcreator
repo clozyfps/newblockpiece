@@ -476,6 +476,21 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "MeraMeraFruitItem",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mera_mera_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/MeraMeraFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mera_mera_fruit_item.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -519,17 +534,18 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "key.blockpiece.switch_move": "Switch Move",
-      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
-      "entity.blockpiece.pistol_mob": "Pistol Mob",
-      "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
+      "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "entity.blockpiece.pistol_mob": "Pistol Mob",
+      "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
-      "key.blockpiece.use_move": "Use Move"
+      "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
   },
   "foldersRoot": {
