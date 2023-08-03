@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
+import net.mcreator.blockpiece.client.renderer.MarineRenderer;
+import net.mcreator.blockpiece.client.renderer.BazookaMobRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class BlockpieceModEntityRenderers {
@@ -18,5 +20,7 @@ public class BlockpieceModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(BlockpieceModEntities.PISTOL_MOB_FORWARD.get(), PistolMobForwardRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.PISTOL_MOB.get(), PistolMobRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.BAZOOKA_MOB.get(), BazookaMobRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.MARINE.get(), MarineRenderer::new);
 	}
 }

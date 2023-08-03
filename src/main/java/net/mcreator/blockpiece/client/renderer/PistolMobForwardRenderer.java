@@ -15,6 +15,6 @@ public class PistolMobForwardRenderer extends MobRenderer<PistolMobForwardEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(PistolMobForwardEntity entity) {
-		return new ResourceLocation("blockpiece:textures/entities/armnew.png");
+		return new ResourceLocation("blockpiece:textures/entities/newarm.png");
 	}
 }

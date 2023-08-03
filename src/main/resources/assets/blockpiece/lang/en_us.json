@@ -1,8 +1,12 @@
 {
   "key.blockpiece.switch_move": "Switch Move",
   "key.categories.bp": "Block Piece",
+  "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+  "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+  "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
   "entity.blockpiece.pistol_mob": "Pistol Mob",
   "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
   "key.blockpiece.switch_moveset": "Switch Moveset",
+  "entity.blockpiece.marine": "Marine",
   "key.blockpiece.use_move": "Use Move"
 }

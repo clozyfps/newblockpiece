@@ -13,8 +13,6 @@
  */
 package net.mcreator.blockpiece;
 
-import software.bernie.geckolib3.GeckoLib;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -31,6 +29,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.blockpiece.init.BlockpieceModTabs;
+import net.mcreator.blockpiece.init.BlockpieceModItems;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 
 import java.util.function.Supplier;
@@ -49,12 +49,12 @@ public class BlockpieceMod {
 
 	public BlockpieceMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		BlockpieceModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		BlockpieceModItems.REGISTRY.register(bus);
 		BlockpieceModEntities.REGISTRY.register(bus);
 
-		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

@@ -402,11 +402,90 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "BazookaMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BazookaMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "BazookaMob",
+      "type": "livingentity",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/BazookaMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/BazookaMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "Marine",
+      "type": "livingentity",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
+          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BlockPieceMobs",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_mobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
     }
   ],
   "variable_elements": [
@@ -452,9 +531,13 @@
     "en_us": {
       "key.blockpiece.switch_move": "Switch Move",
       "key.categories.bp": "Block Piece",
+      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
+      "entity.blockpiece.marine": "Marine",
       "key.blockpiece.use_move": "Use Move"
     }
   },
