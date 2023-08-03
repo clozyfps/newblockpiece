@@ -9,13 +9,13 @@ import net.minecraft.sounds.SoundEvent;
 
 import javax.annotation.Nullable;
 
-public class PistolMobForwardEntity extends Monster {
+public class BazookaMobEntity extends Monster {
 
-	public PistolMobForwardEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BlockpieceModEntities.PISTOL_MOB_FORWARD.get(), world);
+	public BazookaMobEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(BlockpieceModEntities.BAZOOKA_MOB.get(), world);
 	}
 
-	public PistolMobForwardEntity(EntityType<PistolMobForwardEntity> type, Level world) {
+	public BazookaMobEntity(EntityType<BazookaMobEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
@@ -32,19 +32,6 @@ public class PistolMobForwardEntity extends Monster {
 	protected void registerGoals() {
 		super.registerGoals();
 
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
-
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-			}
-
-		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -54,12 +41,12 @@ public class PistolMobForwardEntity extends Monster {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
@@ -96,7 +83,9 @@ public class PistolMobForwardEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		PistolMobForwardOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		BazookaMobOnInitialEntitySpawnProcedure.execute(
+
+		);
 		return retval;
 	}
 
@@ -124,8 +113,6 @@ public class PistolMobForwardEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 
 		return builder;
 	}

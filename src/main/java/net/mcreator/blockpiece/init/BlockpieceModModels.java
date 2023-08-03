@@ -13,6 +13,7 @@ import net.mcreator.blockpiece.client.model.Modelmihawkcape;
 import net.mcreator.blockpiece.client.model.Modellonghandnew;
 import net.mcreator.blockpiece.client.model.Modellonghandfoward;
 import net.mcreator.blockpiece.client.model.Modellonghand;
+import net.mcreator.blockpiece.client.model.Modelbazooka;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class BlockpieceModModels {
@@ -21,6 +22,7 @@ public class BlockpieceModModels {
 		event.registerLayerDefinition(Modelmihawkcape.LAYER_LOCATION, Modelmihawkcape::createBodyLayer);
 		event.registerLayerDefinition(Modellonghand.LAYER_LOCATION, Modellonghand::createBodyLayer);
 		event.registerLayerDefinition(Modellonghandnew.LAYER_LOCATION, Modellonghandnew::createBodyLayer);
+		event.registerLayerDefinition(Modelbazooka.LAYER_LOCATION, Modelbazooka::createBodyLayer);
 		event.registerLayerDefinition(Modellonghandfoward.LAYER_LOCATION, Modellonghandfoward::createBodyLayer);
 	}
 }
