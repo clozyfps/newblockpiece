@@ -5,7 +5,7 @@
     "mobName": "Pistol Mob Forward",
     "mobLabel": "",
     "mobModelName": "Modellonghandfoward",
-    "mobModelTexture": "armnew.png",
+    "mobModelTexture": "longarm.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false

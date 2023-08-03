@@ -1,8 +1,13 @@
 {
   "key.blockpiece.switch_move": "Switch Move",
+  "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
   "key.categories.bp": "Block Piece",
+  "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
   "entity.blockpiece.pistol_mob": "Pistol Mob",
   "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+  "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+  "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+  "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
   "key.blockpiece.switch_moveset": "Switch Moveset",
   "key.blockpiece.use_move": "Use Move"
 }

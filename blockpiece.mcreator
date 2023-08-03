@@ -407,6 +407,75 @@
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "MihawkCapeArmor",
+      "type": "armor",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mihawk_cape_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "BlockPieceArmor",
+      "type": "tab",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_armor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BlockPieceFruits",
+      "type": "tab",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_fruits",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "OpeOpeFruitItem",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope_ope_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GumoGumoFruitItem",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gumo_gumo_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/gumo_gumo_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/GumoGumoFruitItemItem.java"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -451,9 +520,14 @@
   "language_map": {
     "en_us": {
       "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "key.categories.bp": "Block Piece",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "key.blockpiece.switch_moveset": "Switch Moveset",
       "key.blockpiece.use_move": "Use Move"
     }
