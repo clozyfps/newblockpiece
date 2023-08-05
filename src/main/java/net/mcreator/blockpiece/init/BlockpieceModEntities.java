@@ -19,6 +19,8 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
+import net.mcreator.blockpiece.entity.InvisMobEntity;
+import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
 import net.mcreator.blockpiece.entity.BazookaMobEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
@@ -35,6 +37,10 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<MarineEntity>of(MarineEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarineEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InvisMobEntity>> INVIS_MOB = register("invis_mob",
+			EntityType.Builder.<InvisMobEntity>of(InvisMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvisMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ExplosionBlocksEntity>> EXPLOSION_BLOCKS = register("projectile_explosion_blocks", EntityType.Builder.<ExplosionBlocksEntity>of(ExplosionBlocksEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(ExplosionBlocksEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -47,6 +53,7 @@ public class BlockpieceModEntities {
 			PistolMobEntity.init();
 			BazookaMobEntity.init();
 			MarineEntity.init();
+			InvisMobEntity.init();
 		});
 	}
 
@@ -56,5 +63,6 @@ public class BlockpieceModEntities {
 		event.put(PISTOL_MOB.get(), PistolMobEntity.createAttributes().build());
 		event.put(BAZOOKA_MOB.get(), BazookaMobEntity.createAttributes().build());
 		event.put(MARINE.get(), MarineEntity.createAttributes().build());
+		event.put(INVIS_MOB.get(), InvisMobEntity.createAttributes().build());
 	}
 }

@@ -571,6 +571,104 @@
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "InvisMob",
+      "type": "livingentity",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invis_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "SmokeParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/particle/SmokeParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/smoke_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ExplosionBlocksMain",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/ExplosionBlocksMainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/ExplosionBlocks"
+    },
+    {
+      "name": "ExplosionBlocksTicking",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks_ticking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/ExplosionBlocksTickingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/ExplosionBlocks"
+    },
+    {
+      "name": "ExplosionBlocks",
+      "type": "rangeditem",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
+          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java"
+        ]
+      },
+      "path": "~/Items/AbilityItems"
     }
   ],
   "variable_elements": [
@@ -621,6 +719,7 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.marine": "Marine",
+      "entity.blockpiece.invis_mob": "Invis Mob",
       "key.blockpiece.switch_move": "Switch Move",
       "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
@@ -628,6 +727,7 @@
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
+      "item.blockpiece.explosion_blocks": "`",
       "key.blockpiece.use_move": "Use Move",
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
@@ -641,7 +741,12 @@
       },
       {
         "name": "Procedures",
-        "children": []
+        "children": [
+          {
+            "name": "ExplosionBlocks",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Advancements",
@@ -666,7 +771,12 @@
       },
       {
         "name": "Items",
-        "children": []
+        "children": [
+          {
+            "name": "AbilityItems",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Biomes",

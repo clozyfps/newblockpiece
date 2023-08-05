@@ -6,6 +6,7 @@
   "itemGroup.tabblock_piece_armor": "Block Piece Armor",
   "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
   "entity.blockpiece.marine": "Marine",
+  "entity.blockpiece.invis_mob": "Invis Mob",
   "key.blockpiece.switch_move": "Switch Move",
   "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
   "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
@@ -13,6 +14,7 @@
   "entity.blockpiece.pistol_mob": "Pistol Mob",
   "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
   "key.blockpiece.switch_moveset": "Switch Moveset",
+  "item.blockpiece.explosion_blocks": "`",
   "key.blockpiece.use_move": "Use Move",
   "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
 }
