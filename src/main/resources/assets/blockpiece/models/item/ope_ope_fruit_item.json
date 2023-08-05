@@ -1,0 +1,7 @@
+{
+  "parent": "blockpiece:custom/opefruit",
+  "textures": {
+    "0": "blockpiece:blocks/opefruit",
+    "particle": "blockpiece:items/opefruititemmodel"
+  }
+}

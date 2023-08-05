@@ -1,0 +1,7 @@
+{
+  "parent": "blockpiece:custom/merafruit",
+  "textures": {
+    "0": "blockpiece:blocks/merafruit",
+    "particle": "blockpiece:items/merafruititemmodel"
+  }
+}

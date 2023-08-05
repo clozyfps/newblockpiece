@@ -1,0 +1,7 @@
+{
+  "parent": "blockpiece:custom/gumfruit",
+  "textures": {
+    "1": "blockpiece:blocks/gumfruit",
+    "particle": "blockpiece:items/gumfruititemmodel"
+  }
+}

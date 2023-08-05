@@ -407,6 +407,268 @@
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "MihawkCapeArmor",
+      "type": "armor",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mihawk_cape_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "BlockPieceArmor",
+      "type": "tab",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_armor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BlockPieceFruits",
+      "type": "tab",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_fruits",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "OpeOpeFruitItem",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope_ope_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GumoGumoFruitItem",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gumo_gumo_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/gumo_gumo_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/GumoGumoFruitItemItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MeraMeraFruitItem",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mera_mera_fruit_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/MeraMeraFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mera_mera_fruit_item.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BlockPieceMobs",
+      "type": "tab",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_mobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "Marine",
+      "type": "livingentity",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BazookaMob",
+      "type": "livingentity",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/BazookaMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/BazookaMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "BazookaMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BazookaMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "InvisMob",
+      "type": "livingentity",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invis_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "SmokeParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/particle/SmokeParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/smoke_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ExplosionBlocksMain",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/ExplosionBlocksMainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/ExplosionBlocks"
+    },
+    {
+      "name": "ExplosionBlocksTicking",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks_ticking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/ExplosionBlocksTickingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/ExplosionBlocks"
+    },
+    {
+      "name": "ExplosionBlocks",
+      "type": "rangeditem",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
+          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java"
+        ]
+      },
+      "path": "~/Items/AbilityItems"
     }
   ],
   "variable_elements": [
@@ -450,54 +712,48 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "key.blockpiece.switch_move": "Switch Move",
       "key.categories.bp": "Block Piece",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
+      "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
+      "entity.blockpiece.marine": "Marine",
+      "entity.blockpiece.invis_mob": "Invis Mob",
+      "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
-      "key.blockpiece.use_move": "Use Move"
+      "item.blockpiece.explosion_blocks": "`",
+      "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
-        "name": "Keybinds",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Movesets",
-        "children": []
-      },
-      {
-        "name": "Commands",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "AbilityMobs",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Items",
-        "children": []
-      },
-      {
         "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "ExplosionBlocks",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Advancements",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
         "children": []
       },
       {
@@ -510,27 +766,20 @@
         ]
       },
       {
-        "name": "Procedures",
-        "children": []
-      },
-      {
-        "name": "Biomes",
-        "children": []
-      },
-      {
         "name": "Dimensions",
         "children": []
       },
       {
-        "name": "Potion Effects",
-        "children": []
+        "name": "Items",
+        "children": [
+          {
+            "name": "AbilityItems",
+            "children": []
+          }
+        ]
       },
       {
-        "name": "Recipes",
-        "children": []
-      },
-      {
-        "name": "Advancements",
+        "name": "Biomes",
         "children": []
       },
       {
@@ -542,12 +791,47 @@
         "children": []
       },
       {
-        "name": "Structures",
+        "name": "Movesets",
+        "children": []
+      },
+      {
+        "name": "Recipes",
         "children": []
       },
       {
         "name": "Functions",
         "children": []
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "AbilityMobs",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },

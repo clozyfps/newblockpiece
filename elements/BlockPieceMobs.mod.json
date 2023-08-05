@@ -1,0 +1,11 @@
+{
+  "_fv": 43,
+  "_type": "tab",
+  "definition": {
+    "name": "Block Piece Mobs",
+    "icon": {
+      "value": "CUSTOM:Marine.spawn_egg"
+    },
+    "showSearch": true
+  }
+}
