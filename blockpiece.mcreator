@@ -495,6 +495,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -614,11 +615,21 @@
   "language_map": {
     "en_us": {
       "key.categories.bp": "Block Piece",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
+      "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
+      "entity.blockpiece.marine": "Marine",
       "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
-      "key.blockpiece.use_move": "Use Move"
+      "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
   },
   "foldersRoot": {
