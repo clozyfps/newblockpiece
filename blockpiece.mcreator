@@ -110,28 +110,7 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Movesets"
     },
@@ -423,8 +402,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -477,8 +456,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
         ]
       },
       "path": "~/Items"
@@ -516,7 +495,6 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
-      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -534,10 +512,10 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
-          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
           "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
