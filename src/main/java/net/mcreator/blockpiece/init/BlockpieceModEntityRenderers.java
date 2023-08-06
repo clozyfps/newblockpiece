@@ -14,6 +14,8 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
 import net.mcreator.blockpiece.client.renderer.MarineRenderer;
+import net.mcreator.blockpiece.client.renderer.InvisMobRenderer;
+import net.mcreator.blockpiece.client.renderer.ExplosionBlocksRenderer;
 import net.mcreator.blockpiece.client.renderer.EnkaiMobRenderer;
 import net.mcreator.blockpiece.client.renderer.DaiEnkaiMobRenderer;
 import net.mcreator.blockpiece.client.renderer.BazookaMobRenderer;
@@ -27,7 +29,9 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.BAZOOKA_MOB.get(), BazookaMobRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.MARINE.get(), MarineRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.HIKEN.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.INVIS_MOB.get(), InvisMobRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.ENKAI_MOB.get(), EnkaiMobRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.EXPLOSION_BLOCKS.get(), ExplosionBlocksRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_MOB.get(), DaiEnkaiMobRenderer::new);
 	}

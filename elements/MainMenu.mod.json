@@ -1,0 +1,137 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "DisplayPlayerGUI"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 244,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_df",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDF"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 232,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_fs",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayFS"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 232,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_race",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayRACE"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 224,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mainmapgui.png",
+          "use1Xscale": false,
+          "x": 86,
+          "y": -13
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_devil_fruit",
+          "text": {
+            "fixedValue": "Devil Fruit:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 225,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fighting_style",
+          "text": {
+            "fixedValue": "Fighting Style:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 218,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_race",
+          "text": {
+            "fixedValue": "Race:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 241,
+          "y": 173
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
