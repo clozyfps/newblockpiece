@@ -1,0 +1,23 @@
+{
+  "_fv": 43,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Dai Enkai",
+    "icon": "a2i2e_layer_2.png",
+    "color": {
+      "value": -3381760,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "DaiEnkaiOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "DaiEnkaiEffectExpires"
+    }
+  }
+}

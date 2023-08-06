@@ -1,11 +1,19 @@
 
 package net.mcreator.blockpiece.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.blockpiece.init.BlockpieceModTabs;
+
+import java.util.List;
 
 public class MeraMeraFruitItemItem extends Item {
-
 	public MeraMeraFruitItemItem() {
 		super(new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_FRUITS).stacksTo(1).fireResistant().rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
 
@@ -22,5 +30,4 @@ public class MeraMeraFruitItemItem extends Item {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("Mera Mera No Mi - Logia Fruit"));
 	}
-
 }

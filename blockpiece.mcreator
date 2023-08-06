@@ -110,7 +110,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -402,8 +423,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -456,8 +477,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
         ]
       },
       "path": "~/Items"
@@ -495,6 +516,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -512,10 +534,10 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
           "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -545,6 +567,457 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/BazookaMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "Hiken",
+      "type": "rangeditem",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hiken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/hiken.json",
+          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "HikenWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hiken_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HikenWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "HiganOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "higan_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HiganOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "Higan",
+      "type": "potioneffect",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "higan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/HiganMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Enkai",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/functions/enkai.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "EnkaiMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/EnkaiMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "EnkaiMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/EnkaiMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "EnkaiMob",
+      "type": "livingentity",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "DaiEnkaiOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DaiEnkaiOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "DaiEnkai",
+      "type": "potioneffect",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/DaiEnkaiMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "DaiEnkaiProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DaiEnkaiProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "DaiEnkaiProjectile",
+      "type": "rangeditem",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
+          "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "DaiEnkaiEffectExpires",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DaiEnkaiEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "EnkaiTower",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai_tower",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/EnkaiTowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "EnkaiGround",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enkai_ground",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/EnkaiGroundProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DaiEnkaiMob",
+      "type": "livingentity",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/DaiEnkaiMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "DaiEnkaiMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DaiEnkaiMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "DaiEnkaiMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dai_enkai_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DaiEnkaiMobOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -613,12 +1086,28 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "entity.blockpiece.enkai_mob": "Enkai Mob",
       "key.categories.bp": "Block Piece",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
+      "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "effect.blockpiece.higan": "Higan",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+      "item.blockpiece.hiken": "Hiken",
+      "entity.blockpiece.marine": "Marine",
+      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "effect.blockpiece.dai_enkai": "Dai Enkai",
+      "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
+      "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
+      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
-      "key.blockpiece.use_move": "Use Move"
+      "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
   },
   "foldersRoot": {
@@ -638,7 +1127,12 @@
       },
       {
         "name": "Potion Effects",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Overlay",
@@ -708,6 +1202,15 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Ranged Items",
+        "children": [
+          {
+            "name": "Abilities",
             "children": []
           }
         ]
