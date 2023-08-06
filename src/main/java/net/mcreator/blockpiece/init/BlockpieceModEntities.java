@@ -20,7 +20,11 @@ import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
 import net.mcreator.blockpiece.entity.InvisMobEntity;
+import net.mcreator.blockpiece.entity.HikenEntity;
 import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
+import net.mcreator.blockpiece.entity.EnkaiMobEntity;
+import net.mcreator.blockpiece.entity.DaiEnkaiProjectileEntity;
+import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
 import net.mcreator.blockpiece.entity.BazookaMobEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
@@ -39,8 +43,16 @@ public class BlockpieceModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<InvisMobEntity>> INVIS_MOB = register("invis_mob",
 			EntityType.Builder.<InvisMobEntity>of(InvisMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvisMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HikenEntity>> HIKEN = register("projectile_hiken",
+			EntityType.Builder.<HikenEntity>of(HikenEntity::new, MobCategory.MISC).setCustomClientFactory(HikenEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EnkaiMobEntity>> ENKAI_MOB = register("enkai_mob",
+			EntityType.Builder.<EnkaiMobEntity>of(EnkaiMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EnkaiMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ExplosionBlocksEntity>> EXPLOSION_BLOCKS = register("projectile_explosion_blocks", EntityType.Builder.<ExplosionBlocksEntity>of(ExplosionBlocksEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(ExplosionBlocksEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DaiEnkaiProjectileEntity>> DAI_ENKAI_PROJECTILE = register("projectile_dai_enkai_projectile", EntityType.Builder.<DaiEnkaiProjectileEntity>of(DaiEnkaiProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(DaiEnkaiProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DaiEnkaiMobEntity>> DAI_ENKAI_MOB = register("dai_enkai_mob", EntityType.Builder.<DaiEnkaiMobEntity>of(DaiEnkaiMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DaiEnkaiMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -54,6 +66,8 @@ public class BlockpieceModEntities {
 			BazookaMobEntity.init();
 			MarineEntity.init();
 			InvisMobEntity.init();
+			EnkaiMobEntity.init();
+			DaiEnkaiMobEntity.init();
 		});
 	}
 
@@ -64,5 +78,7 @@ public class BlockpieceModEntities {
 		event.put(BAZOOKA_MOB.get(), BazookaMobEntity.createAttributes().build());
 		event.put(MARINE.get(), MarineEntity.createAttributes().build());
 		event.put(INVIS_MOB.get(), InvisMobEntity.createAttributes().build());
+		event.put(ENKAI_MOB.get(), EnkaiMobEntity.createAttributes().build());
+		event.put(DAI_ENKAI_MOB.get(), DaiEnkaiMobEntity.createAttributes().build());
 	}
 }
