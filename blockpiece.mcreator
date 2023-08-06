@@ -110,7 +110,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -402,8 +423,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -456,8 +477,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
         ]
       },
       "path": "~/Items"
@@ -495,6 +516,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -512,10 +534,10 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
           "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -1269,6 +1291,21 @@
         ]
       },
       "path": "~/GUIs"
+    },
+    {
+      "name": "SetupAnimation",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/SetupAnimationProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -1312,27 +1349,33 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "key.blockpiece.open_main_menu": "Open Main Menu",
-      "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
+      "entity.blockpiece.enkai_mob": "Enkai Mob",
       "gui.blockpiece.main_menu.label_race": "Race:",
       "key.categories.bp": "Block Piece",
-      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
-      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
-      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "key.blockpiece.use_move": "Use Move",
+      "key.blockpiece.open_main_menu": "Open Main Menu",
+      "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "effect.blockpiece.higan": "Higan",
+      "item.blockpiece.hiken": "Hiken",
+      "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
       "key.blockpiece.switch_move": "Switch Move",
       "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
-      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
+      "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
-      "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.switch_moveset": "Switch Moveset",
       "item.blockpiece.explosion_blocks": "`",
-      "key.blockpiece.use_move": "Use Move",
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
     }
   },

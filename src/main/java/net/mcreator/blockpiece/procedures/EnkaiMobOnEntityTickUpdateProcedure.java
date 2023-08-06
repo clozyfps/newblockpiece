@@ -1,8 +1,29 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandFunction;
+
+import net.mcreator.blockpiece.BlockpieceMod;
+
+import java.util.stream.Collectors;
+import java.util.Optional;
+import java.util.List;
+import java.util.Comparator;
 
 public class EnkaiMobOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -46,6 +67,7 @@ public class EnkaiMobOnEntityTickUpdateProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 2, 2, false);
 			}
 		}
+		EnkaiTowerProcedure.execute(world, x, y, z, entity);
 		EnkaiGroundProcedure.execute(world, x, y, z);
 		if (world instanceof ServerLevel _level && _level.getServer() != null) {
 			Optional<CommandFunction> _fopt = _level.getServer().getFunctions().get(new ResourceLocation("blockpiece:enkai"));

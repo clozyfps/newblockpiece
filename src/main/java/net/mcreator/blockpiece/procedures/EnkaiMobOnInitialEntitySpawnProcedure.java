@@ -1,14 +1,15 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.BlockpieceMod;
 
 public class EnkaiMobOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		BlockpieceMod.queueServerWork(120, () -> {
+		BlockpieceMod.queueServerWork(50, () -> {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		});
