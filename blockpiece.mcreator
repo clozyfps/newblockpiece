@@ -241,7 +241,6 @@
     {
       "name": "SetDf",
       "type": "command",
-      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_df",
@@ -297,7 +296,6 @@
     {
       "name": "Moveset",
       "type": "overlay",
-      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -592,7 +590,6 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
-      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -1009,6 +1006,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "pehkui",
       "geckolib",
       "playeranimator"
     ],

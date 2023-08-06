@@ -10,6 +10,16 @@ dependencies {
 
 repositories {
   maven {
+      url = "https://jitpack.io"
+  }
+}
+
+dependencies {
+  implementation fg.deobf('com.github.Virtuoel:Pehkui:3.7.4-1.19.2-forge')
+}
+
+repositories {
+  maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }
 }
