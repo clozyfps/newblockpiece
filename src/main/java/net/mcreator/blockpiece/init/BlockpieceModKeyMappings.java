@@ -18,6 +18,7 @@ import net.minecraft.client.KeyMapping;
 import net.mcreator.blockpiece.network.UseMoveMessage;
 import net.mcreator.blockpiece.network.SwitchMovesetMessage;
 import net.mcreator.blockpiece.network.SwitchMoveMessage;
+import net.mcreator.blockpiece.network.OpenMainMenuMessage;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -61,12 +62,26 @@ public class BlockpieceModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPEN_MAIN_MENU = new KeyMapping("key.blockpiece.open_main_menu", GLFW.GLFW_KEY_M, "key.categories.ui") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				BlockpieceMod.PACKET_HANDLER.sendToServer(new OpenMainMenuMessage(0, 0));
+				OpenMainMenuMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(USE_MOVE);
 		event.register(SWITCH_MOVESET);
 		event.register(SWITCH_MOVE);
+		event.register(OPEN_MAIN_MENU);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -77,6 +92,7 @@ public class BlockpieceModKeyMappings {
 				USE_MOVE.consumeClick();
 				SWITCH_MOVESET.consumeClick();
 				SWITCH_MOVE.consumeClick();
+				OPEN_MAIN_MENU.consumeClick();
 			}
 		}
 	}

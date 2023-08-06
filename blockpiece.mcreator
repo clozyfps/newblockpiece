@@ -241,6 +241,7 @@
     {
       "name": "SetDf",
       "type": "command",
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_df",
@@ -296,6 +297,7 @@
     {
       "name": "Moveset",
       "type": "overlay",
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -590,6 +592,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -669,6 +672,155 @@
         ]
       },
       "path": "~/Items/AbilityItems"
+    },
+    {
+      "name": "DisplayPlayerGUI",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_player_gui",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayPlayerGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayDF",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_df",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayDFProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayFS",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_fs",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayFSProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayRACE",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_race",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayRACEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MainMenu",
+      "type": "gui",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "OpenMainMenuKeybindPressed",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_main_menu_keybind_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/OpenMainMenuKeybindPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "OpenMainMenu",
+      "type": "keybind",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/network/OpenMainMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
     }
   ],
   "variable_elements": [
@@ -712,6 +864,9 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "key.blockpiece.open_main_menu": "Open Main Menu",
+      "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
+      "gui.blockpiece.main_menu.label_race": "Race:",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
@@ -719,6 +874,7 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.marine": "Marine",
+      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "entity.blockpiece.invis_mob": "Invis Mob",
       "key.blockpiece.switch_move": "Switch Move",
       "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
@@ -832,6 +988,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "GUIs",
+        "children": []
       }
     ]
   },

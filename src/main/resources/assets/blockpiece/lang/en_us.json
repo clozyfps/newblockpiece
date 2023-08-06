@@ -1,4 +1,7 @@
 {
+  "key.blockpiece.open_main_menu": "Open Main Menu",
+  "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
+  "gui.blockpiece.main_menu.label_race": "Race:",
   "key.categories.bp": "Block Piece",
   "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
   "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
@@ -6,6 +9,7 @@
   "itemGroup.tabblock_piece_armor": "Block Piece Armor",
   "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
   "entity.blockpiece.marine": "Marine",
+  "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
   "entity.blockpiece.invis_mob": "Invis Mob",
   "key.blockpiece.switch_move": "Switch Move",
   "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
