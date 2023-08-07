@@ -110,7 +110,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -1315,12 +1336,14 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "entity.blockpiece.enkai_mob": "Enkai Mob",
       "gui.blockpiece.main_menu.label_race": "Race:",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "key.blockpiece.use_move": "Use Move",
@@ -1328,10 +1351,14 @@
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "effect.blockpiece.higan": "Higan",
+      "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
       "key.blockpiece.switch_move": "Switch Move",
       "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
+      "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "key.blockpiece.switch_moveset": "Switch Moveset",
