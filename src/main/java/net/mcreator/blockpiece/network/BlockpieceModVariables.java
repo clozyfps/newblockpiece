@@ -73,8 +73,8 @@ public class BlockpieceModVariables {
 			clone.SwitchCurrentMove = original.SwitchCurrentMove;
 			clone.SelectedMove = original.SelectedMove;
 			clone.BusoHakiProgress = original.BusoHakiProgress;
-			clone.KenHakiProgress = original.KenHakiProgress;
 			clone.HaoHakiProgress = original.HaoHakiProgress;
+			clone.KenHakiProgress = original.KenHakiProgress;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -116,10 +116,10 @@ public class BlockpieceModVariables {
 		public String Race = "";
 		public String FightingStyle = "";
 		public double SwitchCurrentMove = 0;
-		public String SelectedMove = "";
+		public String SelectedMove = "\"\"";
 		public double BusoHakiProgress = 0;
-		public double KenHakiProgress = 0;
 		public double HaoHakiProgress = 0;
+		public double KenHakiProgress = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -135,8 +135,8 @@ public class BlockpieceModVariables {
 			nbt.putDouble("SwitchCurrentMove", SwitchCurrentMove);
 			nbt.putString("SelectedMove", SelectedMove);
 			nbt.putDouble("BusoHakiProgress", BusoHakiProgress);
-			nbt.putDouble("KenHakiProgress", KenHakiProgress);
 			nbt.putDouble("HaoHakiProgress", HaoHakiProgress);
+			nbt.putDouble("KenHakiProgress", KenHakiProgress);
 			return nbt;
 		}
 
@@ -149,8 +149,8 @@ public class BlockpieceModVariables {
 			SwitchCurrentMove = nbt.getDouble("SwitchCurrentMove");
 			SelectedMove = nbt.getString("SelectedMove");
 			BusoHakiProgress = nbt.getDouble("BusoHakiProgress");
-			KenHakiProgress = nbt.getDouble("KenHakiProgress");
 			HaoHakiProgress = nbt.getDouble("HaoHakiProgress");
+			KenHakiProgress = nbt.getDouble("KenHakiProgress");
 		}
 	}
 
@@ -182,8 +182,8 @@ public class BlockpieceModVariables {
 					variables.SwitchCurrentMove = message.data.SwitchCurrentMove;
 					variables.SelectedMove = message.data.SelectedMove;
 					variables.BusoHakiProgress = message.data.BusoHakiProgress;
-					variables.KenHakiProgress = message.data.KenHakiProgress;
 					variables.HaoHakiProgress = message.data.HaoHakiProgress;
+					variables.KenHakiProgress = message.data.KenHakiProgress;
 				}
 			});
 			context.setPacketHandled(true);

@@ -25,12 +25,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Mera Mera No Mi - Logia Fruit"
+      "Logia Type Fruit"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onFinishUsingItem": {
+      "name": "MeraMeraFruitItemPlayerFinishesUsingItem"
+    },
     "isFood": true,
     "nutritionalValue": 4,
     "saturation": 0.3,
@@ -38,7 +41,7 @@
       "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": false,
+    "isAlwaysEdible": true,
     "animation": "eat"
   }
 }

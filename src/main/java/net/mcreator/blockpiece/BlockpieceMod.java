@@ -33,6 +33,8 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.blockpiece.init.BlockpieceModTabs;
 import net.mcreator.blockpiece.init.BlockpieceModParticleTypes;
+import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
+import net.mcreator.blockpiece.init.BlockpieceModMenus;
 import net.mcreator.blockpiece.init.BlockpieceModItems;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 
@@ -58,7 +60,10 @@ public class BlockpieceMod {
 		BlockpieceModItems.REGISTRY.register(bus);
 		BlockpieceModEntities.REGISTRY.register(bus);
 
+		BlockpieceModMobEffects.REGISTRY.register(bus);
+
 		BlockpieceModParticleTypes.REGISTRY.register(bus);
+		BlockpieceModMenus.REGISTRY.register(bus);
 
 		GeckoLib.initialize();
 	}

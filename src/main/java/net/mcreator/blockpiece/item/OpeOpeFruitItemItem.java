@@ -28,6 +28,6 @@ public class OpeOpeFruitItemItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("Ope Ope No Mi - Paramecia Fruit"));
+		list.add(Component.literal("Paramecia Type Fruit"));
 	}
 }

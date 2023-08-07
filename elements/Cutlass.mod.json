@@ -1,0 +1,29 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "minecraft_dungeons_cutlass_updated",
+    "customModelName": "cutlass1:default",
+    "name": "Cutlass",
+    "specialInfo": [
+      "A basic pirates cutlass"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:BlockPieceItems"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 3.0,
+    "enchantability": 5,
+    "damageVsEntity": 6.0,
+    "usageCount": 800,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,10 +1,8 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.blockpiece.network.BlockpieceModVariables;
-
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
 public class SetDevilFruitProcedure {
 	public static void execute(Entity entity, HashMap cmdparams) {
@@ -19,10 +17,11 @@ public class SetDevilFruitProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Ope") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("ope")
-				|| (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Ope Ope") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("ope ope")) {
+		}
+		if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Mera") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("mera")
+				|| (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Mera Mera") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("mera mera")) {
 			{
-				String _setval = "Ope";
+				String _setval = "Mera";
 				entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.DevilFruit = _setval;
 					capability.syncPlayerVariables(entity);

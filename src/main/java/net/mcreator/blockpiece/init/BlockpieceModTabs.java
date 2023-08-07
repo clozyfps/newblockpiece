@@ -11,6 +11,7 @@ public class BlockpieceModTabs {
 	public static CreativeModeTab TAB_BLOCK_PIECE_ARMOR;
 	public static CreativeModeTab TAB_BLOCK_PIECE_FRUITS;
 	public static CreativeModeTab TAB_BLOCK_PIECE_MOBS;
+	public static CreativeModeTab TAB_BLOCK_PIECE_ITEMS;
 
 	public static void load() {
 		TAB_BLOCK_PIECE_ARMOR = new CreativeModeTab("tabblock_piece_armor") {
@@ -39,6 +40,17 @@ public class BlockpieceModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(BlockpieceModItems.MARINE_SPAWN_EGG.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return true;
+			}
+		}.setBackgroundSuffix("item_search.png");
+		TAB_BLOCK_PIECE_ITEMS = new CreativeModeTab("tabblock_piece_items") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(BlockpieceModItems.CUTLASS.get());
 			}
 
 			@Override
