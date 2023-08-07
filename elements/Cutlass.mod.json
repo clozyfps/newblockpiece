@@ -6,7 +6,9 @@
     "texture": "minecraft_dungeons_cutlass_updated",
     "customModelName": "cutlass1:default",
     "name": "Cutlass",
-    "specialInfo": [],
+    "specialInfo": [
+      "A basic pirates cutlass"
+    ],
     "creativeTab": {
       "value": "CUSTOM:BlockPieceItems"
     },

@@ -477,8 +477,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
         ]
       },
       "path": "~/Items"
@@ -1312,8 +1312,8 @@
       "registry_name": "cutlass",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java",
-          "src/main/resources/assets/blockpiece/models/item/cutlass.json"
+          "src/main/resources/assets/blockpiece/models/item/cutlass.json",
+          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java"
         ]
       },
       "path": "~/Items"
