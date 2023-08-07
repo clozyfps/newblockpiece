@@ -1,18 +1,7 @@
 
 package net.mcreator.blockpiece.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.network.chat.Component;
-
-import net.mcreator.blockpiece.init.BlockpieceModTabs;
-
-import java.util.List;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class CutlassItem extends SwordItem {
 	public CutlassItem() {
@@ -40,7 +29,7 @@ public class CutlassItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -1f, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_ITEMS));
+		}, 3, -1f, new Item.Properties().tab(BlockpieceModTabs.TAB_DELETED_MOD_ELEMENT));
 	}
 
 	@Override

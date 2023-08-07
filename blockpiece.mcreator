@@ -1390,12 +1390,37 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/DisplayBeliProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MasterySystem",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mastery_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "LevelingSystem",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leveling_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
+        ],
+        "dependencies": []
       },
       "path": "~/Procedures"
     }
@@ -1439,6 +1464,24 @@
     },
     {
       "name": "Beli",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "BusoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HaoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "KenHakiProgress",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
