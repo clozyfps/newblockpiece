@@ -1,13 +1,6 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
-
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.blockpiece.network.BlockpieceModVariables;
 
 import javax.annotation.Nullable;
 

@@ -78,12 +78,13 @@ public class BlockpieceModVariables {
 			clone.BusoHakiProgress = original.BusoHakiProgress;
 			clone.HaoHakiProgress = original.HaoHakiProgress;
 			clone.KenHakiProgress = original.KenHakiProgress;
-			clone.DFMasteryMultiplier = original.DFMasteryMultiplier;
-			clone.RaceMasteryMultiplier = original.RaceMasteryMultiplier;
 			clone.FSMasterMultiplier = original.FSMasterMultiplier;
+			clone.DFMasteryMultiplier = original.DFMasteryMultiplier;
+			clone.ExpCap = original.ExpCap;
+			clone.RaceMasteryMultiplier = original.RaceMasteryMultiplier;
 			clone.Level = original.Level;
 			clone.Exp = original.Exp;
-			clone.ExpCap = original.ExpCap;
+			clone.Beli = original.Beli;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -129,12 +130,13 @@ public class BlockpieceModVariables {
 		public double BusoHakiProgress = 0;
 		public double HaoHakiProgress = 0;
 		public double KenHakiProgress = 0;
-		public double DFMasteryMultiplier = 1.0;
-		public double RaceMasteryMultiplier = 1.0;
 		public double FSMasterMultiplier = 1.0;
+		public double DFMasteryMultiplier = 1.0;
+		public double ExpCap = 100.0;
+		public double RaceMasteryMultiplier = 1.0;
 		public double Level = 1.0;
 		public double Exp = 0;
-		public double ExpCap = 100.0;
+		public double Beli = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -152,12 +154,13 @@ public class BlockpieceModVariables {
 			nbt.putDouble("BusoHakiProgress", BusoHakiProgress);
 			nbt.putDouble("HaoHakiProgress", HaoHakiProgress);
 			nbt.putDouble("KenHakiProgress", KenHakiProgress);
-			nbt.putDouble("DFMasteryMultiplier", DFMasteryMultiplier);
-			nbt.putDouble("RaceMasteryMultiplier", RaceMasteryMultiplier);
 			nbt.putDouble("FSMasterMultiplier", FSMasterMultiplier);
+			nbt.putDouble("DFMasteryMultiplier", DFMasteryMultiplier);
+			nbt.putDouble("ExpCap", ExpCap);
+			nbt.putDouble("RaceMasteryMultiplier", RaceMasteryMultiplier);
 			nbt.putDouble("Level", Level);
 			nbt.putDouble("Exp", Exp);
-			nbt.putDouble("ExpCap", ExpCap);
+			nbt.putDouble("Beli", Beli);
 			return nbt;
 		}
 
@@ -172,12 +175,13 @@ public class BlockpieceModVariables {
 			BusoHakiProgress = nbt.getDouble("BusoHakiProgress");
 			HaoHakiProgress = nbt.getDouble("HaoHakiProgress");
 			KenHakiProgress = nbt.getDouble("KenHakiProgress");
-			DFMasteryMultiplier = nbt.getDouble("DFMasteryMultiplier");
-			RaceMasteryMultiplier = nbt.getDouble("RaceMasteryMultiplier");
 			FSMasterMultiplier = nbt.getDouble("FSMasterMultiplier");
+			DFMasteryMultiplier = nbt.getDouble("DFMasteryMultiplier");
+			ExpCap = nbt.getDouble("ExpCap");
+			RaceMasteryMultiplier = nbt.getDouble("RaceMasteryMultiplier");
 			Level = nbt.getDouble("Level");
 			Exp = nbt.getDouble("Exp");
-			ExpCap = nbt.getDouble("ExpCap");
+			Beli = nbt.getDouble("Beli");
 		}
 	}
 
@@ -211,12 +215,13 @@ public class BlockpieceModVariables {
 					variables.BusoHakiProgress = message.data.BusoHakiProgress;
 					variables.HaoHakiProgress = message.data.HaoHakiProgress;
 					variables.KenHakiProgress = message.data.KenHakiProgress;
-					variables.DFMasteryMultiplier = message.data.DFMasteryMultiplier;
-					variables.RaceMasteryMultiplier = message.data.RaceMasteryMultiplier;
 					variables.FSMasterMultiplier = message.data.FSMasterMultiplier;
+					variables.DFMasteryMultiplier = message.data.DFMasteryMultiplier;
+					variables.ExpCap = message.data.ExpCap;
+					variables.RaceMasteryMultiplier = message.data.RaceMasteryMultiplier;
 					variables.Level = message.data.Level;
 					variables.Exp = message.data.Exp;
-					variables.ExpCap = message.data.ExpCap;
+					variables.Beli = message.data.Beli;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,24 +1,8 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.blockpiece.network.BlockpieceModVariables;
-import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
-import net.mcreator.blockpiece.init.BlockpieceModEntities;
-import net.mcreator.blockpiece.entity.HikenEntity;
-import net.mcreator.blockpiece.entity.EnkaiMobEntity;
-import net.mcreator.blockpiece.BlockpieceMod;
+import javax.annotation.Nullable;
 
 public class MeraProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -26,6 +10,14 @@ public class MeraProcedure {
 			return;
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Hiken")) {
+			if (world.isClientSide()) {
+				if (entity instanceof AbstractClientPlayer player) {
+					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
+					if (animation != null && !animation.isActive()) {
+						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("blockpiece", "hiken"))));
+					}
+				}
+			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
 			{
@@ -49,16 +41,44 @@ public class MeraProcedure {
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(15, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Higan")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(50, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
+			if (world.isClientSide()) {
+				if (entity instanceof AbstractClientPlayer player) {
+					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
+					if (animation != null && !animation.isActive()) {
+						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("blockpiece", "higan"))));
+					}
+				}
+			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(BlockpieceModMobEffects.HIGAN.get(), 50, 1, false, false));
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
-				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Enkai")) {
+				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Enkai Hibashira")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(50, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
+			if (world.isClientSide()) {
+				if (entity instanceof AbstractClientPlayer player) {
+					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
+					if (animation != null && !animation.isActive()) {
+						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("blockpiece", "enkaihibashira"))));
+					}
+				}
+			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
 			if (world instanceof ServerLevel _level) {
@@ -72,16 +92,28 @@ public class MeraProcedure {
 				world.addFreshEntity(entityToSpawn);
 			}
 			entity.getPersistentData().putBoolean("usedenkai", true);
-			BlockpieceMod.queueServerWork(120, () -> {
+			BlockpieceMod.queueServerWork(50, () -> {
 				entity.getPersistentData().putBoolean("usedenkai", false);
 			});
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 250, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 250, false, false));
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Dai Enkai")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(25, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
+			if (world.isClientSide()) {
+				if (entity instanceof AbstractClientPlayer player) {
+					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
+					if (animation != null && !animation.isActive()) {
+						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("blockpiece", "enkaientai"))));
+					}
+				}
+			}
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(BlockpieceModMobEffects.DAI_ENKAI.get(), 40, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(BlockpieceModMobEffects.DAI_ENKAI.get(), 10, 1, false, false));
 		}
 	}
 }

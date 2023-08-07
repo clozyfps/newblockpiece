@@ -459,8 +459,8 @@
       "registry_name": "mihawk_cape_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json",
-          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -632,7 +632,6 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
-      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -1441,6 +1440,42 @@
         "dependencies": []
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "MarineOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MarineOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DisplayBeli",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_beli",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayBeliProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -1499,19 +1534,25 @@
       "value": "0"
     },
     {
+      "name": "FSMasterMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
       "name": "DFMasteryMultiplier",
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
     },
     {
-      "name": "RaceMasteryMultiplier",
+      "name": "ExpCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "100.0"
     },
     {
-      "name": "FSMasterMultiplier",
+      "name": "RaceMasteryMultiplier",
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
@@ -1529,10 +1570,10 @@
       "value": "0"
     },
     {
-      "name": "ExpCap",
+      "name": "Beli",
       "type": "number",
       "scope": "player_persistent",
-      "value": "100.0"
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1551,6 +1592,7 @@
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
