@@ -36,7 +36,7 @@ public class HiganOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		double raytrace_distance = 0;
-		raytrace_distance = 15;
+		raytrace_distance = 5;
 		for (int index0 = 0; index0 < 14; index0++) {
 			if (!world.getBlockState(new BlockPos(
 					entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
