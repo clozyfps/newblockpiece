@@ -1,8 +1,6 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class DisplayPlayerGUIProcedure {
 	public static Entity execute(Entity entity) {

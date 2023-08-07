@@ -1,8 +1,13 @@
 
 package net.mcreator.blockpiece.potion;
 
-public class HiganMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.blockpiece.procedures.HiganOnEffectActiveTickProcedure;
+
+public class HiganMobEffect extends MobEffect {
 	public HiganMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -26368);
 	}
@@ -21,5 +26,4 @@ public class HiganMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

@@ -1,8 +1,28 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Arrow;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.blockpiece.init.BlockpieceModParticleTypes;
+import net.mcreator.blockpiece.BlockpieceMod;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class HikenWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -19,7 +39,7 @@ public class HikenWhileProjectileFlyingTickProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (BlockpieceModParticleTypes.FIRE_PARTICLE.get()), x, y, z, 3, 1, 3, 1, 0);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.1, 3, 0.1, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 1, 3, 1, 0);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		BlockpieceMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
