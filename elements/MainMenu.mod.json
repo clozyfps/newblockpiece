@@ -124,6 +124,37 @@
           "x": 241,
           "y": 173
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_beli",
+          "text": {
+            "fixedValue": "Beli:"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 60
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_beli",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayBeli"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "x": 163,
+          "y": 60
+        }
       }
     ],
     "gridSettings": {

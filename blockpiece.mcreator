@@ -1377,6 +1377,27 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "DisplayBeli",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_beli",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayBeliProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -1415,6 +1436,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "Beli",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1427,12 +1454,13 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
-      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "entity.blockpiece.marine": "Marine",
+      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",

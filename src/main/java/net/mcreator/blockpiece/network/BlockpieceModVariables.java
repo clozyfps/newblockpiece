@@ -72,6 +72,7 @@ public class BlockpieceModVariables {
 			clone.FightingStyle = original.FightingStyle;
 			clone.SwitchCurrentMove = original.SwitchCurrentMove;
 			clone.SelectedMove = original.SelectedMove;
+			clone.Beli = original.Beli;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -114,6 +115,7 @@ public class BlockpieceModVariables {
 		public String FightingStyle = "";
 		public double SwitchCurrentMove = 0;
 		public String SelectedMove = "\"\"";
+		public double Beli = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,6 +130,7 @@ public class BlockpieceModVariables {
 			nbt.putString("FightingStyle", FightingStyle);
 			nbt.putDouble("SwitchCurrentMove", SwitchCurrentMove);
 			nbt.putString("SelectedMove", SelectedMove);
+			nbt.putDouble("Beli", Beli);
 			return nbt;
 		}
 
@@ -139,6 +142,7 @@ public class BlockpieceModVariables {
 			FightingStyle = nbt.getString("FightingStyle");
 			SwitchCurrentMove = nbt.getDouble("SwitchCurrentMove");
 			SelectedMove = nbt.getString("SelectedMove");
+			Beli = nbt.getDouble("Beli");
 		}
 	}
 
@@ -169,6 +173,7 @@ public class BlockpieceModVariables {
 					variables.FightingStyle = message.data.FightingStyle;
 					variables.SwitchCurrentMove = message.data.SwitchCurrentMove;
 					variables.SelectedMove = message.data.SelectedMove;
+					variables.Beli = message.data.Beli;
 				}
 			});
 			context.setPacketHandled(true);
