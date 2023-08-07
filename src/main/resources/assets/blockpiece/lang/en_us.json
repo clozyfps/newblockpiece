@@ -4,6 +4,7 @@
   "key.categories.bp": "Block Piece",
   "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
   "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+  "item.blockpiece.cutlass": "Cutlass",
   "entity.blockpiece.marine": "Marine",
   "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
   "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
@@ -24,6 +25,7 @@
   "effect.blockpiece.dai_enkai": "Dai Enkai",
   "entity.blockpiece.bazooka_mob": "Bazooka Mob",
   "entity.blockpiece.pistol_mob": "Pistol Mob",
+  "itemGroup.tabblock_piece_items": "Block Piece Items",
   "key.blockpiece.switch_moveset": "Switch Moveset",
   "item.blockpiece.explosion_blocks": "`",
   "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"

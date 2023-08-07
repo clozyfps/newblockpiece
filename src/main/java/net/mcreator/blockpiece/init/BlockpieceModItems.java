@@ -18,6 +18,7 @@ import net.mcreator.blockpiece.item.HikenItem;
 import net.mcreator.blockpiece.item.GumoGumoFruitItemItem;
 import net.mcreator.blockpiece.item.ExplosionBlocksItem;
 import net.mcreator.blockpiece.item.DaiEnkaiProjectileItem;
+import net.mcreator.blockpiece.item.CutlassItem;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 public class BlockpieceModItems {
@@ -30,4 +31,5 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> HIKEN = REGISTRY.register("hiken", () -> new HikenItem());
 	public static final RegistryObject<Item> EXPLOSION_BLOCKS = REGISTRY.register("explosion_blocks", () -> new ExplosionBlocksItem());
 	public static final RegistryObject<Item> DAI_ENKAI_PROJECTILE = REGISTRY.register("dai_enkai_projectile", () -> new DaiEnkaiProjectileItem());
+	public static final RegistryObject<Item> CUTLASS = REGISTRY.register("cutlass", () -> new CutlassItem());
 }
