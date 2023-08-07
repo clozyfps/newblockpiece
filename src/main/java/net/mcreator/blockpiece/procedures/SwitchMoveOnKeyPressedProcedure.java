@@ -163,7 +163,7 @@ public class SwitchMoveOnKeyPressedProcedure {
 			}
 			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 3) {
 				{
-					String _setval = "Enkai";
+					String _setval = "Enkai Hibashira";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedMove = _setval;
 						capability.syncPlayerVariables(entity);

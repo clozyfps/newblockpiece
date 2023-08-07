@@ -9,7 +9,7 @@ public class EnkaiMobOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		BlockpieceMod.queueServerWork(120, () -> {
+		BlockpieceMod.queueServerWork(50, () -> {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		});

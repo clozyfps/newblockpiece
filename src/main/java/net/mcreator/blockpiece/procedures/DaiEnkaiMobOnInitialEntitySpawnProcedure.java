@@ -12,5 +12,9 @@ public class DaiEnkaiMobOnInitialEntitySpawnProcedure {
 		BlockpieceMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("enkaicurrent", true);
 		});
+		BlockpieceMod.queueServerWork(100, () -> {
+			if (!entity.level.isClientSide())
+				entity.discard();
+		});
 	}
 }
