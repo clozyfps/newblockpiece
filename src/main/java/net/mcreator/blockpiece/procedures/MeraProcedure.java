@@ -65,9 +65,17 @@ public class MeraProcedure {
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(15, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Higan")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(50, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
@@ -83,6 +91,10 @@ public class MeraProcedure {
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Enkai Hibashira")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(50, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
@@ -112,6 +124,10 @@ public class MeraProcedure {
 		}
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Dai Enkai")) {
+			entity.getPersistentData().putBoolean("usingmovedf", true);
+			BlockpieceMod.queueServerWork(25, () -> {
+				entity.getPersistentData().putBoolean("usingmovedf", false);
+			});
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("blockpiece", "player_animation"));
