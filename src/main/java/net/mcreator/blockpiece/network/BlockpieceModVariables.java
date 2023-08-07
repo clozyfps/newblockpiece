@@ -129,7 +129,7 @@ public class BlockpieceModVariables {
 		public String Race = "";
 		public String FightingStyle = "";
 		public double SwitchCurrentMove = 0;
-		public String SelectedMove = "\"\"";
+		public String SelectedMove = "Not Selected";
 		public double BusoHakiProgress = 0;
 		public double HaoHakiProgress = 0;
 		public double KenHakiProgress = 0;

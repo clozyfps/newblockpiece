@@ -18,6 +18,24 @@ public class SwitchMovesetProcedureProcedure {
 					});
 				}
 			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Fighting Style")) {
+				entity.getPersistentData().putString("fsMove", ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove));
+				if ((entity.getPersistentData().getString("dfMove")).isEmpty()) {
+					{
+						String _setval = "Not Selected";
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else {
+					{
+						String _setval = entity.getPersistentData().getString("dfMove");
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 				{
 					String _setval = "Devil Fruit";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -26,6 +44,24 @@ public class SwitchMovesetProcedureProcedure {
 					});
 				}
 			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")) {
+				entity.getPersistentData().putString("dfMove", ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove));
+				if ((entity.getPersistentData().getString("raceMove")).isEmpty()) {
+					{
+						String _setval = "Not Selected";
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else {
+					{
+						String _setval = entity.getPersistentData().getString("raceMove");
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 				{
 					String _setval = "Race";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -34,6 +70,24 @@ public class SwitchMovesetProcedureProcedure {
 					});
 				}
 			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Race")) {
+				entity.getPersistentData().putString("raceMove", ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove));
+				if ((entity.getPersistentData().getString("fsMove")).isEmpty()) {
+					{
+						String _setval = "Not Selected";
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else {
+					{
+						String _setval = entity.getPersistentData().getString("fsMove");
+						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SelectedMove = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 				{
 					String _setval = "Fighting Style";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -72,23 +126,6 @@ public class SwitchMovesetProcedureProcedure {
 					String _setval = "Devil Fruit";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedMoveset = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Shambles (Entity)")) {
-				{
-					String _setval = "Shambles (Block)";
-					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SelectedMove = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Shambles (Block)")) {
-				{
-					String _setval = "Shambles (Entity)";
-					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SelectedMove = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
