@@ -18,6 +18,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
+import net.mcreator.blockpiece.entity.MarineEntity;
+import net.mcreator.blockpiece.entity.InvisMobEntity;
+import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
+import net.mcreator.blockpiece.entity.BazookaMobEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,6 +31,16 @@ public class BlockpieceModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PistolMobForwardEntity::new).fireImmune().sized(1f, 0f));
 	public static final RegistryObject<EntityType<PistolMobEntity>> PISTOL_MOB = register("pistol_mob", EntityType.Builder.<PistolMobEntity>of(PistolMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(PistolMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BazookaMobEntity>> BAZOOKA_MOB = register("bazooka_mob", EntityType.Builder.<BazookaMobEntity>of(BazookaMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(BazookaMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MarineEntity>> MARINE = register("marine",
+			EntityType.Builder.<MarineEntity>of(MarineEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarineEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InvisMobEntity>> INVIS_MOB = register("invis_mob",
+			EntityType.Builder.<InvisMobEntity>of(InvisMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvisMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ExplosionBlocksEntity>> EXPLOSION_BLOCKS = register("projectile_explosion_blocks", EntityType.Builder.<ExplosionBlocksEntity>of(ExplosionBlocksEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(ExplosionBlocksEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -37,6 +51,9 @@ public class BlockpieceModEntities {
 		event.enqueueWork(() -> {
 			PistolMobForwardEntity.init();
 			PistolMobEntity.init();
+			BazookaMobEntity.init();
+			MarineEntity.init();
+			InvisMobEntity.init();
 		});
 	}
 
@@ -44,5 +61,8 @@ public class BlockpieceModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(PISTOL_MOB_FORWARD.get(), PistolMobForwardEntity.createAttributes().build());
 		event.put(PISTOL_MOB.get(), PistolMobEntity.createAttributes().build());
+		event.put(BAZOOKA_MOB.get(), BazookaMobEntity.createAttributes().build());
+		event.put(MARINE.get(), MarineEntity.createAttributes().build());
+		event.put(INVIS_MOB.get(), InvisMobEntity.createAttributes().build());
 	}
 }

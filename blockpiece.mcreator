@@ -95,7 +95,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/OpeProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -669,6 +690,36 @@
         ]
       },
       "path": "~/Items/AbilityItems"
+    },
+    {
+      "name": "LevelingSystem",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leveling_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MasterySystem",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mastery_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -706,7 +757,25 @@
       "name": "SelectedMove",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
+    },
+    {
+      "name": "BusoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "KenHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HaoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],

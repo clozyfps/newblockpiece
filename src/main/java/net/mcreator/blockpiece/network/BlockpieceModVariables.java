@@ -72,6 +72,9 @@ public class BlockpieceModVariables {
 			clone.FightingStyle = original.FightingStyle;
 			clone.SwitchCurrentMove = original.SwitchCurrentMove;
 			clone.SelectedMove = original.SelectedMove;
+			clone.BusoHakiProgress = original.BusoHakiProgress;
+			clone.KenHakiProgress = original.KenHakiProgress;
+			clone.HaoHakiProgress = original.HaoHakiProgress;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -113,7 +116,10 @@ public class BlockpieceModVariables {
 		public String Race = "";
 		public String FightingStyle = "";
 		public double SwitchCurrentMove = 0;
-		public String SelectedMove = "\"\"";
+		public String SelectedMove = "";
+		public double BusoHakiProgress = 0;
+		public double KenHakiProgress = 0;
+		public double HaoHakiProgress = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,6 +134,9 @@ public class BlockpieceModVariables {
 			nbt.putString("FightingStyle", FightingStyle);
 			nbt.putDouble("SwitchCurrentMove", SwitchCurrentMove);
 			nbt.putString("SelectedMove", SelectedMove);
+			nbt.putDouble("BusoHakiProgress", BusoHakiProgress);
+			nbt.putDouble("KenHakiProgress", KenHakiProgress);
+			nbt.putDouble("HaoHakiProgress", HaoHakiProgress);
 			return nbt;
 		}
 
@@ -139,6 +148,9 @@ public class BlockpieceModVariables {
 			FightingStyle = nbt.getString("FightingStyle");
 			SwitchCurrentMove = nbt.getDouble("SwitchCurrentMove");
 			SelectedMove = nbt.getString("SelectedMove");
+			BusoHakiProgress = nbt.getDouble("BusoHakiProgress");
+			KenHakiProgress = nbt.getDouble("KenHakiProgress");
+			HaoHakiProgress = nbt.getDouble("HaoHakiProgress");
 		}
 	}
 
@@ -169,6 +181,9 @@ public class BlockpieceModVariables {
 					variables.FightingStyle = message.data.FightingStyle;
 					variables.SwitchCurrentMove = message.data.SwitchCurrentMove;
 					variables.SelectedMove = message.data.SelectedMove;
+					variables.BusoHakiProgress = message.data.BusoHakiProgress;
+					variables.KenHakiProgress = message.data.KenHakiProgress;
+					variables.HaoHakiProgress = message.data.HaoHakiProgress;
 				}
 			});
 			context.setPacketHandled(true);
