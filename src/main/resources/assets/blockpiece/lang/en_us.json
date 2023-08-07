@@ -11,6 +11,7 @@
   "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
   "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
   "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+  "gui.blockpiece.main_menu.label_level": "Level : ",
   "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
   "gui.blockpiece.main_menu.label_beli": "Beli:",
   "key.blockpiece.use_move": "Use Move",

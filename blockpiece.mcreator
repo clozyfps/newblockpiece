@@ -459,8 +459,8 @@
       "registry_name": "mihawk_cape_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
-          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json",
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java"
         ]
       },
       "path": "~/Armor"
@@ -632,6 +632,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -723,7 +724,16 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -1473,7 +1483,12 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/DisplayBeliProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procedures"
     }
@@ -1534,7 +1549,7 @@
       "value": "0"
     },
     {
-      "name": "FSMasterMultiplier",
+      "name": "FSMasteryMultiplier",
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
@@ -1549,7 +1564,7 @@
       "name": "ExpCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "100.0"
+      "value": "15.0"
     },
     {
       "name": "RaceMasteryMultiplier",
@@ -1567,10 +1582,28 @@
       "name": "Exp",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Beli",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DFMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RaceMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FSMastery",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -1586,11 +1619,12 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
-      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "entity.blockpiece.marine": "Marine",
+      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "gui.blockpiece.main_menu.label_level": "Level : ",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
