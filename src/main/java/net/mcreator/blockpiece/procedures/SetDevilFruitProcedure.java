@@ -1,8 +1,10 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
+
+import java.util.HashMap;
 
 public class SetDevilFruitProcedure {
 	public static void execute(Entity entity, HashMap cmdparams) {

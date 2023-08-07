@@ -1,9 +1,28 @@
 package net.mcreator.blockpiece.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.blockpiece.world.inventory.MainMenuMenu;
+import net.mcreator.blockpiece.procedures.DisplayRACEProcedure;
+import net.mcreator.blockpiece.procedures.DisplayPlayerGUIProcedure;
+import net.mcreator.blockpiece.procedures.DisplayFSProcedure;
+import net.mcreator.blockpiece.procedures.DisplayDFProcedure;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
-
 	private final static HashMap<String, Object> guistate = MainMenuMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -24,12 +43,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
-		if (
-
-		DisplayPlayerGUIProcedure.execute(entity)
-
-		instanceof LivingEntity livingEntity) {
+		if (DisplayPlayerGUIProcedure.execute(entity) instanceof LivingEntity livingEntity) {
 			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 129, this.topPos + 80, 30, 0f + (float) Math.atan((this.leftPos + 129 - mouseX) / 40.0), (float) Math.atan((this.topPos + 30 - mouseY) / 40.0), livingEntity);
 		}
 	}
@@ -52,7 +66,6 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -65,13 +78,13 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				DisplayDFProcedure.execute(), 106, 99, -12829636);
+				DisplayDFProcedure.execute(entity), 106, 99, -12829636);
 		this.font.draw(poseStack,
 
-				DisplayFSProcedure.execute(), 106, 123, -12829636);
+				DisplayFSProcedure.execute(entity), 106, 123, -12829636);
 		this.font.draw(poseStack,
 
-				DisplayRACEProcedure.execute(), 98, 146, -12829636);
+				DisplayRACEProcedure.execute(entity), 98, 146, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_devil_fruit"), 99, 89, -1);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_fighting_style"), 92, 112, -1);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_race"), 115, 136, -1);
@@ -86,9 +99,6 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 	}
-
 }

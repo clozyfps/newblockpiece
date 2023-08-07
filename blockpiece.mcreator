@@ -95,7 +95,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/OpeProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -110,7 +131,28 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MeraProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Movesets"
     },
@@ -402,8 +444,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -417,8 +459,8 @@
       "registry_name": "mihawk_cape_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
-          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json",
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java"
         ]
       },
       "path": "~/Armor"
@@ -514,9 +556,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
           "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -590,6 +632,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -662,10 +705,10 @@
       "registry_name": "explosion_blocks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java",
           "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
-          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
+          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java"
         ]
       },
       "path": "~/Items/AbilityItems"
@@ -696,7 +739,20 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "droppedexperience",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -1441,6 +1497,42 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "DFMasteryMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "RaceMasteryMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "FSMasterMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ExpCap",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
     }
   ],
   "sound_elements": [],
@@ -1453,8 +1545,8 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
-      "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "entity.blockpiece.marine": "Marine",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
@@ -1554,7 +1646,12 @@
       },
       {
         "name": "GUIs",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Movesets",
