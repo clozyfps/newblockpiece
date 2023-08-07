@@ -1,15 +1,33 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.init.BlockpieceModEntities;
+import net.mcreator.blockpiece.entity.InvisMobEntity;
+import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
+import net.mcreator.blockpiece.BlockpieceMod;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class DaiEnkaiProjectileProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, x, y, z, 7, Explosion.BlockInteraction.DESTROY);
+			_level.explode(null, x, y, z, 15, Explosion.BlockInteraction.DESTROY);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		BlockpieceMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
@@ -21,6 +39,10 @@ public class DaiEnkaiProjectileProjectileHitsBlockProcedure {
 				if (!(entity == entityiterator)) {
 					entityiterator.setSecondsOnFire(10);
 					entityiterator.getPersistentData().putBoolean("aoe", true);
+				}
+				if (entityiterator instanceof DaiEnkaiMobEntity) {
+					if (!entityiterator.level.isClientSide())
+						entityiterator.discard();
 				}
 			}
 		}
@@ -54,5 +76,7 @@ public class DaiEnkaiProjectileProjectileHitsBlockProcedure {
 				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 			world.addFreshEntity(entityToSpawn);
 		}
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 250, false, false));
 	}
 }

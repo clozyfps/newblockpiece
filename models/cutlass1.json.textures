@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cutlass1",
+        "1": "cutlass2",
+        "2": "cutlass3",
+        "3": "cutlass4",
+        "4": "cutlass5"
+      },
+      "name": "default"
+    }
+  }
+}

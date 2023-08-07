@@ -89,7 +89,7 @@ public class DaiEnkaiMobEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		DaiEnkaiMobOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		DaiEnkaiMobOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		if (source.getDirectEntity() instanceof Player)
@@ -129,7 +129,7 @@ public class DaiEnkaiMobEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DaiEnkaiMobOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		DaiEnkaiMobOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
