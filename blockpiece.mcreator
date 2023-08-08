@@ -423,8 +423,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -663,8 +663,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1379,55 +1379,6 @@
       "path": "~/Armor"
     },
     {
-      "name": "Blacklegm1right",
-      "type": "rangeditem",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blacklegm_1right",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1rightItem.java",
-          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1rightEntity.java",
-          "src/main/resources/assets/blockpiece/models/item/blacklegm_1right.json",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1rightRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/AbilityMobs"
-    },
-    {
-      "name": "Blacklegm1left",
-      "type": "rangeditem",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blacklegm_1left",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/blockpiece/models/item/blacklegm_1left.json",
-          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1leftItem.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1leftRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1leftEntity.java"
-        ]
-      },
-      "path": "~/Mobs/AbilityMobs"
-    },
-    {
-      "name": "WhiteDustParticle",
-      "type": "particle",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "white_dust_particle",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
       "name": "Blacklegm1rightWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 57,
@@ -1462,6 +1413,154 @@
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "WhiteDustParticle",
+      "type": "particle",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_dust_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Blacklegm1right",
+      "type": "rangeditem",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1rightItem.java",
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1rightEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1right.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1rightRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "Blacklegm1left",
+      "type": "rangeditem",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1left",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1left.json",
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1leftItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1leftRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1leftEntity.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "MarineOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MarineOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DisplayBeli",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_beli",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayBeliProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MasterySystem",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mastery_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MeraMeraFruitItemPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mera_mera_fruit_item_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MeraMeraFruitItemPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "LevelingSystem",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leveling_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MeraMeraNoMi",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mera_mera_no_mi",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/advancements/mera_mera_no_mi.json"
+        ]
+      },
+      "path": "~/Advancements"
     }
   ],
   "variable_elements": [
@@ -1500,6 +1599,84 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "FSMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FSMasteryMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "DFMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DFMasteryMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "RaceMasteryMultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "RaceMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "BusoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ExpCap",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "15.0"
+    },
+    {
+      "name": "HaoHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "KenHakiProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Beli",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1507,25 +1684,23 @@
     "en_us": {
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "gui.blockpiece.main_menu.label_race": "Race:",
-      "item.blockpiece.blacklegm_1left": "Blacklegm1",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
-      "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "entity.blockpiece.marine": "Marine",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "gui.blockpiece.main_menu.label_level": "Level : ",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
-      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
+      "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
-      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "effect.blockpiece.higan": "Higan",
-      "entity.blockpiece.luffy": "Luffy",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
@@ -1534,9 +1709,7 @@
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
-      "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
-      "item.blockpiece.blacklegm_1right": "Blacklegm 1",
       "itemGroup.tabblock_piece_items": "Block Piece Items",
       "key.blockpiece.switch_moveset": "Switch Moveset",
       "item.blockpiece.explosion_blocks": "`",
@@ -1617,7 +1790,12 @@
       },
       {
         "name": "GUIs",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Movesets",
@@ -1678,7 +1856,6 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
-      "pehkui",
       "geckolib",
       "playeranimator"
     ],

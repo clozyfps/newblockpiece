@@ -39,7 +39,7 @@ public class HikenWhileProjectileFlyingTickProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (BlockpieceModParticleTypes.FIRE_PARTICLE.get()), x, y, z, 3, 1, 3, 1, 0);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.1, 3, 0.1, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 1, 3, 1, 0);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		BlockpieceMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
