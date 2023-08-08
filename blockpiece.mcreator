@@ -423,8 +423,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -534,10 +534,10 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
-          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
           "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -663,8 +663,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -842,9 +842,9 @@
       "registry_name": "dai_enkai_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
           "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
-          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json",
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -938,9 +938,9 @@
       "registry_name": "hiken",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java",
           "src/main/resources/assets/blockpiece/models/item/hiken.json",
-          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java",
+          "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1188,10 +1188,10 @@
       "registry_name": "explosion_blocks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
           "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java"
+          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java"
         ]
       },
       "path": "~/Items/AbilityItems"
@@ -1226,8 +1226,8 @@
       "registry_name": "invis_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1282,8 +1282,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java"
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
         ]
       },
       "path": "~/GUIs"
@@ -1339,11 +1339,129 @@
       "registry_name": "fire_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/fire_particle.json"
+          "src/main/resources/assets/blockpiece/particles/fire_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java"
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "Luffy",
+      "type": "livingentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/LuffyRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/LuffyEntity.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/luffy_biome_modifier.json",
+          "src/main/resources/assets/blockpiece/models/item/luffy_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "LuffyFit",
+      "type": "armor",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy_fit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_chestplate.json",
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_helmet.json",
+          "src/main/java/net/mcreator/blockpiece/item/LuffyFitItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Blacklegm1right",
+      "type": "rangeditem",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1rightItem.java",
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1rightEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1right.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1rightRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "Blacklegm1left",
+      "type": "rangeditem",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1left",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1left.json",
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1leftItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1leftRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1leftEntity.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "WhiteDustParticle",
+      "type": "particle",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_dust_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Blacklegm1rightWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1right_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/Blacklegm1rightWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
     }
   ],
   "variable_elements": [
@@ -1389,6 +1507,7 @@
     "en_us": {
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "gui.blockpiece.main_menu.label_race": "Race:",
+      "item.blockpiece.blacklegm_1left": "Blacklegm1",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
@@ -1398,12 +1517,15 @@
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
       "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "effect.blockpiece.higan": "Higan",
+      "entity.blockpiece.luffy": "Luffy",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
@@ -1412,7 +1534,9 @@
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
+      "item.blockpiece.blacklegm_1right": "Blacklegm 1",
       "itemGroup.tabblock_piece_items": "Block Piece Items",
       "key.blockpiece.switch_moveset": "Switch Moveset",
       "item.blockpiece.explosion_blocks": "`",
@@ -1554,6 +1678,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "pehkui",
       "geckolib",
       "playeranimator"
     ],
