@@ -459,8 +459,8 @@
       "registry_name": "mihawk_cape_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json",
-          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/MihawkCapeArmorItem.java",
+          "src/main/resources/assets/blockpiece/models/item/mihawk_cape_armor_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -498,8 +498,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
         ]
       },
       "path": "~/Items"
@@ -537,7 +537,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
-      "sortid": 27,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -555,9 +555,9 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
           "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
           "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
           "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
         ]
       },
@@ -623,8 +623,8 @@
       "registry_name": "invis_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -632,7 +632,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
-      "sortid": 54,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -705,10 +705,10 @@
       "registry_name": "explosion_blocks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
           "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
-          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
-          "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java"
         ]
       },
       "path": "~/Items/AbilityItems"
@@ -724,16 +724,7 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -748,20 +739,7 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "droppedexperience",
-            "type": "number"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -1019,8 +997,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java"
         ]
       },
       "path": "~/GUIs"
@@ -1280,9 +1258,9 @@
       "registry_name": "dai_enkai_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
           "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
-          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json",
-          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java"
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1333,8 +1311,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java",
-          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java",
-          "src/main/resources/assets/blockpiece/models/item/hiken.json"
+          "src/main/resources/assets/blockpiece/models/item/hiken.json",
+          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1362,8 +1340,8 @@
       "registry_name": "fire_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/fire_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/fire_particle.json"
         ]
       },
       "path": "~/Particles"
