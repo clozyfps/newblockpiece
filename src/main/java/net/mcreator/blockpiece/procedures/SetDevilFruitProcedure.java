@@ -30,15 +30,5 @@ public class SetDevilFruitProcedure {
 				});
 			}
 		}
-		if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Ope") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("ope")
-				|| (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Ope Ope") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("ope ope")) {
-			{
-				String _setval = "Ope";
-				entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.DevilFruit = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
 	}
 }

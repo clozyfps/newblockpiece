@@ -1,7 +1,5 @@
 package net.mcreator.blockpiece.network;
 
-import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Exp;
-
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
