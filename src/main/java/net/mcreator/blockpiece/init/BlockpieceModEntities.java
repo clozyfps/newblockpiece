@@ -26,8 +26,6 @@ import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
 import net.mcreator.blockpiece.entity.EnkaiMobEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiProjectileEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
-import net.mcreator.blockpiece.entity.Blacklegm1rightEntity;
-import net.mcreator.blockpiece.entity.Blacklegm1leftEntity;
 import net.mcreator.blockpiece.entity.BazookaMobEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
@@ -60,10 +58,6 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<LuffyEntity>of(LuffyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LuffyEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<Blacklegm1rightEntity>> BLACKLEGM_1RIGHT = register("projectile_blacklegm_1right", EntityType.Builder.<Blacklegm1rightEntity>of(Blacklegm1rightEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(Blacklegm1rightEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<Blacklegm1leftEntity>> BLACKLEGM_1LEFT = register("projectile_blacklegm_1left",
-			EntityType.Builder.<Blacklegm1leftEntity>of(Blacklegm1leftEntity::new, MobCategory.MISC).setCustomClientFactory(Blacklegm1leftEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

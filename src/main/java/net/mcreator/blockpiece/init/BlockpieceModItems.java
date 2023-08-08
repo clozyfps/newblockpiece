@@ -20,8 +20,6 @@ import net.mcreator.blockpiece.item.GumoGumoFruitItemItem;
 import net.mcreator.blockpiece.item.ExplosionBlocksItem;
 import net.mcreator.blockpiece.item.DaiEnkaiProjectileItem;
 import net.mcreator.blockpiece.item.CutlassItem;
-import net.mcreator.blockpiece.item.Blacklegm1rightItem;
-import net.mcreator.blockpiece.item.Blacklegm1leftItem;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 public class BlockpieceModItems {
@@ -38,6 +36,4 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> LUFFY_SPAWN_EGG = REGISTRY.register("luffy_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.LUFFY, -3394816, -3381760, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_MOBS)));
 	public static final RegistryObject<Item> LUFFY_FIT_HELMET = REGISTRY.register("luffy_fit_helmet", () -> new LuffyFitItem.Helmet());
 	public static final RegistryObject<Item> LUFFY_FIT_CHESTPLATE = REGISTRY.register("luffy_fit_chestplate", () -> new LuffyFitItem.Chestplate());
-	public static final RegistryObject<Item> BLACKLEGM_1RIGHT = REGISTRY.register("blacklegm_1right", () -> new Blacklegm1rightItem());
-	public static final RegistryObject<Item> BLACKLEGM_1LEFT = REGISTRY.register("blacklegm_1left", () -> new Blacklegm1leftItem());
 }

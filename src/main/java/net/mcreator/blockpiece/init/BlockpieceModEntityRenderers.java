@@ -19,8 +19,6 @@ import net.mcreator.blockpiece.client.renderer.InvisMobRenderer;
 import net.mcreator.blockpiece.client.renderer.ExplosionBlocksRenderer;
 import net.mcreator.blockpiece.client.renderer.EnkaiMobRenderer;
 import net.mcreator.blockpiece.client.renderer.DaiEnkaiMobRenderer;
-import net.mcreator.blockpiece.client.renderer.Blacklegm1rightRenderer;
-import net.mcreator.blockpiece.client.renderer.Blacklegm1leftRenderer;
 import net.mcreator.blockpiece.client.renderer.BazookaMobRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -38,7 +36,5 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_MOB.get(), DaiEnkaiMobRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.LUFFY.get(), LuffyRenderer::new);
-		event.registerEntityRenderer(BlockpieceModEntities.BLACKLEGM_1RIGHT.get(), Blacklegm1rightRenderer::new);
-		event.registerEntityRenderer(BlockpieceModEntities.BLACKLEGM_1LEFT.get(), Blacklegm1leftRenderer::new);
 	}
 }

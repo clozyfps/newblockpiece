@@ -498,8 +498,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
         ]
       },
       "path": "~/Items"
@@ -623,8 +623,8 @@
       "registry_name": "invis_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -997,8 +997,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java"
         ]
       },
       "path": "~/GUIs"
@@ -1258,9 +1258,9 @@
       "registry_name": "dai_enkai_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
           "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
-          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json",
-          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java"
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1340,8 +1340,8 @@
       "registry_name": "fire_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/fire_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/fire_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1504,42 +1504,6 @@
       "path": "~/Armor"
     },
     {
-      "name": "Blacklegm1rightWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blacklegm_1right_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/procedures/Blacklegm1rightWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/AbilityMobs"
-    },
-    {
       "name": "WhiteDustParticle",
       "type": "particle",
       "sortid": 56,
@@ -1553,40 +1517,6 @@
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "Blacklegm1right",
-      "type": "rangeditem",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blacklegm_1right",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1rightEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1rightRenderer.java",
-          "src/main/resources/assets/blockpiece/models/item/blacklegm_1right.json",
-          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1rightItem.java"
-        ]
-      },
-      "path": "~/Mobs/AbilityMobs"
-    },
-    {
-      "name": "Blacklegm1left",
-      "type": "rangeditem",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blacklegm_1left",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1leftRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1leftEntity.java",
-          "src/main/resources/assets/blockpiece/models/item/blacklegm_1left.json",
-          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1leftItem.java"
-        ]
-      },
-      "path": "~/Mobs/AbilityMobs"
     }
   ],
   "variable_elements": [
@@ -1712,21 +1642,26 @@
       "gui.blockpiece.main_menu.label_race": "Race:",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
-      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
+      "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
       "item.blockpiece.cutlass": "Cutlass",
-      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "entity.blockpiece.marine": "Marine",
+      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
+      "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "gui.blockpiece.main_menu.label_level": "Level : ",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "effect.blockpiece.higan": "Higan",
+      "entity.blockpiece.luffy": "Luffy",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
@@ -1735,6 +1670,7 @@
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "itemGroup.tabblock_piece_items": "Block Piece Items",
       "key.blockpiece.switch_moveset": "Switch Moveset",
