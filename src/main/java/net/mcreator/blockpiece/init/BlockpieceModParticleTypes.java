@@ -15,6 +15,6 @@ import net.mcreator.blockpiece.BlockpieceMod;
 
 public class BlockpieceModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, BlockpieceMod.MODID);
-	public static final RegistryObject<SimpleParticleType> SMOKE_PARTICLE = REGISTRY.register("smoke_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> FIRE_PARTICLE = REGISTRY.register("fire_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> SMOKE_PARTICLE = REGISTRY.register("smoke_particle", () -> new SimpleParticleType(false));
 }

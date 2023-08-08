@@ -1,5 +1,7 @@
 package net.mcreator.blockpiece.network;
 
+import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Exp;
+
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -15,6 +17,7 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -72,10 +75,19 @@ public class BlockpieceModVariables {
 			clone.FightingStyle = original.FightingStyle;
 			clone.SwitchCurrentMove = original.SwitchCurrentMove;
 			clone.SelectedMove = original.SelectedMove;
-			clone.Beli = original.Beli;
 			clone.BusoHakiProgress = original.BusoHakiProgress;
 			clone.HaoHakiProgress = original.HaoHakiProgress;
 			clone.KenHakiProgress = original.KenHakiProgress;
+			clone.FSMasteryMultiplier = original.FSMasteryMultiplier;
+			clone.DFMasteryMultiplier = original.DFMasteryMultiplier;
+			clone.ExpCap = original.ExpCap;
+			clone.RaceMasteryMultiplier = original.RaceMasteryMultiplier;
+			clone.Level = original.Level;
+			clone.Exp = original.Exp;
+			clone.Beli = original.Beli;
+			clone.DFMastery = original.DFMastery;
+			clone.RaceMastery = original.RaceMastery;
+			clone.FSMastery = original.FSMastery;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -117,11 +129,20 @@ public class BlockpieceModVariables {
 		public String Race = "";
 		public String FightingStyle = "";
 		public double SwitchCurrentMove = 0;
-		public String SelectedMove = "\"\"";
-		public double Beli = 0;
+		public String SelectedMove = "Not Selected";
 		public double BusoHakiProgress = 0;
 		public double HaoHakiProgress = 0;
 		public double KenHakiProgress = 0;
+		public double FSMasteryMultiplier = 1.0;
+		public double DFMasteryMultiplier = 1.0;
+		public double ExpCap = 15.0;
+		public double RaceMasteryMultiplier = 1.0;
+		public double Level = 1.0;
+		public double Exp = 0.0;
+		public double Beli = 0;
+		public double DFMastery = 0;
+		public double RaceMastery = 0;
+		public double FSMastery = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -136,10 +157,19 @@ public class BlockpieceModVariables {
 			nbt.putString("FightingStyle", FightingStyle);
 			nbt.putDouble("SwitchCurrentMove", SwitchCurrentMove);
 			nbt.putString("SelectedMove", SelectedMove);
-			nbt.putDouble("Beli", Beli);
 			nbt.putDouble("BusoHakiProgress", BusoHakiProgress);
 			nbt.putDouble("HaoHakiProgress", HaoHakiProgress);
 			nbt.putDouble("KenHakiProgress", KenHakiProgress);
+			nbt.putDouble("FSMasteryMultiplier", FSMasteryMultiplier);
+			nbt.putDouble("DFMasteryMultiplier", DFMasteryMultiplier);
+			nbt.putDouble("ExpCap", ExpCap);
+			nbt.putDouble("RaceMasteryMultiplier", RaceMasteryMultiplier);
+			nbt.putDouble("Level", Level);
+			nbt.putDouble("Exp", Exp);
+			nbt.putDouble("Beli", Beli);
+			nbt.putDouble("DFMastery", DFMastery);
+			nbt.putDouble("RaceMastery", RaceMastery);
+			nbt.putDouble("FSMastery", FSMastery);
 			return nbt;
 		}
 
@@ -151,10 +181,19 @@ public class BlockpieceModVariables {
 			FightingStyle = nbt.getString("FightingStyle");
 			SwitchCurrentMove = nbt.getDouble("SwitchCurrentMove");
 			SelectedMove = nbt.getString("SelectedMove");
-			Beli = nbt.getDouble("Beli");
 			BusoHakiProgress = nbt.getDouble("BusoHakiProgress");
 			HaoHakiProgress = nbt.getDouble("HaoHakiProgress");
 			KenHakiProgress = nbt.getDouble("KenHakiProgress");
+			FSMasteryMultiplier = nbt.getDouble("FSMasteryMultiplier");
+			DFMasteryMultiplier = nbt.getDouble("DFMasteryMultiplier");
+			ExpCap = nbt.getDouble("ExpCap");
+			RaceMasteryMultiplier = nbt.getDouble("RaceMasteryMultiplier");
+			Level = nbt.getDouble("Level");
+			Exp = nbt.getDouble("Exp");
+			Beli = nbt.getDouble("Beli");
+			DFMastery = nbt.getDouble("DFMastery");
+			RaceMastery = nbt.getDouble("RaceMastery");
+			FSMastery = nbt.getDouble("FSMastery");
 		}
 	}
 
@@ -185,10 +224,19 @@ public class BlockpieceModVariables {
 					variables.FightingStyle = message.data.FightingStyle;
 					variables.SwitchCurrentMove = message.data.SwitchCurrentMove;
 					variables.SelectedMove = message.data.SelectedMove;
-					variables.Beli = message.data.Beli;
 					variables.BusoHakiProgress = message.data.BusoHakiProgress;
 					variables.HaoHakiProgress = message.data.HaoHakiProgress;
 					variables.KenHakiProgress = message.data.KenHakiProgress;
+					variables.FSMasteryMultiplier = message.data.FSMasteryMultiplier;
+					variables.DFMasteryMultiplier = message.data.DFMasteryMultiplier;
+					variables.ExpCap = message.data.ExpCap;
+					variables.RaceMasteryMultiplier = message.data.RaceMasteryMultiplier;
+					variables.Level = message.data.Level;
+					variables.Exp = message.data.Exp;
+					variables.Beli = message.data.Beli;
+					variables.DFMastery = message.data.DFMastery;
+					variables.RaceMastery = message.data.RaceMastery;
+					variables.FSMastery = message.data.FSMastery;
 				}
 			});
 			context.setPacketHandled(true);

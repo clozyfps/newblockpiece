@@ -21,6 +21,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.player.AbstractClientPlayer;
 
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
+
 import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
@@ -80,7 +82,7 @@ public class HiganOnEffectActiveTickProcedure {
 							.collect(Collectors.toList());
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
-							entityiterator.hurt(DamageSource.MAGIC, 4);
+							entityiterator.hurt(DamageSource.MAGIC, (float) (4 + (entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).DFMasteryMultiplier));
 							entityiterator.setSecondsOnFire(6);
 							entityiterator.getPersistentData().putBoolean("aoe", true);
 							if (world instanceof ServerLevel _level)
