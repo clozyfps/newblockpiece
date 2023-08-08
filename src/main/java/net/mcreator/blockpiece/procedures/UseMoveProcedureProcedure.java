@@ -16,7 +16,7 @@ public class UseMoveProcedureProcedure {
 			}
 		} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")) {
 			if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).DevilFruit).equals("Ope")) {
-				OpeProcedure.execute(world, x, y, z, entity);
+				OpeProcedure.execute();
 			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).DevilFruit).equals("Gum")) {
 				GumProcedure.execute(world, x, y, z, entity);
 			} else if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).DevilFruit).equals("Mera")) {

@@ -498,8 +498,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
         ]
       },
       "path": "~/Items"
@@ -537,7 +537,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
-      "sortid": 47,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -623,8 +623,8 @@
       "registry_name": "invis_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -632,7 +632,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
-      "sortid": 43,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -997,8 +997,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java"
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
         ]
       },
       "path": "~/GUIs"
@@ -1258,9 +1258,9 @@
       "registry_name": "dai_enkai_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
           "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
-          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json",
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1340,8 +1340,8 @@
       "registry_name": "fire_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/fire_particle.json"
+          "src/main/resources/assets/blockpiece/particles/fire_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1469,6 +1469,124 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "Luffy",
+      "type": "livingentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/forge/biome_modifier/luffy_biome_modifier.json",
+          "src/main/java/net/mcreator/blockpiece/entity/LuffyEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/LuffyRenderer.java",
+          "src/main/resources/assets/blockpiece/models/item/luffy_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "LuffyFit",
+      "type": "armor",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy_fit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_helmet.json",
+          "src/main/java/net/mcreator/blockpiece/item/LuffyFitItem.java",
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Blacklegm1rightWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1right_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/Blacklegm1rightWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "WhiteDustParticle",
+      "type": "particle",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_dust_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Blacklegm1right",
+      "type": "rangeditem",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1rightEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1rightRenderer.java",
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1right.json",
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1rightItem.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "Blacklegm1left",
+      "type": "rangeditem",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacklegm_1left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/Blacklegm1leftRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/Blacklegm1leftEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/blacklegm_1left.json",
+          "src/main/java/net/mcreator/blockpiece/item/Blacklegm1leftItem.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
     }
   ],
   "variable_elements": [
@@ -1596,10 +1714,8 @@
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
-      "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
-      "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
-      "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
+      "entity.blockpiece.marine": "Marine",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "gui.blockpiece.main_menu.label_level": "Level : ",
