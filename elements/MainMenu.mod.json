@@ -161,7 +161,8 @@
         "data": {
           "name": "label_level",
           "text": {
-            "fixedValue": "Level : "
+            "fixedValue": "Level : ",
+            "name": "DisplayLVL"
           },
           "color": {
             "value": -12829636,

@@ -1491,6 +1491,27 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayLVL",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_lvl",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayLVLProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
     }
   ],
   "variable_elements": [

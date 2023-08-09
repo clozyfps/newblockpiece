@@ -13,6 +13,7 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.blockpiece.world.inventory.MainMenuMenu;
 import net.mcreator.blockpiece.procedures.DisplayRACEProcedure;
 import net.mcreator.blockpiece.procedures.DisplayPlayerGUIProcedure;
+import net.mcreator.blockpiece.procedures.DisplayLVLProcedure;
 import net.mcreator.blockpiece.procedures.DisplayFSProcedure;
 import net.mcreator.blockpiece.procedures.DisplayDFProcedure;
 import net.mcreator.blockpiece.procedures.DisplayBeliProcedure;
@@ -93,7 +94,9 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.font.draw(poseStack,
 
 				DisplayBeliProcedure.execute(entity), 37, 23, -13312);
-		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_level"), 8, 11, -12829636);
+		this.font.draw(poseStack,
+
+				DisplayLVLProcedure.execute(entity), 8, 11, -12829636);
 	}
 
 	@Override
