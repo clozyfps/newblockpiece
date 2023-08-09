@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
+import net.mcreator.blockpiece.entity.LuffyEntity;
 import net.mcreator.blockpiece.entity.InvisMobEntity;
 import net.mcreator.blockpiece.entity.HikenEntity;
 import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
@@ -53,6 +54,10 @@ public class BlockpieceModEntities {
 			.setCustomClientFactory(DaiEnkaiProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DaiEnkaiMobEntity>> DAI_ENKAI_MOB = register("dai_enkai_mob", EntityType.Builder.<DaiEnkaiMobEntity>of(DaiEnkaiMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DaiEnkaiMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LuffyEntity>> LUFFY = register("luffy",
+			EntityType.Builder.<LuffyEntity>of(LuffyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LuffyEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -68,6 +73,7 @@ public class BlockpieceModEntities {
 			InvisMobEntity.init();
 			EnkaiMobEntity.init();
 			DaiEnkaiMobEntity.init();
+			LuffyEntity.init();
 		});
 	}
 
@@ -80,5 +86,6 @@ public class BlockpieceModEntities {
 		event.put(INVIS_MOB.get(), InvisMobEntity.createAttributes().build());
 		event.put(ENKAI_MOB.get(), EnkaiMobEntity.createAttributes().build());
 		event.put(DAI_ENKAI_MOB.get(), DaiEnkaiMobEntity.createAttributes().build());
+		event.put(LUFFY.get(), LuffyEntity.createAttributes().build());
 	}
 }

@@ -1512,6 +1512,54 @@
         ]
       },
       "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "Luffy",
+      "type": "livingentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/LuffyRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/LuffyEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/luffy_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/luffy_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "LuffyFit",
+      "type": "armor",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy_fit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_chestplate.json",
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_helmet.json",
+          "src/main/java/net/mcreator/blockpiece/item/LuffyFitItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "WhiteDustParticle",
+      "type": "particle",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_dust_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -1640,20 +1688,23 @@
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
-      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "entity.blockpiece.marine": "Marine",
+      "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "gui.blockpiece.main_menu.label_level": "Level : ",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
+      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
+      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "effect.blockpiece.higan": "Higan",
+      "entity.blockpiece.luffy": "Luffy",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.invis_mob": "Invis Mob",
@@ -1662,6 +1713,7 @@
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "itemGroup.tabblock_piece_items": "Block Piece Items",
       "key.blockpiece.switch_moveset": "Switch Moveset",

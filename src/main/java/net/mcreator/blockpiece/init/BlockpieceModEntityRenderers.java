@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
 import net.mcreator.blockpiece.client.renderer.MarineRenderer;
+import net.mcreator.blockpiece.client.renderer.LuffyRenderer;
 import net.mcreator.blockpiece.client.renderer.InvisMobRenderer;
 import net.mcreator.blockpiece.client.renderer.ExplosionBlocksRenderer;
 import net.mcreator.blockpiece.client.renderer.EnkaiMobRenderer;
@@ -34,5 +35,6 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.EXPLOSION_BLOCKS.get(), ExplosionBlocksRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.DAI_ENKAI_MOB.get(), DaiEnkaiMobRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.LUFFY.get(), LuffyRenderer::new);
 	}
 }

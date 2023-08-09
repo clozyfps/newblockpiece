@@ -20,6 +20,7 @@ import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 import net.mcreator.blockpiece.entity.HikenEntity;
 import net.mcreator.blockpiece.entity.EnkaiMobEntity;
+import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
@@ -138,6 +139,16 @@ public class MeraProcedure {
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(BlockpieceModMobEffects.DAI_ENKAI.get(), 10, 1, false, false));
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = new DaiEnkaiMobEntity(BlockpieceModEntities.DAI_ENKAI_MOB.get(), _level);
+				entityToSpawn.moveTo(x, y, z, 0, 0);
+				entityToSpawn.setYBodyRot(0);
+				entityToSpawn.setYHeadRot(0);
+				entityToSpawn.setDeltaMovement(0, 0, 0);
+				if (entityToSpawn instanceof Mob _mobToSpawn)
+					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				world.addFreshEntity(entityToSpawn);
+			}
 		}
 	}
 }
