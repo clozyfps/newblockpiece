@@ -338,6 +338,7 @@
     {
       "name": "Moveset",
       "type": "overlay",
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -724,16 +725,7 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/MasterySystemProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -748,20 +740,7 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/LevelingSystemProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "droppedexperience",
-            "type": "number"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -1560,6 +1539,188 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "MainWorldBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_world_biome",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/world/biome/MainWorldBiomeBiome.java"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "MainWorld",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_world",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/dimension_type/main_world.json",
+          "src/main/java/net/mcreator/blockpiece/world/dimension/MainWorldDimension.java",
+          "src/main/resources/data/blockpiece/dimension/main_world.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "CheckDimension",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/CheckDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Civilian",
+      "type": "livingentity",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "civilian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/CivilianEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/civilian_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/civilian_biome_modifier.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/CivilianRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "OnCivilianRightClicked",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_civilian_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/OnCivilianRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Bandit",
+      "type": "livingentity",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bandit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/bandit_spawn_egg.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/BanditRenderer.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/bandit_biome_modifier.json",
+          "src/main/java/net/mcreator/blockpiece/entity/BanditEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "QuestHandling",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quest_handling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/QuestHandlingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MainHUD",
+      "type": "overlay",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/screens/MainHUDOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "QuestDisplay",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quest_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/QuestDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "DisplayQuest",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_quest",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/DisplayQuestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
     }
   ],
   "variable_elements": [
@@ -1676,6 +1837,42 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "QuestGoal",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "QuestItem",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "QuestMob",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "QuestProgress",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "QuestRequirement",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Faction",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -1685,6 +1882,7 @@
       "gui.blockpiece.main_menu.label_race": "Race:",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "biome.blockpiece.main_world_biome": "Main World",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
@@ -1694,12 +1892,17 @@
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "gui.blockpiece.main_menu.label_level": "Level : ",
+      "item.blockpiece.bandit_spawn_egg": "Bandit Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "item.blockpiece.luffy_fit_helmet": "Straw Hat",
+      "gui.blockpiece.main_hud.label_questdisplay": "QuestDisplay",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
+      "gui.blockpiece.main_hud.label_quest": "Quest",
       "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
+      "gui.blockpiece.main_hud.label_empty": "-------------------",
       "key.blockpiece.open_main_menu": "Open Main Menu",
+      "entity.blockpiece.bandit": "Bandit",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
@@ -1712,13 +1915,15 @@
       "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
+      "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "itemGroup.tabblock_piece_items": "Block Piece Items",
       "key.blockpiece.switch_moveset": "Switch Moveset",
       "item.blockpiece.explosion_blocks": "`",
-      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi"
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
+      "entity.blockpiece.civilian": "Civilian"
     }
   },
   "foldersRoot": {
@@ -1770,7 +1975,12 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Items",
@@ -1823,6 +2033,10 @@
         "children": [
           {
             "name": "AbilityMobs",
+            "children": []
+          },
+          {
+            "name": "Procedures",
             "children": []
           }
         ]

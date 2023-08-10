@@ -88,6 +88,12 @@ public class BlockpieceModVariables {
 			clone.DFMastery = original.DFMastery;
 			clone.RaceMastery = original.RaceMastery;
 			clone.FSMastery = original.FSMastery;
+			clone.QuestGoal = original.QuestGoal;
+			clone.QuestItem = original.QuestItem;
+			clone.QuestMob = original.QuestMob;
+			clone.QuestProgress = original.QuestProgress;
+			clone.QuestRequirement = original.QuestRequirement;
+			clone.Faction = original.Faction;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -143,6 +149,12 @@ public class BlockpieceModVariables {
 		public double DFMastery = 0;
 		public double RaceMastery = 0;
 		public double FSMastery = 0;
+		public String QuestGoal = "";
+		public String QuestItem = "";
+		public String QuestMob = "";
+		public double QuestProgress = 0;
+		public double QuestRequirement = 0;
+		public String Faction = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -170,6 +182,12 @@ public class BlockpieceModVariables {
 			nbt.putDouble("DFMastery", DFMastery);
 			nbt.putDouble("RaceMastery", RaceMastery);
 			nbt.putDouble("FSMastery", FSMastery);
+			nbt.putString("QuestGoal", QuestGoal);
+			nbt.putString("QuestItem", QuestItem);
+			nbt.putString("QuestMob", QuestMob);
+			nbt.putDouble("QuestProgress", QuestProgress);
+			nbt.putDouble("QuestRequirement", QuestRequirement);
+			nbt.putString("Faction", Faction);
 			return nbt;
 		}
 
@@ -194,6 +212,12 @@ public class BlockpieceModVariables {
 			DFMastery = nbt.getDouble("DFMastery");
 			RaceMastery = nbt.getDouble("RaceMastery");
 			FSMastery = nbt.getDouble("FSMastery");
+			QuestGoal = nbt.getString("QuestGoal");
+			QuestItem = nbt.getString("QuestItem");
+			QuestMob = nbt.getString("QuestMob");
+			QuestProgress = nbt.getDouble("QuestProgress");
+			QuestRequirement = nbt.getDouble("QuestRequirement");
+			Faction = nbt.getString("Faction");
 		}
 	}
 
@@ -237,6 +261,12 @@ public class BlockpieceModVariables {
 					variables.DFMastery = message.data.DFMastery;
 					variables.RaceMastery = message.data.RaceMastery;
 					variables.FSMastery = message.data.FSMastery;
+					variables.QuestGoal = message.data.QuestGoal;
+					variables.QuestItem = message.data.QuestItem;
+					variables.QuestMob = message.data.QuestMob;
+					variables.QuestProgress = message.data.QuestProgress;
+					variables.QuestRequirement = message.data.QuestRequirement;
+					variables.Faction = message.data.Faction;
 				}
 			});
 			context.setPacketHandled(true);

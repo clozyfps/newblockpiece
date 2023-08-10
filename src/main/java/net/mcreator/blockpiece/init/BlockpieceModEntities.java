@@ -26,7 +26,9 @@ import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
 import net.mcreator.blockpiece.entity.EnkaiMobEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiProjectileEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
+import net.mcreator.blockpiece.entity.CivilianEntity;
 import net.mcreator.blockpiece.entity.BazookaMobEntity;
+import net.mcreator.blockpiece.entity.BanditEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -58,6 +60,14 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<LuffyEntity>of(LuffyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LuffyEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CivilianEntity>> CIVILIAN = register("civilian",
+			EntityType.Builder.<CivilianEntity>of(CivilianEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CivilianEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BanditEntity>> BANDIT = register("bandit",
+			EntityType.Builder.<BanditEntity>of(BanditEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BanditEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -74,6 +84,8 @@ public class BlockpieceModEntities {
 			EnkaiMobEntity.init();
 			DaiEnkaiMobEntity.init();
 			LuffyEntity.init();
+			CivilianEntity.init();
+			BanditEntity.init();
 		});
 	}
 
@@ -87,5 +99,7 @@ public class BlockpieceModEntities {
 		event.put(ENKAI_MOB.get(), EnkaiMobEntity.createAttributes().build());
 		event.put(DAI_ENKAI_MOB.get(), DaiEnkaiMobEntity.createAttributes().build());
 		event.put(LUFFY.get(), LuffyEntity.createAttributes().build());
+		event.put(CIVILIAN.get(), CivilianEntity.createAttributes().build());
+		event.put(BANDIT.get(), BanditEntity.createAttributes().build());
 	}
 }
