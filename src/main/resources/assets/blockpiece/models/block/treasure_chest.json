@@ -1,0 +1,9 @@
+{
+  "parent": "blockpiece:custom/woodentreasurechest",
+  "textures": {
+    "all": "blockpiece:blocks/woodentreasurechest",
+    "particle": "blockpiece:blocks/woodentreasurechest",
+    "0": "blockpiece:blocks/woodentreasurechest"
+  },
+  "render_type": "solid"
+}

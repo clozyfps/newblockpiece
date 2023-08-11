@@ -9,8 +9,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.blockpiece.item.OpeOpeFruitItemItem;
 import net.mcreator.blockpiece.item.MihawkCapeArmorItem;
@@ -39,4 +41,9 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> LUFFY_FIT_CHESTPLATE = REGISTRY.register("luffy_fit_chestplate", () -> new LuffyFitItem.Chestplate());
 	public static final RegistryObject<Item> CIVILIAN_SPAWN_EGG = REGISTRY.register("civilian_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.CIVILIAN, -3355444, -6710887, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BANDIT_SPAWN_EGG = REGISTRY.register("bandit_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.BANDIT, -3381760, -26317, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> TREASURE_CHEST = block(BlockpieceModBlocks.TREASURE_CHEST, CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	}
 }

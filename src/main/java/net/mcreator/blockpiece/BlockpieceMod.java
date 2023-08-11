@@ -37,6 +37,7 @@ import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
 import net.mcreator.blockpiece.init.BlockpieceModMenus;
 import net.mcreator.blockpiece.init.BlockpieceModItems;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
+import net.mcreator.blockpiece.init.BlockpieceModBlocks;
 import net.mcreator.blockpiece.init.BlockpieceModBiomes;
 
 import java.util.function.Supplier;
@@ -58,6 +59,7 @@ public class BlockpieceMod {
 		BlockpieceModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		BlockpieceModBlocks.REGISTRY.register(bus);
 		BlockpieceModItems.REGISTRY.register(bus);
 		BlockpieceModEntities.REGISTRY.register(bus);
 
