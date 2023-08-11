@@ -92,7 +92,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_beli"), 8, 23, -13312);
 		this.font.draw(poseStack,
 
-				DisplayBeliProcedure.execute(), 37, 23, -13312);
+				DisplayBeliProcedure.execute(entity), 37, 23, -13312);
 	}
 
 	@Override
