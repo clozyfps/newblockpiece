@@ -1,26 +1,14 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.blockpiece.init.BlockpieceModEntities;
-import net.mcreator.blockpiece.entity.ChestEntityEntity;
+import javax.annotation.Nullable;
 
 public class TreasureChestRightClickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = new ChestEntityEntity(BlockpieceModEntities.CHEST_ENTITY.get(), _level);
+			Entity entityToSpawn = new ChestEntityEntity(BlockpieceModEntities.DELETED_MOD_ELEMENT.get(), _level);
 			entityToSpawn.moveTo(x, y, z, 0, 0);
 			entityToSpawn.setYBodyRot(0);
 			entityToSpawn.setYHeadRot(0);

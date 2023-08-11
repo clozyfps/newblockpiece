@@ -1723,19 +1723,34 @@
       "path": "~/Overlay/Procedures"
     },
     {
-      "name": "ChestEntity",
-      "type": "livingentity",
-      "sortid": 66,
+      "name": "ChestEntityLootTable",
+      "type": "loottable",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chest_entity",
+      "registry_name": "chest_entity_loot_table",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java"
+          "src/main/resources/data/blockpiece/loot_tables/entities/chest_entity.json"
         ]
       },
-      "path": "~/Mobs/AbilityMobs"
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "TreasureChest",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "treasure_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/treasure_chest.json",
+          "src/main/resources/assets/blockpiece/blockstates/treasure_chest.json",
+          "src/main/resources/assets/blockpiece/models/block/treasure_chest.json",
+          "src/main/java/net/mcreator/blockpiece/block/TreasureChestBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
     },
     {
       "name": "TreasureChestRightClick",
@@ -1770,34 +1785,34 @@
       "path": "~/Blocks/Procedures"
     },
     {
-      "name": "ChestEntityLootTable",
-      "type": "loottable",
+      "name": "ChestEntity",
+      "type": "livingentity",
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chest_entity_loot_table",
+      "registry_name": "chest_entity",
       "metadata": {
         "files": [
-          "src/main/resources/data/blockpiece/loot_tables/entities/chest_entity.json"
+          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java"
         ]
       },
-      "path": "~/Loot Tables"
+      "path": "~/Mobs/AbilityMobs"
     },
     {
-      "name": "TreasureChest",
-      "type": "block",
-      "sortid": 68,
+      "name": "RoomParticle",
+      "type": "particle",
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "treasure_chest",
+      "registry_name": "room_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/treasure_chest.json",
-          "src/main/resources/assets/blockpiece/blockstates/treasure_chest.json",
-          "src/main/resources/assets/blockpiece/models/block/treasure_chest.json",
-          "src/main/java/net/mcreator/blockpiece/block/TreasureChestBlock.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/room_particle.json"
         ]
       },
-      "path": "~/Blocks"
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -2022,6 +2037,10 @@
         ]
       },
       {
+        "name": "Loot Tables",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": [
           {
@@ -2033,6 +2052,15 @@
       {
         "name": "Advancements",
         "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Potion Effects",
@@ -2111,11 +2139,11 @@
         "name": "Mobs",
         "children": [
           {
-            "name": "AbilityMobs",
+            "name": "Procedures",
             "children": []
           },
           {
-            "name": "Procedures",
+            "name": "AbilityMobs",
             "children": []
           }
         ]
@@ -2137,19 +2165,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Blocks",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Loot Tables",
-        "children": []
       }
     ]
   },

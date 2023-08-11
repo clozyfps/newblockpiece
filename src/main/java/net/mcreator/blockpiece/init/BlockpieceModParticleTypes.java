@@ -18,4 +18,5 @@ public class BlockpieceModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> FIRE_PARTICLE = REGISTRY.register("fire_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> SMOKE_PARTICLE = REGISTRY.register("smoke_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> WHITE_DUST_PARTICLE = REGISTRY.register("white_dust_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> ROOM_PARTICLE = REGISTRY.register("room_particle", () -> new SimpleParticleType(false));
 }
