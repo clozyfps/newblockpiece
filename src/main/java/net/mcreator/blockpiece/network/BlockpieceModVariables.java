@@ -88,6 +88,12 @@ public class BlockpieceModVariables {
 			clone.Exp = original.Exp;
 			clone.KenHakiProgress = original.KenHakiProgress;
 			clone.Beli = original.Beli;
+			clone.QuestProgress = original.QuestProgress;
+			clone.QuestGoal = original.QuestGoal;
+			clone.QuestMob = original.QuestMob;
+			clone.QuestItem = original.QuestItem;
+			clone.QuestRequirement = original.QuestRequirement;
+			clone.Faction = original.Faction;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -143,6 +149,12 @@ public class BlockpieceModVariables {
 		public double Exp = 0.0;
 		public double KenHakiProgress = 0;
 		public double Beli = 0;
+		public double QuestProgress = 0;
+		public String QuestGoal = "";
+		public String QuestMob = "";
+		public String QuestItem = "";
+		public double QuestRequirement = 0;
+		public String Faction = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -170,6 +182,12 @@ public class BlockpieceModVariables {
 			nbt.putDouble("Exp", Exp);
 			nbt.putDouble("KenHakiProgress", KenHakiProgress);
 			nbt.putDouble("Beli", Beli);
+			nbt.putDouble("QuestProgress", QuestProgress);
+			nbt.putString("QuestGoal", QuestGoal);
+			nbt.putString("QuestMob", QuestMob);
+			nbt.putString("QuestItem", QuestItem);
+			nbt.putDouble("QuestRequirement", QuestRequirement);
+			nbt.putString("Faction", Faction);
 			return nbt;
 		}
 
@@ -194,6 +212,12 @@ public class BlockpieceModVariables {
 			Exp = nbt.getDouble("Exp");
 			KenHakiProgress = nbt.getDouble("KenHakiProgress");
 			Beli = nbt.getDouble("Beli");
+			QuestProgress = nbt.getDouble("QuestProgress");
+			QuestGoal = nbt.getString("QuestGoal");
+			QuestMob = nbt.getString("QuestMob");
+			QuestItem = nbt.getString("QuestItem");
+			QuestRequirement = nbt.getDouble("QuestRequirement");
+			Faction = nbt.getString("Faction");
 		}
 	}
 
@@ -237,6 +261,12 @@ public class BlockpieceModVariables {
 					variables.Exp = message.data.Exp;
 					variables.KenHakiProgress = message.data.KenHakiProgress;
 					variables.Beli = message.data.Beli;
+					variables.QuestProgress = message.data.QuestProgress;
+					variables.QuestGoal = message.data.QuestGoal;
+					variables.QuestMob = message.data.QuestMob;
+					variables.QuestItem = message.data.QuestItem;
+					variables.QuestRequirement = message.data.QuestRequirement;
+					variables.Faction = message.data.Faction;
 				}
 			});
 			context.setPacketHandled(true);
