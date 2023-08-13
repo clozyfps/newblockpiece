@@ -13,8 +13,6 @@
  */
 package net.mcreator.blockpiece;
 
-import software.bernie.geckolib3.GeckoLib;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -37,8 +35,6 @@ import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
 import net.mcreator.blockpiece.init.BlockpieceModMenus;
 import net.mcreator.blockpiece.init.BlockpieceModItems;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
-import net.mcreator.blockpiece.init.BlockpieceModBlocks;
-import net.mcreator.blockpiece.init.BlockpieceModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -59,7 +55,6 @@ public class BlockpieceMod {
 		BlockpieceModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-		BlockpieceModBlocks.REGISTRY.register(bus);
 		BlockpieceModItems.REGISTRY.register(bus);
 		BlockpieceModEntities.REGISTRY.register(bus);
 
@@ -67,8 +62,7 @@ public class BlockpieceMod {
 
 		BlockpieceModParticleTypes.REGISTRY.register(bus);
 		BlockpieceModMenus.REGISTRY.register(bus);
-		BlockpieceModBiomes.REGISTRY.register(bus);
-		GeckoLib.initialize();
+
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
