@@ -27,6 +27,7 @@ import net.mcreator.blockpiece.entity.EnkaiMobEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiProjectileEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiMobEntity;
 import net.mcreator.blockpiece.entity.CivilianEntity;
+import net.mcreator.blockpiece.entity.ChestEntityEntity;
 import net.mcreator.blockpiece.entity.BazookaMobEntity;
 import net.mcreator.blockpiece.entity.BanditEntity;
 import net.mcreator.blockpiece.BlockpieceMod;
@@ -68,6 +69,8 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<BanditEntity>of(BanditEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BanditEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ChestEntityEntity>> CHEST_ENTITY = register("chest_entity", EntityType.Builder.<ChestEntityEntity>of(ChestEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChestEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -86,6 +89,7 @@ public class BlockpieceModEntities {
 			LuffyEntity.init();
 			CivilianEntity.init();
 			BanditEntity.init();
+			ChestEntityEntity.init();
 		});
 	}
 
@@ -101,5 +105,6 @@ public class BlockpieceModEntities {
 		event.put(LUFFY.get(), LuffyEntity.createAttributes().build());
 		event.put(CIVILIAN.get(), CivilianEntity.createAttributes().build());
 		event.put(BANDIT.get(), BanditEntity.createAttributes().build());
+		event.put(CHEST_ENTITY.get(), ChestEntityEntity.createAttributes().build());
 	}
 }

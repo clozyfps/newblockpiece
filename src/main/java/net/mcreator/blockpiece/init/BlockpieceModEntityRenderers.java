@@ -20,6 +20,7 @@ import net.mcreator.blockpiece.client.renderer.ExplosionBlocksRenderer;
 import net.mcreator.blockpiece.client.renderer.EnkaiMobRenderer;
 import net.mcreator.blockpiece.client.renderer.DaiEnkaiMobRenderer;
 import net.mcreator.blockpiece.client.renderer.CivilianRenderer;
+import net.mcreator.blockpiece.client.renderer.ChestEntityRenderer;
 import net.mcreator.blockpiece.client.renderer.BazookaMobRenderer;
 import net.mcreator.blockpiece.client.renderer.BanditRenderer;
 
@@ -40,5 +41,6 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.LUFFY.get(), LuffyRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.CIVILIAN.get(), CivilianRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.BANDIT.get(), BanditRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.CHEST_ENTITY.get(), ChestEntityRenderer::new);
 	}
 }

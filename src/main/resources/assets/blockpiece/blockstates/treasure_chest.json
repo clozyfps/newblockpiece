@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "blockpiece:block/treasure_chest"
+    },
+    "facing=east": {
+      "model": "blockpiece:block/treasure_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "blockpiece:block/treasure_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "blockpiece:block/treasure_chest",
+      "y": 270
+    }
+  }
+}

@@ -338,7 +338,6 @@
     {
       "name": "Moveset",
       "type": "overlay",
-      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -445,8 +444,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -685,8 +684,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1736,6 +1735,83 @@
         ]
       },
       "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "ChestEntityLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_entity_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/loot_tables/entities/chest_entity.json"
+        ]
+      },
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "TreasureChest",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "treasure_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/blockstates/treasure_chest.json",
+          "src/main/resources/assets/blockpiece/models/item/treasure_chest.json",
+          "src/main/java/net/mcreator/blockpiece/block/TreasureChestBlock.java",
+          "src/main/resources/assets/blockpiece/models/block/treasure_chest.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "TreasureChestRightClick",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "treasure_chest_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/TreasureChestRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "ChestEntity",
+      "type": "livingentity",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
     }
   ],
   "variable_elements": [
@@ -1893,52 +1969,52 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "entity.blockpiece.enkai_mob": "Enkai Mob",
       "gui.blockpiece.main_menu.label_race": "Race:",
-      "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "biome.blockpiece.main_world_biome": "Main World",
-      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "item.blockpiece.cutlass": "Cutlass",
+      "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
+      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
+      "gui.blockpiece.main_hud.label_questdisplay": "QuestDisplay",
+      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
+      "gui.blockpiece.main_hud.label_empty": "-------------------",
+      "key.blockpiece.open_main_menu": "Open Main Menu",
+      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
+      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
+      "entity.blockpiece.luffy": "Luffy",
+      "entity.blockpiece.invis_mob": "Invis Mob",
+      "key.blockpiece.switch_move": "Switch Move",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
+      "effect.blockpiece.dai_enkai": "Dai Enkai",
+      "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
+      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
+      "entity.blockpiece.pistol_mob": "Pistol Mob",
+      "itemGroup.tabblock_piece_items": "Block Piece Items",
+      "item.blockpiece.explosion_blocks": "`",
+      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
+      "entity.blockpiece.civilian": "Civilian",
+      "entity.blockpiece.enkai_mob": "Enkai Mob",
+      "key.categories.bp": "Block Piece",
+      "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
       "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
-      "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
-      "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "gui.blockpiece.main_menu.label_level": "Level : ",
       "item.blockpiece.bandit_spawn_egg": "Bandit Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
-      "item.blockpiece.luffy_fit_helmet": "Straw Hat",
-      "gui.blockpiece.main_hud.label_questdisplay": "QuestDisplay",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
       "gui.blockpiece.main_hud.label_quest": "Quest",
-      "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
-      "gui.blockpiece.main_hud.label_empty": "-------------------",
-      "key.blockpiece.open_main_menu": "Open Main Menu",
       "entity.blockpiece.bandit": "Bandit",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
-      "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
-      "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "effect.blockpiece.higan": "Higan",
-      "entity.blockpiece.luffy": "Luffy",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
-      "entity.blockpiece.invis_mob": "Invis Mob",
-      "key.blockpiece.switch_move": "Switch Move",
-      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
-      "effect.blockpiece.dai_enkai": "Dai Enkai",
-      "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
-      "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
-      "entity.blockpiece.pistol_mob": "Pistol Mob",
-      "itemGroup.tabblock_piece_items": "Block Piece Items",
-      "key.blockpiece.switch_moveset": "Switch Moveset",
-      "item.blockpiece.explosion_blocks": "`",
-      "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
-      "entity.blockpiece.civilian": "Civilian"
+      "key.blockpiece.switch_moveset": "Switch Moveset"
     }
   },
   "foldersRoot": {
@@ -1958,6 +2034,10 @@
         ]
       },
       {
+        "name": "Loot Tables",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": [
           {
@@ -1969,6 +2049,15 @@
       {
         "name": "Advancements",
         "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Potion Effects",
