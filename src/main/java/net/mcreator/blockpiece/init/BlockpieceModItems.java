@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.blockpiece.item.PistolItem;
 import net.mcreator.blockpiece.item.OpeOpeFruitItemItem;
 import net.mcreator.blockpiece.item.MihawkCapeArmorItem;
 import net.mcreator.blockpiece.item.MeraMeraFruitItemItem;
@@ -45,6 +46,7 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> BANDIT_SPAWN_EGG = REGISTRY.register("bandit_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.BANDIT, -3381760, -26317, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_MOBS)));
 	public static final RegistryObject<Item> TREASURE_CHEST = block(BlockpieceModBlocks.TREASURE_CHEST, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> BOUNTY_POSTER = REGISTRY.register("bounty_poster", () -> new BountyPosterItem());
+	public static final RegistryObject<Item> PISTOL = REGISTRY.register("pistol", () -> new PistolItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
