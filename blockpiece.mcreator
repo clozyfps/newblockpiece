@@ -338,6 +338,7 @@
     {
       "name": "Moveset",
       "type": "overlay",
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -444,8 +445,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -684,8 +685,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1973,6 +1974,7 @@
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "biome.blockpiece.main_world_biome": "Main World",
       "item.blockpiece.cutlass": "Cutlass",
+      "block.blockpiece.treasure_chest": "Treasure Chest",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "item.blockpiece.luffy_fit_helmet": "Straw Hat",
@@ -1994,6 +1996,7 @@
       "item.blockpiece.explosion_blocks": "`",
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
       "entity.blockpiece.civilian": "Civilian",
+      "entity.blockpiece.chest_entity": "Chest Entity",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
