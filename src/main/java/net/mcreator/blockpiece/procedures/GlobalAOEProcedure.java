@@ -1,5 +1,6 @@
 package net.mcreator.blockpiece.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -8,9 +9,15 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.blockpiece.network.BlockpieceModVariables;
 
@@ -86,6 +93,48 @@ public class GlobalAOEProcedure {
 									});
 								}
 							}
+						}
+						if ((entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Exp <= (entityiterator
+								.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).ExpCap) {
+							{
+								double _setval = (entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Exp + Mth.nextInt(RandomSource.create(), 1, 4);
+								entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.Exp = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+						} else if ((entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Exp > (entityiterator
+								.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).ExpCap) {
+							{
+								double _setval = (entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Level + 1;
+								entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.Level = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+							{
+								double _setval = 0;
+								entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.Exp = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+							{
+								double _setval = (entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).ExpCap + Mth.nextInt(RandomSource.create(), 5, 10);
+								entityiterator.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.ExpCap = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
+							if (entityiterator instanceof Player _player && !_player.level.isClientSide())
+								_player.displayClientMessage(Component.literal("Level Up!"), true);
 						}
 					}
 				}

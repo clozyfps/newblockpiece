@@ -28,6 +28,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.blockpiece.procedures.LuffyOnEntityTickUpdateProcedure;
 import net.mcreator.blockpiece.init.BlockpieceModItems;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 
@@ -95,6 +96,12 @@ public class LuffyEntity extends Monster {
 		if (source == DamageSource.FALL)
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		LuffyOnEntityTickUpdateProcedure.execute(this);
 	}
 
 	public static void init() {
