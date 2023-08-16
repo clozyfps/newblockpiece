@@ -15,7 +15,7 @@ import net.mcreator.blockpiece.network.BlockpieceModVariables;
 
 import java.util.Iterator;
 
-public class MeraMeraFruitItemPlayerFinishesUsingItemProcedure {
+public class MeramerafruititemfinishesusingProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

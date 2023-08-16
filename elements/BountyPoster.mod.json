@@ -8,7 +8,7 @@
     "name": "Bounty Poster",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:BlockPieceItem"
+      "value": "CUSTOM:BlockPieceArmor"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -29,9 +29,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "BountyPosterRightclicked"
-    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
