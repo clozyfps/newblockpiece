@@ -1,8 +1,8 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
 
 public class SwitchMoveOnKeyPressedProcedure {
 	public static void execute(Entity entity) {
@@ -183,7 +183,7 @@ public class SwitchMoveOnKeyPressedProcedure {
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMoveset).equals("Devil Fruit")
 				&& ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).DevilFruit).equals("Ope")) {
 			if (!entity.isShiftKeyDown()) {
-				if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove < 3) {
+				if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove < 8) {
 					{
 						double _setval = (entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove + 1;
 						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -201,7 +201,7 @@ public class SwitchMoveOnKeyPressedProcedure {
 					}
 				}
 			} else {
-				if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove <= 3
+				if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove <= 8
 						&& (entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove != 1) {
 					{
 						double _setval = (entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove - 1;
@@ -212,7 +212,7 @@ public class SwitchMoveOnKeyPressedProcedure {
 					}
 				} else if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 1) {
 					{
-						double _setval = 3;
+						double _setval = 8;
 						entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.SwitchCurrentMove = _setval;
 							capability.syncPlayerVariables(entity);
@@ -241,6 +241,51 @@ public class SwitchMoveOnKeyPressedProcedure {
 			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 3) {
 				{
 					String _setval = "Shambles (Block)";
+					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 4) {
+				{
+					String _setval = "Amputate";
+					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 5) {
+				{
+					String _setval = "Takt";
+					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 6) {
+				{
+					String _setval = "Scan";
+					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 7) {
+				{
+					String _setval = "Mes";
+					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SwitchCurrentMove == 8) {
+				{
+					String _setval = "Gamma Knife";
 					entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedMove = _setval;
 						capability.syncPlayerVariables(entity);

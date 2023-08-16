@@ -94,6 +94,8 @@ public class BlockpieceModVariables {
 			clone.QuestProgress = original.QuestProgress;
 			clone.QuestRequirement = original.QuestRequirement;
 			clone.Faction = original.Faction;
+			clone.Stamina = original.Stamina;
+			clone.StaminaCap = original.StaminaCap;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -155,6 +157,8 @@ public class BlockpieceModVariables {
 		public double QuestProgress = 0;
 		public double QuestRequirement = 0;
 		public String Faction = "";
+		public double Stamina = 0;
+		public double StaminaCap = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -188,6 +192,8 @@ public class BlockpieceModVariables {
 			nbt.putDouble("QuestProgress", QuestProgress);
 			nbt.putDouble("QuestRequirement", QuestRequirement);
 			nbt.putString("Faction", Faction);
+			nbt.putDouble("Stamina", Stamina);
+			nbt.putDouble("StaminaCap", StaminaCap);
 			return nbt;
 		}
 
@@ -218,6 +224,8 @@ public class BlockpieceModVariables {
 			QuestProgress = nbt.getDouble("QuestProgress");
 			QuestRequirement = nbt.getDouble("QuestRequirement");
 			Faction = nbt.getString("Faction");
+			Stamina = nbt.getDouble("Stamina");
+			StaminaCap = nbt.getDouble("StaminaCap");
 		}
 	}
 
@@ -267,6 +275,8 @@ public class BlockpieceModVariables {
 					variables.QuestProgress = message.data.QuestProgress;
 					variables.QuestRequirement = message.data.QuestRequirement;
 					variables.Faction = message.data.Faction;
+					variables.Stamina = message.data.Stamina;
+					variables.StaminaCap = message.data.StaminaCap;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,8 +1,33 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
+import net.mcreator.blockpiece.init.BlockpieceModMobEffects;
+import net.mcreator.blockpiece.init.BlockpieceModEntities;
+import net.mcreator.blockpiece.init.BlockpieceModBlocks;
+import net.mcreator.blockpiece.entity.OpeMiddleEntity;
+
+import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.List;
+import java.util.Comparator;
 
 public class OpeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -128,6 +153,18 @@ public class OpeProcedure {
 				}
 				world.setBlock(new BlockPos(xRay, yRay, zRay), Blocks.AIR.defaultBlockState(), 3);
 			}
+		}
+		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Amputate") && entity.getPersistentData().getBoolean("roomActive")
+				&& entity.getPersistentData().getBoolean("inRoom")) {
+			world.setBlock(new BlockPos(xRay, yRay, zRay), Blocks.AIR.defaultBlockState(), 3);
+		}
+		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Takt") && entity.getPersistentData().getBoolean("roomActive")
+				&& entity.getPersistentData().getBoolean("inRoom")) {
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(BlockpieceModMobEffects.TAKT_ACTIVE.get(), 30, 0, true, false));
+			entity.getPersistentData().putDouble("activeX", xRay);
+			entity.getPersistentData().putDouble("activeY", yRay);
+			entity.getPersistentData().putDouble("activeZ", zRay);
 		}
 	}
 }

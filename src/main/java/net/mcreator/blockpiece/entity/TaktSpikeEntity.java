@@ -15,22 +15,20 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.blockpiece.procedures.OpeMiddleUpdateTickProcedure;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 
-public class OpeMiddleEntity extends PathfinderMob {
-	public OpeMiddleEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BlockpieceModEntities.OPE_MIDDLE.get(), world);
+public class TaktSpikeEntity extends PathfinderMob {
+	public TaktSpikeEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(BlockpieceModEntities.TAKT_SPIKE.get(), world);
 	}
 
-	public OpeMiddleEntity(EntityType<OpeMiddleEntity> type, Level world) {
+	public TaktSpikeEntity(EntityType<TaktSpikeEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
@@ -55,12 +53,12 @@ public class OpeMiddleEntity extends PathfinderMob {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}
 
 	@Override
@@ -92,25 +90,6 @@ public class OpeMiddleEntity extends PathfinderMob {
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		OpeMiddleUpdateTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
-	}
-
-	@Override
-	public boolean isPushable() {
-		return false;
-	}
-
-	@Override
-	protected void doPush(Entity entityIn) {
-	}
-
-	@Override
-	protected void pushEntities() {
 	}
 
 	public static void init() {
