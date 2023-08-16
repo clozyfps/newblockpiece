@@ -1554,21 +1554,6 @@
       "path": "~/Biomes"
     },
     {
-      "name": "MainWorld",
-      "type": "dimension",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_world",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/blockpiece/dimension_type/main_world.json",
-          "src/main/java/net/mcreator/blockpiece/world/dimension/MainWorldDimension.java",
-          "src/main/resources/data/blockpiece/dimension/main_world.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
       "name": "CheckDimension",
       "type": "procedure",
       "sortid": 57,
