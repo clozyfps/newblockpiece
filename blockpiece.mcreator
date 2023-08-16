@@ -2551,6 +2551,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "pehkui",
       "geckolib",
       "playeranimator"
     ],
