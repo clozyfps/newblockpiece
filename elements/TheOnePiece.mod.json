@@ -2,10 +2,10 @@
   "_fv": 43,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Mera Mera No Mi",
-    "achievementDescription": "Eat The Mera Mera No Mi",
+    "achievementName": "The One Piece",
+    "achievementDescription": "Begin Your Adventure!",
     "achievementIcon": {
-      "value": "CUSTOM:MeraMeraFruitItem"
+      "value": "CUSTOM:LuffyFit.helmet"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -18,8 +18,8 @@
     "rewardXP": 0,
     "achievementType": "challenge",
     "parent": {
-      "value": "CUSTOM:TheOnePiece"
+      "value": "No parent: root"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"52\" y=\"30\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"90\" y=\"86\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

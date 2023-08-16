@@ -94,6 +94,10 @@ public class BlockpieceModVariables {
 			clone.QuestItem = original.QuestItem;
 			clone.QuestRequirement = original.QuestRequirement;
 			clone.Faction = original.Faction;
+			clone.FirstName = original.FirstName;
+			clone.JoinedWorld = original.JoinedWorld;
+			clone.Bounty = original.Bounty;
+			clone.LastName = original.LastName;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -155,6 +159,10 @@ public class BlockpieceModVariables {
 		public String QuestItem = "";
 		public double QuestRequirement = 0;
 		public String Faction = "";
+		public String FirstName = "\"\"";
+		public boolean JoinedWorld = false;
+		public double Bounty = 0;
+		public String LastName = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -188,6 +196,10 @@ public class BlockpieceModVariables {
 			nbt.putString("QuestItem", QuestItem);
 			nbt.putDouble("QuestRequirement", QuestRequirement);
 			nbt.putString("Faction", Faction);
+			nbt.putString("FirstName", FirstName);
+			nbt.putBoolean("JoinedWorld", JoinedWorld);
+			nbt.putDouble("Bounty", Bounty);
+			nbt.putString("LastName", LastName);
 			return nbt;
 		}
 
@@ -218,6 +230,10 @@ public class BlockpieceModVariables {
 			QuestItem = nbt.getString("QuestItem");
 			QuestRequirement = nbt.getDouble("QuestRequirement");
 			Faction = nbt.getString("Faction");
+			FirstName = nbt.getString("FirstName");
+			JoinedWorld = nbt.getBoolean("JoinedWorld");
+			Bounty = nbt.getDouble("Bounty");
+			LastName = nbt.getString("LastName");
 		}
 	}
 
@@ -267,6 +283,10 @@ public class BlockpieceModVariables {
 					variables.QuestItem = message.data.QuestItem;
 					variables.QuestRequirement = message.data.QuestRequirement;
 					variables.Faction = message.data.Faction;
+					variables.FirstName = message.data.FirstName;
+					variables.JoinedWorld = message.data.JoinedWorld;
+					variables.Bounty = message.data.Bounty;
+					variables.LastName = message.data.LastName;
 				}
 			});
 			context.setPacketHandled(true);
