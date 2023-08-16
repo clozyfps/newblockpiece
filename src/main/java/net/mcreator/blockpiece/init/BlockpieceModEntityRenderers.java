@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.blockpiece.client.renderer.PistolRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
 import net.mcreator.blockpiece.client.renderer.OpeMiddleRenderer;
@@ -44,5 +45,6 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.BANDIT.get(), BanditRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.CHEST_ENTITY.get(), ChestEntityRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.OPE_MIDDLE.get(), OpeMiddleRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.PISTOL.get(), PistolRenderer::new);
 	}
 }

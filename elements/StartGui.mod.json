@@ -15,14 +15,14 @@
         "data": {
           "name": "label_what_shall_the_world_call_you",
           "text": {
-            "fixedValue": "What shall the world call you?"
+            "fixedValue": "What shall the pirate world call you?"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 139,
-          "y": 26
+          "x": 119,
+          "y": 21
         }
       },
       {
@@ -40,14 +40,11 @@
         "type": "button",
         "data": {
           "name": "button_begin",
-          "text": "Begin",
-          "onClick": {
-            "name": "Begin"
-          },
+          "text": "Begin!",
           "width": 51,
           "height": 20,
-          "x": 189,
-          "y": 81
+          "x": 187,
+          "y": 76
         }
       }
     ],

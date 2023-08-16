@@ -10,7 +10,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.blockpiece.procedures.MeraMeraFruitItemPlayerFinishesUsingItemProcedure;
+import net.mcreator.blockpiece.procedures.MeramerafruititemfinishesusingProcedure;
 import net.mcreator.blockpiece.init.BlockpieceModTabs;
 
 import java.util.List;
@@ -40,7 +40,7 @@ public class MeraMeraFruitItemItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MeraMeraFruitItemPlayerFinishesUsingItemProcedure.execute(entity);
+		MeramerafruititemfinishesusingProcedure.execute(entity);
 		return retval;
 	}
 }
