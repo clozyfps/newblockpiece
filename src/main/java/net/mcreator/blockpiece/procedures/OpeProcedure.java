@@ -1,8 +1,21 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class OpeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -16,13 +29,54 @@ public class OpeProcedure {
 		double zPos = 0;
 		if (((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).SelectedMove).equals("Room")) {
 			if (!entity.getPersistentData().getBoolean("roomActive")) {
-				entity.getPersistentData().putDouble("roomSize", 35);
-				entity.getPersistentData().putBoolean("roomActive", true);
-				entity.getPersistentData().putBoolean("inRoom", true);
+				if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.AIR) {
+					entity.getPersistentData().putDouble("roomSize", 25);
+					entity.getPersistentData().putBoolean("roomActive", true);
+					entity.getPersistentData().putBoolean("inRoom", true);
+					entity.getPersistentData().putDouble("roomPosX", (entity.getX()));
+					entity.getPersistentData().putDouble("roomPosY", (entity.getY()));
+					entity.getPersistentData().putDouble("roomPosZ", (entity.getZ()));
+					int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("roomSize")) - 1;
+					int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("roomSize")) - 1;
+					int yIterationsSphere = verticalRadiusSphere;
+					for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+						for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+							for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+								double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+										+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+								if (distanceSq <= 1.0) {
+									if (!((world.getBlockState(new BlockPos(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
+										world.setBlock(new BlockPos(x, y, z), Blocks.DIAMOND_ORE.defaultBlockState(), 3);
+									}
+								}
+							}
+						}
+					}
+				} else {
+					if (entity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal("Must be in an open space!"), true);
+				}
 			} else if (entity.getPersistentData().getBoolean("roomActive")) {
 				entity.getPersistentData().putDouble("roomSize", 0);
 				entity.getPersistentData().putBoolean("roomActive", false);
 				entity.getPersistentData().putBoolean("inRoom", false);
+				int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("roomSize")) - 1;
+				int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("roomSize")) - 1;
+				int yIterationsSphere = verticalRadiusSphere;
+				for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+							if (distanceSq <= 1.0) {
+								if ((world.getBlockState(new BlockPos(entity.getPersistentData().getDouble("roomPosX"), entity.getPersistentData().getDouble("roomPosY"), entity.getPersistentData().getDouble("roomPosZ"))))
+										.getBlock() == Blocks.DIAMOND_ORE) {
+									world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		xRay = entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((entity.getPersistentData().getDouble("roomSize")))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
