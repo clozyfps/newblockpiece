@@ -11,11 +11,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.blockpiece.world.inventory.MainMenuMenu;
-import net.mcreator.blockpiece.procedures.MaxExpValueProcedure;
-import net.mcreator.blockpiece.procedures.LevelValueProcedure;
-import net.mcreator.blockpiece.procedures.LastNameValueProcedure;
-import net.mcreator.blockpiece.procedures.FirstNameValueProcedure;
-import net.mcreator.blockpiece.procedures.ExpValueProcedure;
 import net.mcreator.blockpiece.procedures.DisplayRACEProcedure;
 import net.mcreator.blockpiece.procedures.DisplayPlayerGUIProcedure;
 import net.mcreator.blockpiece.procedures.DisplayFSProcedure;
@@ -84,13 +79,13 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				DisplayDFProcedure.execute(entity), 104, 99, -1);
+				DisplayDFProcedure.execute(entity), 106, 99, -12829636);
 		this.font.draw(poseStack,
 
-				DisplayFSProcedure.execute(entity), 104, 123, -1);
+				DisplayFSProcedure.execute(entity), 106, 123, -12829636);
 		this.font.draw(poseStack,
 
-				DisplayRACEProcedure.execute(entity), 100, 146, -1);
+				DisplayRACEProcedure.execute(entity), 98, 146, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_devil_fruit"), 99, 89, -1);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_fighting_style"), 92, 112, -1);
 		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_race"), 115, 136, -1);
@@ -98,24 +93,6 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.font.draw(poseStack,
 
 				DisplayBeliProcedure.execute(entity), 37, 23, -13312);
-		this.font.draw(poseStack,
-
-				FirstNameValueProcedure.execute(entity), 8, 9, -1);
-		this.font.draw(poseStack,
-
-				LastNameValueProcedure.execute(entity), 71, 9, -1);
-		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_level"), 8, 36, -1);
-		this.font.draw(poseStack,
-
-				LevelValueProcedure.execute(entity), 40, 36, -1);
-		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_exp"), 8, 49, -1);
-		this.font.draw(poseStack,
-
-				ExpValueProcedure.execute(entity), 29, 49, -1);
-		this.font.draw(poseStack,
-
-				MaxExpValueProcedure.execute(entity), 72, 49, -1);
-		this.font.draw(poseStack, Component.translatable("gui.blockpiece.main_menu.label_empty"), 69, 50, -1);
 	}
 
 	@Override
