@@ -32,10 +32,10 @@
             "name": "DisplayDF"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 232,
+          "x": 230,
           "y": 136
         }
       },
@@ -48,10 +48,10 @@
             "name": "DisplayFS"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 232,
+          "x": 230,
           "y": 160
         }
       },
@@ -64,10 +64,10 @@
             "name": "DisplayRACE"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 224,
+          "x": 226,
           "y": 183
         }
       },
@@ -154,6 +154,131 @@
           },
           "x": 163,
           "y": 60
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_first_name_value",
+          "text": {
+            "fixedValue": "",
+            "name": "FirstNameValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_last_name_value",
+          "text": {
+            "fixedValue": "",
+            "name": "LastNameValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 197,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level",
+          "text": {
+            "fixedValue": "Level:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 73
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_level_value",
+          "text": {
+            "fixedValue": "",
+            "name": "LevelValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 73
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exp",
+          "text": {
+            "fixedValue": "Exp:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_level_value1",
+          "text": {
+            "fixedValue": "",
+            "name": "ExpValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 155,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_exp_value",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxExpValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "/"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 87
         }
       }
     ],

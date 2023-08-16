@@ -33,7 +33,7 @@ public class HikenWhileProjectileFlyingTickProcedure {
 		double sy = 0;
 		double sz = 0;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 200, 1.6, 3, 1.6, 0);
+			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 200, 2, 3, 2, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (BlockpieceModParticleTypes.SMOKE_PARTICLE.get()), x, y, z, 1, 1, 3, 1, 0);
 		if (world instanceof ServerLevel _level)

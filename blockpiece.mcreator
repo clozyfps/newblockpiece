@@ -338,6 +338,7 @@
     {
       "name": "Moveset",
       "type": "overlay",
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -498,8 +499,8 @@
       "registry_name": "ope_ope_fruit_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json",
-          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/OpeOpeFruitItemItem.java",
+          "src/main/resources/assets/blockpiece/models/item/ope_ope_fruit_item.json"
         ]
       },
       "path": "~/Items"
@@ -537,7 +538,7 @@
     {
       "name": "BlockPieceMobs",
       "type": "tab",
-      "sortid": 47,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_piece_mobs",
@@ -555,10 +556,10 @@
       "registry_name": "marine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json",
           "src/main/resources/assets/blockpiece/models/item/marine_spawn_egg.json",
-          "src/main/resources/data/blockpiece/forge/biome_modifier/marine_biome_modifier.json"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/MarineRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/MarineEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -863,9 +864,9 @@
       "registry_name": "dai_enkai_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java",
           "src/main/java/net/mcreator/blockpiece/item/DaiEnkaiProjectileItem.java",
-          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json",
-          "src/main/java/net/mcreator/blockpiece/entity/DaiEnkaiProjectileEntity.java"
+          "src/main/resources/assets/blockpiece/models/item/dai_enkai_projectile.json"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -959,9 +960,9 @@
       "registry_name": "hiken",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java",
           "src/main/resources/assets/blockpiece/models/item/hiken.json",
-          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java",
-          "src/main/java/net/mcreator/blockpiece/entity/HikenEntity.java"
+          "src/main/java/net/mcreator/blockpiece/item/HikenItem.java"
         ]
       },
       "path": "~/Ranged Items/Abilities"
@@ -1080,7 +1081,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUIs/Procedures"
     },
     {
       "name": "ExplosionBlocksTicking",
@@ -1153,7 +1154,7 @@
     {
       "name": "SmokeParticle",
       "type": "particle",
-      "sortid": 43,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_particle",
@@ -1184,7 +1185,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUIs/Procedures"
     },
     {
       "name": "OpenMainMenu",
@@ -1209,10 +1210,10 @@
       "registry_name": "explosion_blocks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java",
-          "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
           "src/main/java/net/mcreator/blockpiece/item/ExplosionBlocksItem.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java"
+          "src/main/resources/assets/blockpiece/models/item/explosion_blocks.json",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ExplosionBlocksRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/ExplosionBlocksEntity.java"
         ]
       },
       "path": "~/Items/AbilityItems"
@@ -1236,7 +1237,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUIs/Procedures"
     },
     {
       "name": "InvisMob",
@@ -1247,8 +1248,8 @@
       "registry_name": "invis_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/InvisMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/InvisMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1292,7 +1293,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUIs/Procedures"
     },
     {
       "name": "MainMenu",
@@ -1303,8 +1304,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java"
+          "src/main/java/net/mcreator/blockpiece/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/blockpiece/client/gui/MainMenuScreen.java"
         ]
       },
       "path": "~/GUIs"
@@ -1333,8 +1334,8 @@
       "registry_name": "cutlass",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/cutlass.json",
-          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java",
+          "src/main/resources/assets/blockpiece/models/item/cutlass.json"
         ]
       },
       "path": "~/Items"
@@ -1360,8 +1361,8 @@
       "registry_name": "fire_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/fire_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/FireParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/fire_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1375,9 +1376,9 @@
       "registry_name": "luffy",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/LuffyRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/LuffyEntity.java",
           "src/main/resources/data/blockpiece/forge/biome_modifier/luffy_biome_modifier.json",
+          "src/main/java/net/mcreator/blockpiece/entity/LuffyEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/LuffyRenderer.java",
           "src/main/resources/assets/blockpiece/models/item/luffy_spawn_egg.json"
         ]
       },
@@ -1392,9 +1393,9 @@
       "registry_name": "luffy_fit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/luffy_fit_chestplate.json",
           "src/main/resources/assets/blockpiece/models/item/luffy_fit_helmet.json",
-          "src/main/java/net/mcreator/blockpiece/item/LuffyFitItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/LuffyFitItem.java",
+          "src/main/resources/assets/blockpiece/models/item/luffy_fit_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -1408,8 +1409,8 @@
       "registry_name": "white_dust_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1453,7 +1454,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUIs/Procedures"
     },
     {
       "name": "MasterySystem",
@@ -1488,7 +1489,7 @@
           }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Items/Procedures"
     },
     {
       "name": "LevelingSystem",
@@ -1508,6 +1509,7 @@
     {
       "name": "MeraMeraNoMi",
       "type": "achievement",
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mera_mera_no_mi",
@@ -1527,8 +1529,8 @@
       "registry_name": "room_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/room_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/room_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1542,10 +1544,10 @@
       "registry_name": "civilian",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/CivilianRenderer.java",
-          "src/main/resources/assets/blockpiece/models/item/civilian_spawn_egg.json",
           "src/main/resources/data/blockpiece/forge/biome_modifier/civilian_biome_modifier.json",
-          "src/main/java/net/mcreator/blockpiece/entity/CivilianEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/CivilianEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/CivilianRenderer.java",
+          "src/main/resources/assets/blockpiece/models/item/civilian_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -1569,21 +1571,6 @@
         ]
       },
       "path": "~/Mobs/Procedures"
-    },
-    {
-      "name": "MainWorld",
-      "type": "dimension",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_world",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/world/dimension/MainWorldDimension.java",
-          "src/main/resources/data/blockpiece/dimension/main_world.json",
-          "src/main/resources/data/blockpiece/dimension_type/main_world.json"
-        ]
-      },
-      "path": "~/Dimensions"
     },
     {
       "name": "CheckDimension",
@@ -1648,10 +1635,10 @@
       "registry_name": "bandit",
       "metadata": {
         "files": [
-          "src/main/resources/data/blockpiece/forge/biome_modifier/bandit_biome_modifier.json",
           "src/main/java/net/mcreator/blockpiece/entity/BanditEntity.java",
           "src/main/java/net/mcreator/blockpiece/client/renderer/BanditRenderer.java",
-          "src/main/resources/assets/blockpiece/models/item/bandit_spawn_egg.json"
+          "src/main/resources/assets/blockpiece/models/item/bandit_spawn_egg.json",
+          "src/main/resources/data/blockpiece/forge/biome_modifier/bandit_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -1758,10 +1745,10 @@
       "registry_name": "treasure_chest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/blockstates/treasure_chest.json",
-          "src/main/resources/assets/blockpiece/models/item/treasure_chest.json",
           "src/main/java/net/mcreator/blockpiece/block/TreasureChestBlock.java",
-          "src/main/resources/assets/blockpiece/models/block/treasure_chest.json"
+          "src/main/resources/assets/blockpiece/models/block/treasure_chest.json",
+          "src/main/resources/assets/blockpiece/models/item/treasure_chest.json",
+          "src/main/resources/assets/blockpiece/blockstates/treasure_chest.json"
         ]
       },
       "path": "~/Blocks"
@@ -1807,11 +1794,341 @@
       "registry_name": "chest_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "BountyMenu",
+      "type": "gui",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bounty_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/gui/BountyMenuScreen.java",
+          "src/main/java/net/mcreator/blockpiece/world/inventory/BountyMenuMenu.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "StartGui",
+      "type": "gui",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/gui/StartGuiScreen.java",
+          "src/main/java/net/mcreator/blockpiece/world/inventory/StartGuiMenu.java",
+          "src/main/java/net/mcreator/blockpiece/network/StartGuiButtonMessage.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "Begin",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "begin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BeginProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "TheOnePiece",
+      "type": "achievement",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_one_piece",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blockpiece/advancements/the_one_piece.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "joined_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/JoinedWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FirstNameValue",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "first_name_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/FirstNameValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "LastNameValue",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "last_name_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LastNameValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "BountyPoster",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bounty_poster",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/bounty_poster.json",
+          "src/main/java/net/mcreator/blockpiece/item/BountyPosterItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BlockPieceItem",
+      "type": "tab",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_piece_item",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BountyPosterRightclicked",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bounty_poster_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BountyPosterRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "BountyValue",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bounty_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/BountyValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "LevelValue",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LevelValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "ExpValue",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/ExpValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "MaxExpValue",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_exp_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/MaxExpValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "GlobalAOE",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "global_aoe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/GlobalAOEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -1964,6 +2281,30 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "LastName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "FirstName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Bounty",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1973,6 +2314,8 @@
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
       "biome.blockpiece.main_world_biome": "Main World",
       "item.blockpiece.cutlass": "Cutlass",
+      "gui.blockpiece.start_gui.label_what_shall_the_world_call_you": "What shall the world call you?",
+      "block.blockpiece.treasure_chest": "Treasure Chest",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
       "item.blockpiece.luffy_fit_helmet": "Straw Hat",
@@ -1984,36 +2327,45 @@
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "entity.blockpiece.luffy": "Luffy",
       "entity.blockpiece.invis_mob": "Invis Mob",
+      "advancements.the_one_piece.descr": "Begin Your Adventure!",
       "key.blockpiece.switch_move": "Switch Move",
-      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "effect.blockpiece.dai_enkai": "Dai Enkai",
+      "item.blockpiece.ope_ope_fruit_item": "Ope Ope No Mi",
       "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
-      "itemGroup.tabblock_piece_items": "Block Piece Items",
+      "itemGroup.tabblock_piece_items": "Block Piece Weapons",
       "item.blockpiece.explosion_blocks": "`",
+      "gui.blockpiece.main_menu.label_empty": "/",
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
       "entity.blockpiece.civilian": "Civilian",
+      "entity.blockpiece.chest_entity": "Chest Entity",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
+      "gui.blockpiece.main_menu.label_exp": "Exp:",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
       "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
-      "gui.blockpiece.main_menu.label_level": "Level : ",
+      "gui.blockpiece.main_menu.label_level": "Level:",
       "item.blockpiece.bandit_spawn_egg": "Bandit Spawn Egg",
       "entity.blockpiece.pistol_mob_forward": "Pistol Mob Forward",
       "gui.blockpiece.main_menu.label_beli": "Beli:",
       "key.blockpiece.use_move": "Use Move",
       "gui.blockpiece.main_hud.label_quest": "Quest",
+      "gui.blockpiece.start_gui.FirstName": "First Name",
       "entity.blockpiece.bandit": "Bandit",
       "gui.blockpiece.main_menu.label_devil_fruit": "Devil Fruit:",
+      "advancements.the_one_piece.title": "The One Piece",
+      "itemGroup.tabblock_piece_item": "Block Piece Items",
+      "item.blockpiece.bounty_poster": "Bounty Poster",
       "effect.blockpiece.higan": "Higan",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
+      "gui.blockpiece.start_gui.button_begin": "Begin",
       "key.blockpiece.switch_moveset": "Switch Moveset"
     }
   },
@@ -2091,6 +2443,10 @@
         "children": [
           {
             "name": "AbilityItems",
+            "children": []
+          },
+          {
+            "name": "Procedures",
             "children": []
           }
         ]

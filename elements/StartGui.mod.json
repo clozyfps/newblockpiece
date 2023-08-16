@@ -1,0 +1,62 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_what_shall_the_world_call_you",
+          "text": {
+            "fixedValue": "What shall the world call you?"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 139,
+          "y": 26
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "First Name",
+          "name": "FirstName",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 48
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_begin",
+          "text": "Begin",
+          "onClick": {
+            "name": "Begin"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 189,
+          "y": 81
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

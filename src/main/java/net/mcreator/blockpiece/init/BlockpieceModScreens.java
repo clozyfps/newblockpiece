@@ -11,7 +11,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.blockpiece.client.gui.StartGuiScreen;
 import net.mcreator.blockpiece.client.gui.MainMenuScreen;
+import net.mcreator.blockpiece.client.gui.BountyMenuScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class BlockpieceModScreens {
@@ -19,6 +21,8 @@ public class BlockpieceModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(BlockpieceModMenus.MAIN_MENU.get(), MainMenuScreen::new);
+			MenuScreens.register(BlockpieceModMenus.BOUNTY_MENU.get(), BountyMenuScreen::new);
+			MenuScreens.register(BlockpieceModMenus.START_GUI.get(), StartGuiScreen::new);
 		});
 	}
 }
