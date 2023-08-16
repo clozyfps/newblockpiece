@@ -1,8 +1,14 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.init.BlockpieceModEntities;
+import net.mcreator.blockpiece.entity.PistolEntity;
 
 public class LuffyOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {
@@ -16,7 +22,7 @@ public class LuffyOnEntityTickUpdateProcedure {
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new PistolEntity(BlockpieceModEntities.DELETED_MOD_ELEMENT.get(), level);
+								AbstractArrow entityToSpawn = new PistolEntity(BlockpieceModEntities.PISTOL.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);

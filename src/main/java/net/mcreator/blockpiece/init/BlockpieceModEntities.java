@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
+import net.mcreator.blockpiece.entity.PistolEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
 import net.mcreator.blockpiece.entity.LuffyEntity;
 import net.mcreator.blockpiece.entity.InvisMobEntity;
@@ -71,6 +72,8 @@ public class BlockpieceModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ChestEntityEntity>> CHEST_ENTITY = register("chest_entity", EntityType.Builder.<ChestEntityEntity>of(ChestEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChestEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PistolEntity>> PISTOL = register("projectile_pistol",
+			EntityType.Builder.<PistolEntity>of(PistolEntity::new, MobCategory.MISC).setCustomClientFactory(PistolEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
