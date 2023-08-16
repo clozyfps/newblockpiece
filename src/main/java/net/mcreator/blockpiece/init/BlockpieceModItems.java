@@ -42,6 +42,7 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> CIVILIAN_SPAWN_EGG = REGISTRY.register("civilian_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.CIVILIAN, -3355444, -6710887, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BANDIT_SPAWN_EGG = REGISTRY.register("bandit_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.BANDIT, -3381760, -26317, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TREASURE_CHEST = block(BlockpieceModBlocks.TREASURE_CHEST, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> ROOM_BLOCK = block(BlockpieceModBlocks.ROOM_BLOCK, null);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

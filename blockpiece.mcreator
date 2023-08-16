@@ -1798,6 +1798,130 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "OpeSecondary",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope_secondary",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/OpeSecondaryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets/Procedures"
+    },
+    {
+      "name": "RoomBlock",
+      "type": "block",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "room_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/room_block.json",
+          "src/main/resources/assets/blockpiece/blockstates/room_block.json",
+          "src/main/resources/assets/blockpiece/models/block/room_block.json",
+          "src/main/java/net/mcreator/blockpiece/block/RoomBlockBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "RoomBlockEntityCollision",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "room_block_entity_collision",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/RoomBlockEntityCollisionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "OpeMiddleUpdateTick",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope_middle_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/OpeMiddleUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "OpeMiddle",
+      "type": "livingentity",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ope_middle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/OpeMiddleEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/OpeMiddleRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
     }
   ],
   "variable_elements": [
@@ -1962,6 +2086,7 @@
       "block.blockpiece.treasure_chest": "Treasure Chest",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "block.blockpiece.room_block": "Room Block",
       "item.blockpiece.luffy_fit_helmet": "Straw Hat",
       "gui.blockpiece.main_hud.label_questdisplay": "QuestDisplay",
       "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
@@ -1982,6 +2107,7 @@
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
       "entity.blockpiece.civilian": "Civilian",
       "entity.blockpiece.chest_entity": "Chest Entity",
+      "entity.blockpiece.ope_middle": "Ope Middle",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
@@ -2106,7 +2232,12 @@
       },
       {
         "name": "Movesets",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Recipes",

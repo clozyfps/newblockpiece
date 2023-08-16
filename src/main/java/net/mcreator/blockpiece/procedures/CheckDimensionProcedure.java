@@ -39,7 +39,7 @@ public class CheckDimensionProcedure {
 			return;
 		if ((entity.level.dimension()) == Level.OVERWORLD) {
 			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("blockpiece:main_world"));
+				ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("blockpiece:deleted_mod_element"));
 				if (_player.level.dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);

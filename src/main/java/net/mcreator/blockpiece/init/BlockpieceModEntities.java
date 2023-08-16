@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
 import net.mcreator.blockpiece.entity.PistolMobEntity;
+import net.mcreator.blockpiece.entity.OpeMiddleEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
 import net.mcreator.blockpiece.entity.LuffyEntity;
 import net.mcreator.blockpiece.entity.InvisMobEntity;
@@ -71,6 +72,8 @@ public class BlockpieceModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ChestEntityEntity>> CHEST_ENTITY = register("chest_entity", EntityType.Builder.<ChestEntityEntity>of(ChestEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChestEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<OpeMiddleEntity>> OPE_MIDDLE = register("ope_middle", EntityType.Builder.<OpeMiddleEntity>of(OpeMiddleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(OpeMiddleEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -90,6 +93,7 @@ public class BlockpieceModEntities {
 			CivilianEntity.init();
 			BanditEntity.init();
 			ChestEntityEntity.init();
+			OpeMiddleEntity.init();
 		});
 	}
 
@@ -106,5 +110,6 @@ public class BlockpieceModEntities {
 		event.put(CIVILIAN.get(), CivilianEntity.createAttributes().build());
 		event.put(BANDIT.get(), BanditEntity.createAttributes().build());
 		event.put(CHEST_ENTITY.get(), ChestEntityEntity.createAttributes().build());
+		event.put(OPE_MIDDLE.get(), OpeMiddleEntity.createAttributes().build());
 	}
 }

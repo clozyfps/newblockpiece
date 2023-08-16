@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "blockpiece:block/room_block"
+    }
+  }
+}
