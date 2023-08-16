@@ -1433,7 +1433,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Mobs"
     },
     {
       "name": "DisplayBeli",
@@ -2131,6 +2131,26 @@
       "path": "~/Procedures"
     },
     {
+      "name": "LuffyOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luffy_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/LuffyOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
       "name": "PistolWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 86,
@@ -2171,6 +2191,23 @@
       "path": "~/Ranged Items/Abilities"
     },
     {
+      "name": "Pistol",
+      "type": "rangeditem",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pistol",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/PistolItem.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolRenderer.java",
+          "src/main/resources/assets/blockpiece/models/item/pistol.json",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolEntity.java"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
       "name": "PistolProjectileHitsLivingEntity",
       "type": "procedure",
       "sortid": 87,
@@ -2201,37 +2238,6 @@
         ]
       },
       "path": "~/Ranged Items/Abilities"
-    },
-    {
-      "name": "Pistol",
-      "type": "rangeditem",
-      "sortid": 88,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pistol",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/item/PistolItem.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolRenderer.java",
-          "src/main/resources/assets/blockpiece/models/item/pistol.json",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolEntity.java"
-        ]
-      },
-      "path": "~/Ranged Items/Abilities"
-    },
-    {
-      "name": "DfCooldown",
-      "type": "potioneffect",
-      "sortid": 89,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "df_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/potion/DfCooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
     },
     {
       "name": "Exp",
@@ -2270,24 +2276,33 @@
       "path": "~/Procedures"
     },
     {
-      "name": "LuffyOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 91,
+      "name": "DfCooldown",
+      "type": "potioneffect",
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "luffy_on_entity_tick_update",
+      "registry_name": "df_cooldown",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/procedures/LuffyOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/blockpiece/potion/DfCooldownMobEffect.java"
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "MarineCape",
+      "type": "armor",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine_cape",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/marine_cape_chestplate.json",
+          "src/main/java/net/mcreator/blockpiece/item/MarineCapeItem.java"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -2482,7 +2497,6 @@
       "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "gui.blockpiece.main_hud.label_empty": "-------------------",
       "key.blockpiece.open_main_menu": "Open Main Menu",
-      "item.blockpiece.pistol": "Pistol",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "entity.blockpiece.luffy": "Luffy",
@@ -2520,7 +2534,6 @@
       "advancements.the_one_piece.title": "The One Piece",
       "itemGroup.tabblock_piece_item": "Block Piece Items",
       "item.blockpiece.bounty_poster": "Bounty Poster",
-      "effect.blockpiece.df_cooldown": "Dfcooldown",
       "effect.blockpiece.higan": "Higan",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",

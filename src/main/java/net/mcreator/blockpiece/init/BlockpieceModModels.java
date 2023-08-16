@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.blockpiece.client.model.Modelstrawhat;
 import net.mcreator.blockpiece.client.model.Modelpistol;
 import net.mcreator.blockpiece.client.model.Modelmihawkcape;
+import net.mcreator.blockpiece.client.model.Modelmarinecape;
 import net.mcreator.blockpiece.client.model.Modelluffyshirt;
 import net.mcreator.blockpiece.client.model.Modellonghandnew;
 import net.mcreator.blockpiece.client.model.Modellonghandfoward;
@@ -30,6 +31,7 @@ public class BlockpieceModModels {
 		event.registerLayerDefinition(Modeldaienkai.LAYER_LOCATION, Modeldaienkai::createBodyLayer);
 		event.registerLayerDefinition(Modellonghand.LAYER_LOCATION, Modellonghand::createBodyLayer);
 		event.registerLayerDefinition(Modellonghandnew.LAYER_LOCATION, Modellonghandnew::createBodyLayer);
+		event.registerLayerDefinition(Modelmarinecape.LAYER_LOCATION, Modelmarinecape::createBodyLayer);
 		event.registerLayerDefinition(Modelbazooka.LAYER_LOCATION, Modelbazooka::createBodyLayer);
 		event.registerLayerDefinition(Modellonghandfoward.LAYER_LOCATION, Modellonghandfoward::createBodyLayer);
 		event.registerLayerDefinition(Modelluffyshirt.LAYER_LOCATION, Modelluffyshirt::createBodyLayer);

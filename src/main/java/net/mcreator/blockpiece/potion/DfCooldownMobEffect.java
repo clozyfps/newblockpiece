@@ -1,10 +1,8 @@
 
 package net.mcreator.blockpiece.potion;
 
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
 public class DfCooldownMobEffect extends MobEffect {
+
 	public DfCooldownMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -18,4 +16,5 @@ public class DfCooldownMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
+
 }
