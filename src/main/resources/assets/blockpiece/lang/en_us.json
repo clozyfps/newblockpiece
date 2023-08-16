@@ -23,6 +23,7 @@
   "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
   "entity.blockpiece.bazooka_mob": "Bazooka Mob",
   "entity.blockpiece.pistol_mob": "Pistol Mob",
+  "item.blockpiece.marine_cape_chestplate": "Marine Cape",
   "itemGroup.tabblock_piece_items": "Block Piece Weapons",
   "item.blockpiece.explosion_blocks": "`",
   "gui.blockpiece.main_menu.label_empty": "/",

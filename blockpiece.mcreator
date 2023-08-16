@@ -338,6 +338,7 @@
     {
       "name": "Moveset",
       "type": "overlay",
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moveset",
@@ -444,8 +445,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -684,8 +685,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1508,6 +1509,7 @@
     {
       "name": "MeraMeraNoMi",
       "type": "achievement",
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mera_mera_no_mi",
@@ -1923,7 +1925,12 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/BountyValueProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/GUIs/Procedures"
     },
@@ -1939,7 +1946,12 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/FirstNameValueProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/GUIs/Procedures"
     },
@@ -2088,6 +2100,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
           }
         ]
       },
@@ -2105,9 +2121,29 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/LastNameValueProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/GUIs/Procedures"
+    },
+    {
+      "name": "MarineCape",
+      "type": "armor",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marine_cape",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/marine_cape_chestplate.json",
+          "src/main/java/net/mcreator/blockpiece/item/MarineCapeItem.java"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -2313,6 +2349,7 @@
       "item.blockpiece.civilian_spawn_egg": "Civilian Spawn Egg",
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
+      "item.blockpiece.marine_cape_chestplate": "Marine Cape",
       "itemGroup.tabblock_piece_items": "Block Piece Weapons",
       "item.blockpiece.explosion_blocks": "`",
       "gui.blockpiece.main_menu.label_empty": "/",

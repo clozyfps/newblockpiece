@@ -1,15 +1,30 @@
 package net.mcreator.blockpiece.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.blockpiece.world.inventory.StartGuiMenu;
+import net.mcreator.blockpiece.network.StartGuiButtonMessage;
+import net.mcreator.blockpiece.BlockpieceMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
-
 	private final static HashMap<String, Object> guistate = StartGuiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	EditBox FirstName;
-
 	Button button_begin;
 
 	public StartGuiScreen(StartGuiMenu container, Inventory inventory, Component text) {
@@ -30,9 +45,7 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 		FirstName.render(ms, mouseX, mouseY, partialTicks);
-
 	}
 
 	@Override
@@ -40,10 +53,8 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -53,10 +64,8 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		if (FirstName.isFocused())
 			return FirstName.keyPressed(key, b, c);
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -80,9 +89,7 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		FirstName = new EditBox(this.font, this.leftPos + -59, this.topPos + 11, 120, 20, Component.translatable("gui.blockpiece.start_gui.FirstName")) {
 			{
 				setSuggestion(Component.translatable("gui.blockpiece.start_gui.FirstName").getString());
@@ -91,7 +98,6 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
-
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.blockpiece.start_gui.FirstName").getString());
 				else
@@ -101,7 +107,6 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 			@Override
 			public void moveCursorTo(int pos) {
 				super.moveCursorTo(pos);
-
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.blockpiece.start_gui.FirstName").getString());
 				else
@@ -109,20 +114,15 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 			}
 		};
 		FirstName.setMaxLength(32767);
-
 		guistate.put("text:FirstName", FirstName);
 		this.addWidget(this.FirstName);
-
 		button_begin = new Button(this.leftPos + -24, this.topPos + 44, 51, 20, Component.translatable("gui.blockpiece.start_gui.button_begin"), e -> {
 			if (true) {
 				BlockpieceMod.PACKET_HANDLER.sendToServer(new StartGuiButtonMessage(0, x, y, z));
 				StartGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_begin", button_begin);
 		this.addRenderableWidget(button_begin);
-
 	}
-
 }

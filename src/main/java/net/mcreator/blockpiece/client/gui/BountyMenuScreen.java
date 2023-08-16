@@ -1,9 +1,28 @@
 package net.mcreator.blockpiece.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.blockpiece.world.inventory.BountyMenuMenu;
+import net.mcreator.blockpiece.procedures.LastNameValueProcedure;
+import net.mcreator.blockpiece.procedures.FirstNameValueProcedure;
+import net.mcreator.blockpiece.procedures.DisplayPlayerGUIProcedure;
+import net.mcreator.blockpiece.procedures.BountyValueProcedure;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
-
 	private final static HashMap<String, Object> guistate = BountyMenuMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -26,12 +45,7 @@ public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
-		if (
-
-		DisplayPlayerGUIProcedure.execute(entity)
-
-		instanceof LivingEntity livingEntity) {
+		if (DisplayPlayerGUIProcedure.execute(entity) instanceof LivingEntity livingEntity) {
 			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 4, this.topPos + 85, 40, 0f, 0, livingEntity);
 		}
 	}
@@ -41,7 +55,6 @@ public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
@@ -57,7 +70,6 @@ public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -70,13 +82,13 @@ public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				FirstNameValueProcedure.execute(), -55, 106, -16777216);
+				FirstNameValueProcedure.execute(entity), -55, 106, -16777216);
 		this.font.draw(poseStack,
 
-				LastNameValueProcedure.execute(), 17, 106, -16777216);
+				LastNameValueProcedure.execute(entity), 17, 106, -16777216);
 		this.font.draw(poseStack,
 
-				BountyValueProcedure.execute(), -28, 123, -16777216);
+				BountyValueProcedure.execute(entity), -28, 123, -16777216);
 	}
 
 	@Override
@@ -88,9 +100,6 @@ public class BountyMenuScreen extends AbstractContainerScreen<BountyMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 	}
-
 }

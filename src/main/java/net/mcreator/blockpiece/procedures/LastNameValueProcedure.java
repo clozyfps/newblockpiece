@@ -1,11 +1,13 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.blockpiece.network.BlockpieceModVariables;
 
 public class LastNameValueProcedure {
-	public static String execute() {
-		return;
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return (entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).LastName;
 	}
 }
