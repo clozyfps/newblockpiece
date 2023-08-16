@@ -18,8 +18,8 @@ import net.mcreator.blockpiece.client.particle.FireParticleParticle;
 public class BlockpieceModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
-		event.register(BlockpieceModParticleTypes.SMOKE_PARTICLE.get(), SmokeParticleParticle::provider);
 		event.register(BlockpieceModParticleTypes.FIRE_PARTICLE.get(), FireParticleParticle::provider);
+		event.register(BlockpieceModParticleTypes.SMOKE_PARTICLE.get(), SmokeParticleParticle::provider);
 		event.register(BlockpieceModParticleTypes.WHITE_DUST_PARTICLE.get(), WhiteDustParticleParticle::provider);
 		event.register(BlockpieceModParticleTypes.ROOM_PARTICLE.get(), RoomParticleParticle::provider);
 	}
