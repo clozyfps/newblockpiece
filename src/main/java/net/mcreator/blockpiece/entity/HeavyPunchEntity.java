@@ -7,7 +7,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -20,25 +19,24 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.blockpiece.procedures.PistolWhileProjectileFlyingTickProcedure;
-import net.mcreator.blockpiece.procedures.PistolProjectileHitsLivingEntityProcedure;
+import net.mcreator.blockpiece.procedures.HeavyPunchWhileProjectileFlyingTickProcedure;
 import net.mcreator.blockpiece.init.BlockpieceModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class PistolEntity extends AbstractArrow implements ItemSupplier {
-	public PistolEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(BlockpieceModEntities.PISTOL.get(), world);
+public class HeavyPunchEntity extends AbstractArrow implements ItemSupplier {
+	public HeavyPunchEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(BlockpieceModEntities.HEAVY_PUNCH.get(), world);
 	}
 
-	public PistolEntity(EntityType<? extends PistolEntity> type, Level world) {
+	public HeavyPunchEntity(EntityType<? extends HeavyPunchEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public PistolEntity(EntityType<? extends PistolEntity> type, double x, double y, double z, Level world) {
+	public HeavyPunchEntity(EntityType<? extends HeavyPunchEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public PistolEntity(EntityType<? extends PistolEntity> type, LivingEntity entity, Level world) {
+	public HeavyPunchEntity(EntityType<? extends HeavyPunchEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -65,21 +63,15 @@ public class PistolEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
-	public void onHitEntity(EntityHitResult entityHitResult) {
-		super.onHitEntity(entityHitResult);
-		PistolProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
-	}
-
-	@Override
 	public void tick() {
 		super.tick();
-		PistolWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		HeavyPunchWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}
 
-	public static PistolEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		PistolEntity entityarrow = new PistolEntity(BlockpieceModEntities.PISTOL.get(), entity, world);
+	public static HeavyPunchEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		HeavyPunchEntity entityarrow = new HeavyPunchEntity(BlockpieceModEntities.HEAVY_PUNCH.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -90,15 +82,15 @@ public class PistolEntity extends AbstractArrow implements ItemSupplier {
 		return entityarrow;
 	}
 
-	public static PistolEntity shoot(LivingEntity entity, LivingEntity target) {
-		PistolEntity entityarrow = new PistolEntity(BlockpieceModEntities.PISTOL.get(), entity, entity.level);
+	public static HeavyPunchEntity shoot(LivingEntity entity, LivingEntity target) {
+		HeavyPunchEntity entityarrow = new HeavyPunchEntity(BlockpieceModEntities.HEAVY_PUNCH.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 2f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(8);
-		entityarrow.setKnockback(3);
+		entityarrow.setBaseDamage(6);
+		entityarrow.setKnockback(2);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));

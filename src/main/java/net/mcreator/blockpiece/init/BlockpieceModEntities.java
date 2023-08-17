@@ -25,6 +25,7 @@ import net.mcreator.blockpiece.entity.MarineEntity;
 import net.mcreator.blockpiece.entity.LuffyEntity;
 import net.mcreator.blockpiece.entity.InvisMobEntity;
 import net.mcreator.blockpiece.entity.HikenEntity;
+import net.mcreator.blockpiece.entity.HeavyPunchEntity;
 import net.mcreator.blockpiece.entity.ExplosionBlocksEntity;
 import net.mcreator.blockpiece.entity.EnkaiMobEntity;
 import net.mcreator.blockpiece.entity.DaiEnkaiProjectileEntity;
@@ -80,6 +81,8 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<PistolEntity>of(PistolEntity::new, MobCategory.MISC).setCustomClientFactory(PistolEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TaktSpikeEntity>> TAKT_SPIKE = register("takt_spike", EntityType.Builder.<TaktSpikeEntity>of(TaktSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(TaktSpikeEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HeavyPunchEntity>> HEAVY_PUNCH = register("projectile_heavy_punch",
+			EntityType.Builder.<HeavyPunchEntity>of(HeavyPunchEntity::new, MobCategory.MISC).setCustomClientFactory(HeavyPunchEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

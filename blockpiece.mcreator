@@ -283,6 +283,7 @@
     {
       "name": "SetDf",
       "type": "command",
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_df",
@@ -1790,8 +1791,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/blockpiece/client/gui/StartGuiScreen.java",
-          "src/main/java/net/mcreator/blockpiece/world/inventory/StartGuiMenu.java",
-          "src/main/java/net/mcreator/blockpiece/network/StartGuiButtonMessage.java"
+          "src/main/java/net/mcreator/blockpiece/world/inventory/StartGuiMenu.java"
         ]
       },
       "path": "~/GUIs"
@@ -2273,6 +2273,150 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "RaceCooldown",
+      "type": "potioneffect",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "race_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/RaceCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Human",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "human",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HumanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "HeavyPunchWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HeavyPunchWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "HeavyPunch",
+      "type": "rangeditem",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/entity/HeavyPunchEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/heavy_punch.json",
+          "src/main/java/net/mcreator/blockpiece/item/HeavyPunchItem.java"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "SetRaces",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_races",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/SetRacesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetRace",
+      "type": "command",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_race",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/command/SetRaceCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -2430,13 +2574,13 @@
       "name": "StaminaCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "200.0"
     },
     {
       "name": "Stamina",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "200.0"
     }
   ],
   "sound_elements": [],
@@ -2444,18 +2588,21 @@
     "en_us": {
       "gui.blockpiece.main_menu.label_race": "Race:",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "entity.blockpiece.takt_spike": "Takt Spike",
       "biome.blockpiece.main_world_biome": "Main World",
       "item.blockpiece.cutlass": "Cutlass",
-      "gui.blockpiece.start_gui.label_what_shall_the_world_call_you": "What shall the world call you?",
+      "gui.blockpiece.start_gui.label_what_shall_the_world_call_you": "What shall the pirate world call you?",
       "block.blockpiece.treasure_chest": "Treasure Chest",
       "item.blockpiece.dai_enkai_projectile": "Dai Enkai Projectile",
       "item.blockpiece.marine_spawn_egg": "Marine Spawn Egg",
+      "block.blockpiece.room_block": "Room Block",
       "item.blockpiece.luffy_fit_helmet": "Straw Hat",
       "gui.blockpiece.main_hud.label_questdisplay": "QuestDisplay",
       "item.blockpiece.luffy_fit_chestplate": "Luffys Shirt",
       "gui.blockpiece.main_hud.label_empty": "-------------------",
-      "key.blockpiece.open_main_menu": "Open Main Menu",
       "item.blockpiece.pistol": "Pistol",
+      "key.blockpiece.open_main_menu": "Open Main Menu",
+      "item.blockpiece.heavy_punch": "Heavy Punch",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "entity.blockpiece.luffy": "Luffy",
@@ -2468,13 +2615,15 @@
       "entity.blockpiece.bazooka_mob": "Bazooka Mob",
       "entity.blockpiece.pistol_mob": "Pistol Mob",
       "item.blockpiece.marine_cape_chestplate": "Marine Cape",
-      "itemGroup.tabblock_piece_items": "Block Piece Weapons",
+      "itemGroup.tabblock_piece_items": "Block Piece Items",
       "item.blockpiece.explosion_blocks": "`",
       "item.blockpiece.mera_mera_fruit_item": "Mera Mera No Mi",
       "entity.blockpiece.civilian": "Civilian",
       "entity.blockpiece.chest_entity": "Chest Entity",
+      "entity.blockpiece.ope_middle": "Ope Middle",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "key.categories.bp": "Block Piece",
+      "effect.blockpiece.race_cooldown": "Racecooldown",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
       "entity.blockpiece.marine": "Marine",
@@ -2493,12 +2642,13 @@
       "itemGroup.tabblock_piece_item": "Block Piece Items",
       "item.blockpiece.bounty_poster": "Bounty Poster",
       "effect.blockpiece.df_cooldown": "Dfcooldown",
+      "effect.blockpiece.takt_active": "Takt Active",
       "effect.blockpiece.higan": "Higan",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",
       "entity.blockpiece.dai_enkai_mob": "Dai Enkai Mob",
       "item.blockpiece.luffy_spawn_egg": "Luffy Spawn Egg",
-      "gui.blockpiece.start_gui.button_begin": "Begin",
+      "gui.blockpiece.start_gui.button_begin": "Begin!",
       "key.blockpiece.switch_moveset": "Switch Moveset"
     }
   },

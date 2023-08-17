@@ -13,10 +13,10 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
-import net.mcreator.blockpiece.entity.PistolEntity;
+import net.mcreator.blockpiece.entity.HeavyPunchEntity;
 
-public class PistolItem extends Item {
-	public PistolItem() {
+public class HeavyPunchItem extends Item {
+	public HeavyPunchItem() {
 		super(new Item.Properties().tab(null).durability(100));
 	}
 
@@ -43,7 +43,7 @@ public class PistolItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				PistolEntity entityarrow = PistolEntity.shoot(world, entity, world.getRandom(), 2f, 8, 3);
+				HeavyPunchEntity entityarrow = HeavyPunchEntity.shoot(world, entity, world.getRandom(), 2f, 6, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

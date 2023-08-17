@@ -48,5 +48,6 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.OPE_MIDDLE.get(), OpeMiddleRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.PISTOL.get(), PistolRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.TAKT_SPIKE.get(), TaktSpikeRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.HEAVY_PUNCH.get(), ThrownItemRenderer::new);
 	}
 }

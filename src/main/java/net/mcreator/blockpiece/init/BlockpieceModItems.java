@@ -21,6 +21,7 @@ import net.mcreator.blockpiece.item.MeraMeraFruitItemItem;
 import net.mcreator.blockpiece.item.MarineCapeItem;
 import net.mcreator.blockpiece.item.LuffyFitItem;
 import net.mcreator.blockpiece.item.HikenItem;
+import net.mcreator.blockpiece.item.HeavyPunchItem;
 import net.mcreator.blockpiece.item.GumoGumoFruitItemItem;
 import net.mcreator.blockpiece.item.ExplosionBlocksItem;
 import net.mcreator.blockpiece.item.DaiEnkaiProjectileItem;
@@ -49,6 +50,7 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> BOUNTY_POSTER = REGISTRY.register("bounty_poster", () -> new BountyPosterItem());
 	public static final RegistryObject<Item> PISTOL = REGISTRY.register("pistol", () -> new PistolItem());
 	public static final RegistryObject<Item> MARINE_CAPE_CHESTPLATE = REGISTRY.register("marine_cape_chestplate", () -> new MarineCapeItem.Chestplate());
+	public static final RegistryObject<Item> HEAVY_PUNCH = REGISTRY.register("heavy_punch", () -> new HeavyPunchItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

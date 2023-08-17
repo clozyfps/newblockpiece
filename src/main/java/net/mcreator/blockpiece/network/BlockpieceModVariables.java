@@ -155,8 +155,8 @@ public class BlockpieceModVariables {
 		public String QuestItem = "";
 		public double QuestRequirement = 0;
 		public String Faction = "";
-		public double StaminaCap = 0;
-		public double Stamina = 0;
+		public double StaminaCap = 200.0;
+		public double Stamina = 200.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
