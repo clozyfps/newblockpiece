@@ -2134,7 +2134,7 @@
       "name": "LuffyOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 91,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "luffy_on_entity_tick_update",
       "metadata": {
@@ -2154,7 +2154,7 @@
       "name": "PistolWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 86,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pistol_while_projectile_flying_tick",
       "metadata": {
@@ -2194,7 +2194,7 @@
       "name": "Pistol",
       "type": "rangeditem",
       "sortid": 88,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pistol",
       "metadata": {
@@ -2211,7 +2211,7 @@
       "name": "PistolProjectileHitsLivingEntity",
       "type": "procedure",
       "sortid": 87,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pistol_projectile_hits_living_entity",
       "metadata": {
@@ -2243,7 +2243,7 @@
       "name": "Exp",
       "type": "procedure",
       "sortid": 90,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "exp",
       "metadata": {
@@ -2279,7 +2279,7 @@
       "name": "DfCooldown",
       "type": "potioneffect",
       "sortid": 89,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "df_cooldown",
       "metadata": {
@@ -2293,7 +2293,7 @@
       "name": "MarineCape",
       "type": "armor",
       "sortid": 88,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "marine_cape",
       "metadata": {
