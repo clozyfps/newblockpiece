@@ -2253,17 +2253,22 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "StaminaSystem",
+      "name": "StaminaRegen",
       "type": "procedure",
       "sortid": 97,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stamina_system",
+      "registry_name": "stamina_regen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/procedures/StaminaSystemProcedure.java"
+          "src/main/java/net/mcreator/blockpiece/procedures/StaminaRegenProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procedures"
     }
