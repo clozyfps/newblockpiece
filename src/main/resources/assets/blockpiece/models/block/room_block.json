@@ -1,0 +1,9 @@
+{
+  "parent": "blockpiece:custom/roomblock",
+  "textures": {
+    "all": "blockpiece:blocks/roomblock",
+    "particle": "blockpiece:blocks/roomblock",
+    "0": "blockpiece:blocks/roomblock"
+  },
+  "render_type": "translucent"
+}

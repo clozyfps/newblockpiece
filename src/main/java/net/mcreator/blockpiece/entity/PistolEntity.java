@@ -44,7 +44,7 @@ public class PistolEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		PistolProjectileHitsLivingEntityProcedure.execute();
+		PistolProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

@@ -42,10 +42,10 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> LUFFY_SPAWN_EGG = REGISTRY.register("luffy_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.LUFFY, -3394816, -3381760, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_MOBS)));
 	public static final RegistryObject<Item> LUFFY_FIT_HELMET = REGISTRY.register("luffy_fit_helmet", () -> new LuffyFitItem.Helmet());
 	public static final RegistryObject<Item> LUFFY_FIT_CHESTPLATE = REGISTRY.register("luffy_fit_chestplate", () -> new LuffyFitItem.Chestplate());
-	public static final RegistryObject<Item> CIVILIAN_SPAWN_EGG = REGISTRY.register("civilian_spawn_egg",
-			() -> new ForgeSpawnEggItem(BlockpieceModEntities.CIVILIAN, -3355444, -6710887, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_MOBS)));
-	public static final RegistryObject<Item> BANDIT_SPAWN_EGG = REGISTRY.register("bandit_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.BANDIT, -3381760, -26317, new Item.Properties().tab(BlockpieceModTabs.TAB_BLOCK_PIECE_MOBS)));
+	public static final RegistryObject<Item> CIVILIAN_SPAWN_EGG = REGISTRY.register("civilian_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.CIVILIAN, -3355444, -6710887, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BANDIT_SPAWN_EGG = REGISTRY.register("bandit_spawn_egg", () -> new ForgeSpawnEggItem(BlockpieceModEntities.BANDIT, -3381760, -26317, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TREASURE_CHEST = block(BlockpieceModBlocks.TREASURE_CHEST, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> ROOM_BLOCK = block(BlockpieceModBlocks.ROOM_BLOCK, null);
 	public static final RegistryObject<Item> BOUNTY_POSTER = REGISTRY.register("bounty_poster", () -> new BountyPosterItem());
 	public static final RegistryObject<Item> PISTOL = REGISTRY.register("pistol", () -> new PistolItem());
 	public static final RegistryObject<Item> MARINE_CAPE_CHESTPLATE = REGISTRY.register("marine_cape_chestplate", () -> new MarineCapeItem.Chestplate());

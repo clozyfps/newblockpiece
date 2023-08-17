@@ -92,10 +92,8 @@ public class BlockpieceModVariables {
 			clone.QuestItem = original.QuestItem;
 			clone.QuestRequirement = original.QuestRequirement;
 			clone.Faction = original.Faction;
-			clone.LastName = original.LastName;
-			clone.FirstName = original.FirstName;
-			clone.JoinedWorld = original.JoinedWorld;
-			clone.Bounty = original.Bounty;
+			clone.StaminaCap = original.StaminaCap;
+			clone.Stamina = original.Stamina;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -157,10 +155,8 @@ public class BlockpieceModVariables {
 		public String QuestItem = "";
 		public double QuestRequirement = 0;
 		public String Faction = "";
-		public String LastName = "\"\"";
-		public String FirstName = "\"\"";
-		public boolean JoinedWorld = false;
-		public double Bounty = 0;
+		public double StaminaCap = 0;
+		public double Stamina = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -194,10 +190,8 @@ public class BlockpieceModVariables {
 			nbt.putString("QuestItem", QuestItem);
 			nbt.putDouble("QuestRequirement", QuestRequirement);
 			nbt.putString("Faction", Faction);
-			nbt.putString("LastName", LastName);
-			nbt.putString("FirstName", FirstName);
-			nbt.putBoolean("JoinedWorld", JoinedWorld);
-			nbt.putDouble("Bounty", Bounty);
+			nbt.putDouble("StaminaCap", StaminaCap);
+			nbt.putDouble("Stamina", Stamina);
 			return nbt;
 		}
 
@@ -228,10 +222,8 @@ public class BlockpieceModVariables {
 			QuestItem = nbt.getString("QuestItem");
 			QuestRequirement = nbt.getDouble("QuestRequirement");
 			Faction = nbt.getString("Faction");
-			LastName = nbt.getString("LastName");
-			FirstName = nbt.getString("FirstName");
-			JoinedWorld = nbt.getBoolean("JoinedWorld");
-			Bounty = nbt.getDouble("Bounty");
+			StaminaCap = nbt.getDouble("StaminaCap");
+			Stamina = nbt.getDouble("Stamina");
 		}
 	}
 
@@ -281,10 +273,8 @@ public class BlockpieceModVariables {
 					variables.QuestItem = message.data.QuestItem;
 					variables.QuestRequirement = message.data.QuestRequirement;
 					variables.Faction = message.data.Faction;
-					variables.LastName = message.data.LastName;
-					variables.FirstName = message.data.FirstName;
-					variables.JoinedWorld = message.data.JoinedWorld;
-					variables.Bounty = message.data.Bounty;
+					variables.StaminaCap = message.data.StaminaCap;
+					variables.Stamina = message.data.Stamina;
 				}
 			});
 			context.setPacketHandled(true);

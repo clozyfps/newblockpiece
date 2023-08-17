@@ -11,8 +11,6 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.blockpiece.world.inventory.StartGuiMenu;
-import net.mcreator.blockpiece.network.StartGuiButtonMessage;
-import net.mcreator.blockpiece.BlockpieceMod;
 
 import java.util.HashMap;
 
@@ -77,7 +75,7 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.blockpiece.start_gui.label_what_shall_the_world_call_you"), -74, -11, -1);
+		this.font.draw(poseStack, Component.translatable("gui.blockpiece.start_gui.label_what_shall_the_world_call_you"), -94, -16, -1);
 	}
 
 	@Override
@@ -116,11 +114,7 @@ public class StartGuiScreen extends AbstractContainerScreen<StartGuiMenu> {
 		FirstName.setMaxLength(32767);
 		guistate.put("text:FirstName", FirstName);
 		this.addWidget(this.FirstName);
-		button_begin = new Button(this.leftPos + -24, this.topPos + 44, 51, 20, Component.translatable("gui.blockpiece.start_gui.button_begin"), e -> {
-			if (true) {
-				BlockpieceMod.PACKET_HANDLER.sendToServer(new StartGuiButtonMessage(0, x, y, z));
-				StartGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
+		button_begin = new Button(this.leftPos + -26, this.topPos + 39, 51, 20, Component.translatable("gui.blockpiece.start_gui.button_begin"), e -> {
 		});
 		guistate.put("button:button_begin", button_begin);
 		this.addRenderableWidget(button_begin);

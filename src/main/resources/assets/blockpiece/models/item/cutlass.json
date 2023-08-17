@@ -1,11 +1,8 @@
 {
-  "parent": "blockpiece:custom/cutlass1",
+  "parent": "blockpiece:custom/cutlass",
   "textures": {
-    "0": "blockpiece:blocks/cutlass1",
-    "1": "blockpiece:blocks/cutlass2",
-    "2": "blockpiece:blocks/cutlass3",
-    "3": "blockpiece:blocks/cutlass4",
-    "4": "blockpiece:blocks/cutlass5",
+    "0": "blockpiece:blocks/maincutlasstexture",
+    "1": "blockpiece:blocks/bladetexture",
     "particle": "blockpiece:items/minecraft_dungeons_cutlass_updated"
   }
 }

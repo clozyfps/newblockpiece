@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.blockpiece.client.model.Modeltaktspike;
 import net.mcreator.blockpiece.client.model.Modelstrawhat;
 import net.mcreator.blockpiece.client.model.Modelpistol;
 import net.mcreator.blockpiece.client.model.Modelmihawkcape;
@@ -28,6 +29,7 @@ import net.mcreator.blockpiece.client.model.ModelExplosionStoneEntity;
 public class BlockpieceModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modeltaktspike.LAYER_LOCATION, Modeltaktspike::createBodyLayer);
 		event.registerLayerDefinition(Modeldaienkai.LAYER_LOCATION, Modeldaienkai::createBodyLayer);
 		event.registerLayerDefinition(Modellonghand.LAYER_LOCATION, Modellonghand::createBodyLayer);
 		event.registerLayerDefinition(Modellonghandnew.LAYER_LOCATION, Modellonghandnew::createBodyLayer);

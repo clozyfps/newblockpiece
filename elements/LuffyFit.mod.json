@@ -3,7 +3,7 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "straw_hat",
+    "textureHelmet": "strawhatitem",
     "enableBody": true,
     "textureBody": "luffyshirtitem",
     "enableLeggings": false,
