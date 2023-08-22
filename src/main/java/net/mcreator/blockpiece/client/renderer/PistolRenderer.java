@@ -1,22 +1,9 @@
 package net.mcreator.blockpiece.client.renderer;
 
-import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.blockpiece.entity.PistolEntity;
-import net.mcreator.blockpiece.client.model.Modelpistol;
-
-import com.mojang.math.Vector3f;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class PistolRenderer extends EntityRenderer<PistolEntity> {
+
 	private static final ResourceLocation texture = new ResourceLocation("blockpiece:textures/entities/newarm.png");
+
 	private final Modelpistol model;
 
 	public PistolRenderer(EntityRendererProvider.Context context) {
@@ -32,6 +19,7 @@ public class PistolRenderer extends EntityRenderer<PistolEntity> {
 		poseStack.mulPose(Vector3f.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
 		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
 		poseStack.popPose();
+
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}
 
@@ -39,4 +27,5 @@ public class PistolRenderer extends EntityRenderer<PistolEntity> {
 	public ResourceLocation getTextureLocation(PistolEntity entity) {
 		return texture;
 	}
+
 }

@@ -94,6 +94,10 @@ public class BlockpieceModVariables {
 			clone.QuestProgress = original.QuestProgress;
 			clone.QuestRequirement = original.QuestRequirement;
 			clone.Faction = original.Faction;
+			clone.StaminaCap = original.StaminaCap;
+			clone.FirstName = original.FirstName;
+			clone.Clan = original.Clan;
+			clone.Stamina = original.Stamina;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -155,6 +159,10 @@ public class BlockpieceModVariables {
 		public double QuestProgress = 0;
 		public double QuestRequirement = 0;
 		public String Faction = "";
+		public double StaminaCap = 200.0;
+		public String FirstName = "\"\"";
+		public String Clan = "\"\"";
+		public double Stamina = 200.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -188,6 +196,10 @@ public class BlockpieceModVariables {
 			nbt.putDouble("QuestProgress", QuestProgress);
 			nbt.putDouble("QuestRequirement", QuestRequirement);
 			nbt.putString("Faction", Faction);
+			nbt.putDouble("StaminaCap", StaminaCap);
+			nbt.putString("FirstName", FirstName);
+			nbt.putString("Clan", Clan);
+			nbt.putDouble("Stamina", Stamina);
 			return nbt;
 		}
 
@@ -218,6 +230,10 @@ public class BlockpieceModVariables {
 			QuestProgress = nbt.getDouble("QuestProgress");
 			QuestRequirement = nbt.getDouble("QuestRequirement");
 			Faction = nbt.getString("Faction");
+			StaminaCap = nbt.getDouble("StaminaCap");
+			FirstName = nbt.getString("FirstName");
+			Clan = nbt.getString("Clan");
+			Stamina = nbt.getDouble("Stamina");
 		}
 	}
 
@@ -267,6 +283,10 @@ public class BlockpieceModVariables {
 					variables.QuestProgress = message.data.QuestProgress;
 					variables.QuestRequirement = message.data.QuestRequirement;
 					variables.Faction = message.data.Faction;
+					variables.StaminaCap = message.data.StaminaCap;
+					variables.FirstName = message.data.FirstName;
+					variables.Clan = message.data.Clan;
+					variables.Stamina = message.data.Stamina;
 				}
 			});
 			context.setPacketHandled(true);

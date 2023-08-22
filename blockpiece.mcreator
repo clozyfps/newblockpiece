@@ -445,8 +445,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -803,8 +803,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -854,8 +854,8 @@
       "registry_name": "cutlass",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/cutlass.json",
-          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java",
+          "src/main/resources/assets/blockpiece/models/item/cutlass.json"
         ]
       },
       "path": "~/Items"
@@ -1514,8 +1514,8 @@
       "registry_name": "white_dust_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1758,8 +1758,8 @@
       "registry_name": "chest_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1773,8 +1773,8 @@
       "registry_name": "room_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/room_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/room_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1897,8 +1897,8 @@
       "registry_name": "ope_middle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/renderer/OpeMiddleRenderer.java",
-          "src/main/java/net/mcreator/blockpiece/entity/OpeMiddleEntity.java"
+          "src/main/java/net/mcreator/blockpiece/entity/OpeMiddleEntity.java",
+          "src/main/java/net/mcreator/blockpiece/client/renderer/OpeMiddleRenderer.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -2028,8 +2028,8 @@
       "registry_name": "bounty_poster",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/BountyPosterItem.java",
-          "src/main/resources/assets/blockpiece/models/item/bounty_poster.json"
+          "src/main/resources/assets/blockpiece/models/item/bounty_poster.json",
+          "src/main/java/net/mcreator/blockpiece/item/BountyPosterItem.java"
         ]
       },
       "path": "~/Items"
@@ -2162,6 +2162,275 @@
         ]
       },
       "path": "~/GUIs"
+    },
+    {
+      "name": "TaktActive",
+      "type": "potioneffect",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takt_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/TaktActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Human",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "human",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HumanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "HeavyPunch",
+      "type": "rangeditem",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/HeavyPunchItem.java",
+          "src/main/java/net/mcreator/blockpiece/entity/HeavyPunchEntity.java",
+          "src/main/resources/assets/blockpiece/models/item/heavy_punch.json"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "HeavyPunchWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HeavyPunchWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "TaktSpike",
+      "type": "livingentity",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takt_spike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/client/renderer/TaktSpikeRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/TaktSpikeEntity.java"
+        ]
+      },
+      "path": "~/Mobs/AbilityMobs"
+    },
+    {
+      "name": "SetRaces",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_races",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/SetRacesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "TaktActiveTick",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takt_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/TaktActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "SetRace",
+      "type": "command",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_race",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/command/SetRaceCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "StaminaValue",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/StaminaValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "StaminaRegen",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/StaminaRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TaktEnd",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "takt_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/TaktEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "RaceCooldown",
+      "type": "potioneffect",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "race_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/RaceCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     }
   ],
   "variable_elements": [
@@ -2314,6 +2583,30 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "StaminaCap",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "200.0"
+    },
+    {
+      "name": "FirstName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Stamina",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "200.0"
     }
   ],
   "sound_elements": [],
