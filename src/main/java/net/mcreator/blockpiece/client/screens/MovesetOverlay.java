@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.blockpiece.procedures.StaminaValueProcedure;
 import net.mcreator.blockpiece.procedures.MovesetValueProcedure;
 import net.mcreator.blockpiece.procedures.MoveValueProcedure;
 
@@ -42,6 +43,9 @@ public class MovesetOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					MoveValueProcedure.execute(entity), posX + -206, posY + 79, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+					StaminaValueProcedure.execute(entity), posX + -206, posY + 50, -1);
 		}
 	}
 }

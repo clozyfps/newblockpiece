@@ -348,7 +348,7 @@
           "src/main/java/net/mcreator/blockpiece/client/screens/MovesetOverlay.java"
         ]
       },
-      "path": "~/Overlay/Procedures"
+      "path": "~/Overlay"
     },
     {
       "name": "PistolMobOnInitialEntitySpawn",
@@ -2417,6 +2417,27 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "StaminaValue",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/StaminaValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
     }
   ],
   "variable_elements": [
@@ -2581,6 +2602,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "200.0"
+    },
+    {
+      "name": "FirstName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],

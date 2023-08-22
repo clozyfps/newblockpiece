@@ -20,8 +20,6 @@ public class HeavyPunchWhileProjectileFlyingTickProcedure {
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 1, 1, 1, 0.3);
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 1, 1, 1, 0);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		BlockpieceMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
@@ -39,7 +37,7 @@ public class HeavyPunchWhileProjectileFlyingTickProcedure {
 				}
 			}
 		}
-		BlockpieceMod.queueServerWork(20, () -> {
+		BlockpieceMod.queueServerWork(10, () -> {
 			if (!immediatesourceentity.level.isClientSide())
 				immediatesourceentity.discard();
 		});
