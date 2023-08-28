@@ -67,6 +67,7 @@ public class BlockpieceMod {
 		BlockpieceModMenus.REGISTRY.register(bus);
 		BlockpieceModBiomes.REGISTRY.register(bus);
 
+		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
