@@ -44,7 +44,7 @@ public class HeavyPunchEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		HeavyPunchWhileProjectileFlyingTickProcedure.execute();
+		HeavyPunchWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}

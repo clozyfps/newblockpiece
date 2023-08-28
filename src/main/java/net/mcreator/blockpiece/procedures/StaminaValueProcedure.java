@@ -5,7 +5,9 @@ import net.minecraftforge.eventbus.api.Event;
 import javax.annotation.Nullable;
 
 public class StaminaValueProcedure {
-	public static String execute() {
-		return new java.text.DecimalFormat("#").format() + "";
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return new java.text.DecimalFormat("#").format((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Stamina) + "";
 	}
 }
