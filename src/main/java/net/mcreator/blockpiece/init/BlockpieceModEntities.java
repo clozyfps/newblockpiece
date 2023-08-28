@@ -17,8 +17,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.blockpiece.entity.TaktSpikeEntity;
-import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
-import net.mcreator.blockpiece.entity.PistolMobEntity;
 import net.mcreator.blockpiece.entity.PistolEntity;
 import net.mcreator.blockpiece.entity.OpeMiddleEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
@@ -49,10 +47,10 @@ public class BlockpieceModEntities {
 			EntityType.Builder.<MarineEntity>of(MarineEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarineEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<HikenEntity>> HIKEN = register("projectile_hiken",
-			EntityType.Builder.<HikenEntity>of(HikenEntity::new, MobCategory.MISC).setCustomClientFactory(HikenEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<InvisMobEntity>> INVIS_MOB = register("invis_mob",
 			EntityType.Builder.<InvisMobEntity>of(InvisMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvisMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HikenEntity>> HIKEN = register("projectile_hiken",
+			EntityType.Builder.<HikenEntity>of(HikenEntity::new, MobCategory.MISC).setCustomClientFactory(HikenEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<EnkaiMobEntity>> ENKAI_MOB = register("enkai_mob",
 			EntityType.Builder.<EnkaiMobEntity>of(EnkaiMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EnkaiMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ExplosionBlocksEntity>> EXPLOSION_BLOCKS = register("projectile_explosion_blocks", EntityType.Builder.<ExplosionBlocksEntity>of(ExplosionBlocksEntity::new, MobCategory.MISC)

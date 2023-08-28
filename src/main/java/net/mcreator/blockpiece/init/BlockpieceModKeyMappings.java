@@ -15,9 +15,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.blockpiece.network.UseMoveMessage;
-import net.mcreator.blockpiece.network.SwitchMovesetMessage;
-import net.mcreator.blockpiece.network.SwitchMoveMessage;
 import net.mcreator.blockpiece.network.OpenMainMenuMessage;
 import net.mcreator.blockpiece.BlockpieceMod;
 

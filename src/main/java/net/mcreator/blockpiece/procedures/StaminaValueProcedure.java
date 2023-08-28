@@ -1,13 +1,11 @@
 package net.mcreator.blockpiece.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.blockpiece.network.BlockpieceModVariables;
+import javax.annotation.Nullable;
 
 public class StaminaValueProcedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		return new java.text.DecimalFormat("#").format((entity.getCapability(BlockpieceModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new BlockpieceModVariables.PlayerVariables())).Stamina) + "";
+	public static String execute() {
+		return new java.text.DecimalFormat("#").format() + "";
 	}
 }
