@@ -2271,6 +2271,21 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "MesHeart",
+      "type": "item",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mes_heart",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/mes_heart.json",
+          "src/main/java/net/mcreator/blockpiece/item/MesHeartItem.java"
+        ]
+      },
+      "path": "~/Items/AbilityItems"
     }
   ],
   "variable_elements": [
@@ -2475,6 +2490,7 @@
       "entity.blockpiece.chest_entity": "Chest Entity",
       "entity.blockpiece.ope_middle": "Ope Middle",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
+      "item.blockpiece.mes_heart": "Heart",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",

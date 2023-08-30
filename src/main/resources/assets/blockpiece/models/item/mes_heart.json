@@ -1,0 +1,8 @@
+{
+  "parent": "blockpiece:custom/mes",
+  "textures": {
+    "0": "blockpiece:blocks/outsidemes",
+    "1": "blockpiece:blocks/hearttexture",
+    "particle": "blockpiece:items/a2i2e_layer_2"
+  }
+}
