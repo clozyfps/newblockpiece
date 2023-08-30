@@ -13,8 +13,6 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.blockpiece.client.renderer.TaktSpikeRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolRenderer;
-import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
-import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
 import net.mcreator.blockpiece.client.renderer.OpeMiddleRenderer;
 import net.mcreator.blockpiece.client.renderer.MarineRenderer;
 import net.mcreator.blockpiece.client.renderer.LuffyRenderer;

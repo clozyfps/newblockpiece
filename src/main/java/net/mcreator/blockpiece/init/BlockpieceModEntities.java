@@ -17,8 +17,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.blockpiece.entity.TaktSpikeEntity;
-import net.mcreator.blockpiece.entity.PistolMobForwardEntity;
-import net.mcreator.blockpiece.entity.PistolMobEntity;
 import net.mcreator.blockpiece.entity.PistolEntity;
 import net.mcreator.blockpiece.entity.OpeMiddleEntity;
 import net.mcreator.blockpiece.entity.MarineEntity;
