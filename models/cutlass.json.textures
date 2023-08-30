@@ -2,8 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "maincutlasstexture",
-        "1": "bladetexture"
+        "0": "cutlasstexture"
       },
       "name": "default"
     }

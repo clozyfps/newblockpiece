@@ -96,6 +96,8 @@ public class BlockpieceModVariables {
 			clone.Faction = original.Faction;
 			clone.Stamina = original.Stamina;
 			clone.StaminaCap = original.StaminaCap;
+			clone.FirstName = original.FirstName;
+			clone.Clan = original.Clan;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -159,6 +161,8 @@ public class BlockpieceModVariables {
 		public String Faction = "";
 		public double Stamina = 0;
 		public double StaminaCap = 0;
+		public String FirstName = "\"\"";
+		public String Clan = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -194,6 +198,8 @@ public class BlockpieceModVariables {
 			nbt.putString("Faction", Faction);
 			nbt.putDouble("Stamina", Stamina);
 			nbt.putDouble("StaminaCap", StaminaCap);
+			nbt.putString("FirstName", FirstName);
+			nbt.putString("Clan", Clan);
 			return nbt;
 		}
 
@@ -226,6 +232,8 @@ public class BlockpieceModVariables {
 			Faction = nbt.getString("Faction");
 			Stamina = nbt.getDouble("Stamina");
 			StaminaCap = nbt.getDouble("StaminaCap");
+			FirstName = nbt.getString("FirstName");
+			Clan = nbt.getString("Clan");
 		}
 	}
 
@@ -277,6 +285,8 @@ public class BlockpieceModVariables {
 					variables.Faction = message.data.Faction;
 					variables.Stamina = message.data.Stamina;
 					variables.StaminaCap = message.data.StaminaCap;
+					variables.FirstName = message.data.FirstName;
+					variables.Clan = message.data.Clan;
 				}
 			});
 			context.setPacketHandled(true);

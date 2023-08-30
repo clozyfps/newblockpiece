@@ -35,6 +35,22 @@
           "x": 7,
           "y": 199
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_stamina_value",
+          "text": {
+            "fixedValue": "",
+            "name": "StaminaValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 7,
+          "y": 170
+        }
       }
     ],
     "baseTexture": "",

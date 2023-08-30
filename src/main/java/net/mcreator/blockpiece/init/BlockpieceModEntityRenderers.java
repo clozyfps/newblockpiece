@@ -13,8 +13,6 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.blockpiece.client.renderer.TaktSpikeRenderer;
 import net.mcreator.blockpiece.client.renderer.PistolRenderer;
-import net.mcreator.blockpiece.client.renderer.PistolMobRenderer;
-import net.mcreator.blockpiece.client.renderer.PistolMobForwardRenderer;
 import net.mcreator.blockpiece.client.renderer.OpeMiddleRenderer;
 import net.mcreator.blockpiece.client.renderer.MarineRenderer;
 import net.mcreator.blockpiece.client.renderer.LuffyRenderer;
@@ -48,5 +46,6 @@ public class BlockpieceModEntityRenderers {
 		event.registerEntityRenderer(BlockpieceModEntities.OPE_MIDDLE.get(), OpeMiddleRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.PISTOL.get(), PistolRenderer::new);
 		event.registerEntityRenderer(BlockpieceModEntities.TAKT_SPIKE.get(), TaktSpikeRenderer::new);
+		event.registerEntityRenderer(BlockpieceModEntities.HEAVY_PUNCH.get(), ThrownItemRenderer::new);
 	}
 }

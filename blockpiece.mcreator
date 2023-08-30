@@ -85,42 +85,6 @@
       "path": "~/Keybinds/Procedures"
     },
     {
-      "name": "Ope",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ope",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/blockpiece/procedures/OpeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
       "name": "Mera",
       "type": "procedure",
       "sortid": 6,
@@ -2286,6 +2250,201 @@
         ]
       },
       "path": "~/Items/AbilityItems"
+    },
+    {
+      "name": "Human",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "human",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HumanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Yoru",
+      "type": "tool",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yoru",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/yoru.json",
+          "src/main/java/net/mcreator/blockpiece/item/YoruItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HeavyPunch",
+      "type": "rangeditem",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/HeavyPunchItem.java",
+          "src/main/resources/assets/blockpiece/models/item/heavy_punch.json",
+          "src/main/java/net/mcreator/blockpiece/entity/HeavyPunchEntity.java"
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "HeavyPunchWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_punch_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/HeavyPunchWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged Items/Abilities"
+    },
+    {
+      "name": "SetRaces",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_races",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/SetRacesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetRace",
+      "type": "command",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_race",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/command/SetRaceCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "StaminaValue",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/procedures/StaminaValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "RaceCooldown",
+      "type": "potioneffect",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "race_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/potion/RaceCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Saber",
+      "type": "tool",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saber",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/SaberItem.java",
+          "src/main/resources/assets/blockpiece/models/item/saber.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -2450,6 +2609,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "FirstName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -2490,7 +2661,6 @@
       "entity.blockpiece.chest_entity": "Chest Entity",
       "entity.blockpiece.ope_middle": "Ope Middle",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
-      "item.blockpiece.mes_heart": "Heart",
       "key.categories.bp": "Block Piece",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",

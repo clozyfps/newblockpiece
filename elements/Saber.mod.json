@@ -1,0 +1,29 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "sabericon",
+    "customModelName": "saber:default",
+    "name": "Saber",
+    "specialInfo": [
+      "Saber | Unknown Grade"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:BlockPieceItems"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 15,
+    "damageVsEntity": 4.5,
+    "usageCount": 500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}
