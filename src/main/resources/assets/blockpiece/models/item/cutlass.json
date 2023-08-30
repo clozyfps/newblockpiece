@@ -1,8 +1,7 @@
 {
   "parent": "blockpiece:custom/cutlass",
   "textures": {
-    "0": "blockpiece:blocks/maincutlasstexture",
-    "1": "blockpiece:blocks/bladetexture",
-    "particle": "blockpiece:items/minecraft_dungeons_cutlass_updated"
+    "0": "blockpiece:blocks/cutlasstexture",
+    "particle": "blockpiece:items/cutlassicon"
   }
 }

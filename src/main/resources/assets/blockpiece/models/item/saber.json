@@ -1,0 +1,7 @@
+{
+  "parent": "blockpiece:custom/saber",
+  "textures": {
+    "0": "blockpiece:blocks/sabertexture",
+    "particle": "blockpiece:items/sabericon"
+  }
+}

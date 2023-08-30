@@ -283,6 +283,7 @@
     {
       "name": "SetDf",
       "type": "command",
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_df",
@@ -445,8 +446,8 @@
       "registry_name": "pistol_mob_forward",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/PistolMobForwardRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/PistolMobForwardEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -803,8 +804,8 @@
       "registry_name": "enkai_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/EnkaiMobRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/EnkaiMobEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -854,8 +855,8 @@
       "registry_name": "cutlass",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java",
-          "src/main/resources/assets/blockpiece/models/item/cutlass.json"
+          "src/main/resources/assets/blockpiece/models/item/cutlass.json",
+          "src/main/java/net/mcreator/blockpiece/item/CutlassItem.java"
         ]
       },
       "path": "~/Items"
@@ -1514,8 +1515,8 @@
       "registry_name": "white_dust_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json",
-          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java"
+          "src/main/java/net/mcreator/blockpiece/client/particle/WhiteDustParticleParticle.java",
+          "src/main/resources/assets/blockpiece/particles/white_dust_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1758,8 +1759,8 @@
       "registry_name": "chest_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/ChestEntityRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/ChestEntityEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -1773,8 +1774,8 @@
       "registry_name": "room_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java",
-          "src/main/resources/assets/blockpiece/particles/room_particle.json"
+          "src/main/resources/assets/blockpiece/particles/room_particle.json",
+          "src/main/java/net/mcreator/blockpiece/client/particle/RoomParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1897,8 +1898,8 @@
       "registry_name": "ope_middle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/blockpiece/entity/OpeMiddleEntity.java",
-          "src/main/java/net/mcreator/blockpiece/client/renderer/OpeMiddleRenderer.java"
+          "src/main/java/net/mcreator/blockpiece/client/renderer/OpeMiddleRenderer.java",
+          "src/main/java/net/mcreator/blockpiece/entity/OpeMiddleEntity.java"
         ]
       },
       "path": "~/Mobs/AbilityMobs"
@@ -2028,8 +2029,8 @@
       "registry_name": "bounty_poster",
       "metadata": {
         "files": [
-          "src/main/resources/assets/blockpiece/models/item/bounty_poster.json",
-          "src/main/java/net/mcreator/blockpiece/item/BountyPosterItem.java"
+          "src/main/java/net/mcreator/blockpiece/item/BountyPosterItem.java",
+          "src/main/resources/assets/blockpiece/models/item/bounty_poster.json"
         ]
       },
       "path": "~/Items"
@@ -2358,7 +2359,12 @@
         "files": [
           "src/main/java/net/mcreator/blockpiece/procedures/StaminaValueProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlay/Procedures"
     },
@@ -2431,6 +2437,36 @@
         ]
       },
       "path": "~/Potion Effects"
+    },
+    {
+      "name": "Yoru",
+      "type": "tool",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yoru",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/blockpiece/item/YoruItem.java",
+          "src/main/resources/assets/blockpiece/models/item/yoru.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Saber",
+      "type": "tool",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saber",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/blockpiece/models/item/saber.json",
+          "src/main/java/net/mcreator/blockpiece/item/SaberItem.java"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -2614,6 +2650,7 @@
     "en_us": {
       "gui.blockpiece.main_menu.label_race": "Race:",
       "itemGroup.tabblock_piece_mobs": "Block Piece Mobs",
+      "entity.blockpiece.takt_spike": "Takt Spike",
       "biome.blockpiece.main_world_biome": "Main World",
       "item.blockpiece.cutlass": "Cutlass",
       "gui.blockpiece.start_gui.label_what_shall_the_world_call_you": "What shall the pirate world call you?",
@@ -2627,6 +2664,7 @@
       "gui.blockpiece.main_hud.label_empty": "-------------------",
       "key.blockpiece.open_main_menu": "Open Main Menu",
       "item.blockpiece.pistol": "Pistol",
+      "item.blockpiece.heavy_punch": "Heavy Punch",
       "itemGroup.tabblock_piece_fruits": "Block Piece Fruits",
       "item.blockpiece.gumo_gumo_fruit_item": "Gumo Gumo No Mi",
       "entity.blockpiece.luffy": "Luffy",
@@ -2647,8 +2685,11 @@
       "entity.blockpiece.ope_middle": "Ope Middle",
       "entity.blockpiece.enkai_mob": "Enkai Mob",
       "key.categories.bp": "Block Piece",
+      "item.blockpiece.yoru": "Yoru",
+      "effect.blockpiece.race_cooldown": "Racecooldown",
       "itemGroup.tabblock_piece_armor": "Block Piece Armor",
       "advancements.mera_mera_no_mi.title": "Mera Mera No Mi",
+      "item.blockpiece.saber": "Saber",
       "entity.blockpiece.marine": "Marine",
       "gui.blockpiece.main_menu.label_fighting_style": "Fighting Style:",
       "advancements.mera_mera_no_mi.descr": "Eat The Mera Mera No Mi",
@@ -2665,6 +2706,7 @@
       "itemGroup.tabblock_piece_item": "Block Piece Items",
       "item.blockpiece.bounty_poster": "Bounty Poster",
       "effect.blockpiece.df_cooldown": "Dfcooldown",
+      "effect.blockpiece.takt_active": "Takt Active",
       "effect.blockpiece.higan": "Higan",
       "item.blockpiece.hiken": "Hiken",
       "item.blockpiece.mihawk_cape_armor_chestplate": "Mihawk Cape",

@@ -14,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.blockpiece.item.YoruItem;
+import net.mcreator.blockpiece.item.SaberItem;
 import net.mcreator.blockpiece.item.PistolItem;
 import net.mcreator.blockpiece.item.OpeOpeFruitItemItem;
 import net.mcreator.blockpiece.item.MihawkCapeArmorItem;
@@ -51,6 +53,8 @@ public class BlockpieceModItems {
 	public static final RegistryObject<Item> PISTOL = REGISTRY.register("pistol", () -> new PistolItem());
 	public static final RegistryObject<Item> MARINE_CAPE_CHESTPLATE = REGISTRY.register("marine_cape_chestplate", () -> new MarineCapeItem.Chestplate());
 	public static final RegistryObject<Item> HEAVY_PUNCH = REGISTRY.register("heavy_punch", () -> new HeavyPunchItem());
+	public static final RegistryObject<Item> YORU = REGISTRY.register("yoru", () -> new YoruItem());
+	public static final RegistryObject<Item> SABER = REGISTRY.register("saber", () -> new SaberItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

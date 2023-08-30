@@ -1,0 +1,7 @@
+{
+  "parent": "blockpiece:custom/yoru",
+  "textures": {
+    "0": "blockpiece:blocks/yorutexture_1",
+    "particle": "blockpiece:items/yoruicon"
+  }
+}
